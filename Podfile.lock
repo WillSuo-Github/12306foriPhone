@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.0.1)
+  - FLEX (2.1.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0)
+  - FLEX (~> 2.1.1)
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  FLEX: 27b768fcae23a313a1eb115076d429180ca9b472
+
+PODFILE CHECKSUM: eaacc15cb84cbb96246665cda8bf108b548b457f
+
+COCOAPODS: 1.1.1

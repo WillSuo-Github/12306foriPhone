@@ -7,21 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20C30703EC783338271F318E /* Pods_12306foriPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F636753D1B88E84D44EEF507 /* Pods_12306foriPhone.framework */; };
 		543E48631DBCF5C900AB9D08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48621DBCF5C900AB9D08 /* AppDelegate.swift */; };
-		543E48651DBCF5C900AB9D08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48641DBCF5C900AB9D08 /* ViewController.swift */; };
-		543E48681DBCF5C900AB9D08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543E48661DBCF5C900AB9D08 /* Main.storyboard */; };
 		543E486A1DBCF5C900AB9D08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 543E48691DBCF5C900AB9D08 /* Assets.xcassets */; };
 		543E486D1DBCF5C900AB9D08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543E486B1DBCF5C900AB9D08 /* LaunchScreen.storyboard */; };
+		543E48771DBCF5F500AB9D08 /* WSOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48751DBCF5F500AB9D08 /* WSOrderController.swift */; };
+		543E48781DBCF5F500AB9D08 /* WSTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48761DBCF5F500AB9D08 /* WSTabBarController.swift */; };
+		543E487D1DBCF60A00AB9D08 /* WSLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E487A1DBCF60A00AB9D08 /* WSLogin.swift */; };
+		543E487E1DBCF60A00AB9D08 /* WSLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E487B1DBCF60A00AB9D08 /* WSLoginController.swift */; };
+		543E487F1DBCF60A00AB9D08 /* WSLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 543E487C1DBCF60A00AB9D08 /* WSLoginController.xib */; };
+		543E48821DBCF62000AB9D08 /* WSGrapTicketontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48811DBCF62000AB9D08 /* WSGrapTicketontroller.swift */; };
+		543E48851DBCF64400AB9D08 /* WSNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48841DBCF64400AB9D08 /* WSNavigationController.swift */; };
+		543E48891DBCF65900AB9D08 /* WSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48871DBCF65900AB9D08 /* WSService.swift */; };
+		543E488A1DBCF65900AB9D08 /* WSService+login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48881DBCF65900AB9D08 /* WSService+login.swift */; };
+		543E488D1DBCF67C00AB9D08 /* srca.cer in Resources */ = {isa = PBXBuildFile; fileRef = 543E488C1DBCF67C00AB9D08 /* srca.cer */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FA04F8C4CA218F18B06F365 /* Pods-12306foriPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-12306foriPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-12306foriPhone/Pods-12306foriPhone.debug.xcconfig"; sourceTree = "<group>"; };
 		543E485F1DBCF5C900AB9D08 /* 12306foriPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 12306foriPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		543E48621DBCF5C900AB9D08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		543E48641DBCF5C900AB9D08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		543E48671DBCF5C900AB9D08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		543E48691DBCF5C900AB9D08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		543E486C1DBCF5C900AB9D08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		543E486E1DBCF5C900AB9D08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		543E48751DBCF5F500AB9D08 /* WSOrderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSOrderController.swift; sourceTree = "<group>"; };
+		543E48761DBCF5F500AB9D08 /* WSTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTabBarController.swift; sourceTree = "<group>"; };
+		543E487A1DBCF60A00AB9D08 /* WSLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLogin.swift; sourceTree = "<group>"; };
+		543E487B1DBCF60A00AB9D08 /* WSLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLoginController.swift; sourceTree = "<group>"; };
+		543E487C1DBCF60A00AB9D08 /* WSLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSLoginController.xib; sourceTree = "<group>"; };
+		543E48811DBCF62000AB9D08 /* WSGrapTicketontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSGrapTicketontroller.swift; sourceTree = "<group>"; };
+		543E48841DBCF64400AB9D08 /* WSNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSNavigationController.swift; sourceTree = "<group>"; };
+		543E48871DBCF65900AB9D08 /* WSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSService.swift; sourceTree = "<group>"; };
+		543E48881DBCF65900AB9D08 /* WSService+login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WSService+login.swift"; sourceTree = "<group>"; };
+		543E488C1DBCF67C00AB9D08 /* srca.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = srca.cer; sourceTree = "<group>"; };
+		7C0BED7311D0D7C7883A25D1 /* Pods-12306foriPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-12306foriPhone.release.xcconfig"; path = "Pods/Target Support Files/Pods-12306foriPhone/Pods-12306foriPhone.release.xcconfig"; sourceTree = "<group>"; };
+		F636753D1B88E84D44EEF507 /* Pods_12306foriPhone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_12306foriPhone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +49,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C30703EC783338271F318E /* Pods_12306foriPhone.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		472A1DFBE85672CD46A1461F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FA04F8C4CA218F18B06F365 /* Pods-12306foriPhone.debug.xcconfig */,
+				7C0BED7311D0D7C7883A25D1 /* Pods-12306foriPhone.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		543E48561DBCF5C900AB9D08 = {
 			isa = PBXGroup;
 			children = (
 				543E48611DBCF5C900AB9D08 /* 12306foriPhone */,
+				543E488B1DBCF66B00AB9D08 /* productFile */,
 				543E48601DBCF5C900AB9D08 /* Products */,
+				472A1DFBE85672CD46A1461F /* Pods */,
+				A471CCDFF1142B1427B4EFF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +87,78 @@
 		543E48611DBCF5C900AB9D08 /* 12306foriPhone */ = {
 			isa = PBXGroup;
 			children = (
+				543E48861DBCF64700AB9D08 /* service */,
+				543E48831DBCF62400AB9D08 /* order */,
+				543E48801DBCF61300AB9D08 /* ticket */,
+				543E48791DBCF5FA00AB9D08 /* login */,
+				543E48741DBCF5E400AB9D08 /* main */,
+			);
+			path = 12306foriPhone;
+			sourceTree = "<group>";
+		};
+		543E48741DBCF5E400AB9D08 /* main */ = {
+			isa = PBXGroup;
+			children = (
 				543E48621DBCF5C900AB9D08 /* AppDelegate.swift */,
-				543E48641DBCF5C900AB9D08 /* ViewController.swift */,
-				543E48661DBCF5C900AB9D08 /* Main.storyboard */,
+				543E48841DBCF64400AB9D08 /* WSNavigationController.swift */,
+				543E48761DBCF5F500AB9D08 /* WSTabBarController.swift */,
+			);
+			name = main;
+			sourceTree = "<group>";
+		};
+		543E48791DBCF5FA00AB9D08 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				543E487A1DBCF60A00AB9D08 /* WSLogin.swift */,
+				543E487B1DBCF60A00AB9D08 /* WSLoginController.swift */,
+				543E487C1DBCF60A00AB9D08 /* WSLoginController.xib */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		543E48801DBCF61300AB9D08 /* ticket */ = {
+			isa = PBXGroup;
+			children = (
+				543E48811DBCF62000AB9D08 /* WSGrapTicketontroller.swift */,
+			);
+			name = ticket;
+			sourceTree = "<group>";
+		};
+		543E48831DBCF62400AB9D08 /* order */ = {
+			isa = PBXGroup;
+			children = (
+				543E48751DBCF5F500AB9D08 /* WSOrderController.swift */,
+			);
+			name = order;
+			sourceTree = "<group>";
+		};
+		543E48861DBCF64700AB9D08 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				543E48871DBCF65900AB9D08 /* WSService.swift */,
+				543E48881DBCF65900AB9D08 /* WSService+login.swift */,
+			);
+			name = service;
+			sourceTree = "<group>";
+		};
+		543E488B1DBCF66B00AB9D08 /* productFile */ = {
+			isa = PBXGroup;
+			children = (
+				543E488C1DBCF67C00AB9D08 /* srca.cer */,
 				543E48691DBCF5C900AB9D08 /* Assets.xcassets */,
 				543E486B1DBCF5C900AB9D08 /* LaunchScreen.storyboard */,
 				543E486E1DBCF5C900AB9D08 /* Info.plist */,
 			);
+			name = productFile;
 			path = 12306foriPhone;
+			sourceTree = "<group>";
+		};
+		A471CCDFF1142B1427B4EFF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F636753D1B88E84D44EEF507 /* Pods_12306foriPhone.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +168,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 543E48711DBCF5C900AB9D08 /* Build configuration list for PBXNativeTarget "12306foriPhone" */;
 			buildPhases = (
+				081250C94A6B0E7D3497C519 /* [CP] Check Pods Manifest.lock */,
 				543E485B1DBCF5C900AB9D08 /* Sources */,
 				543E485C1DBCF5C900AB9D08 /* Frameworks */,
 				543E485D1DBCF5C900AB9D08 /* Resources */,
+				86853E2B144E2D1E673857F7 /* [CP] Embed Pods Frameworks */,
+				9802FFBAD4452CCA69002E90 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,34 +224,82 @@
 			buildActionMask = 2147483647;
 			files = (
 				543E486D1DBCF5C900AB9D08 /* LaunchScreen.storyboard in Resources */,
+				543E488D1DBCF67C00AB9D08 /* srca.cer in Resources */,
+				543E487F1DBCF60A00AB9D08 /* WSLoginController.xib in Resources */,
 				543E486A1DBCF5C900AB9D08 /* Assets.xcassets in Resources */,
-				543E48681DBCF5C900AB9D08 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		081250C94A6B0E7D3497C519 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		86853E2B144E2D1E673857F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-12306foriPhone/Pods-12306foriPhone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9802FFBAD4452CCA69002E90 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-12306foriPhone/Pods-12306foriPhone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		543E485B1DBCF5C900AB9D08 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				543E48651DBCF5C900AB9D08 /* ViewController.swift in Sources */,
+				543E488A1DBCF65900AB9D08 /* WSService+login.swift in Sources */,
+				543E48851DBCF64400AB9D08 /* WSNavigationController.swift in Sources */,
+				543E48771DBCF5F500AB9D08 /* WSOrderController.swift in Sources */,
+				543E48821DBCF62000AB9D08 /* WSGrapTicketontroller.swift in Sources */,
+				543E487E1DBCF60A00AB9D08 /* WSLoginController.swift in Sources */,
+				543E48781DBCF5F500AB9D08 /* WSTabBarController.swift in Sources */,
+				543E48891DBCF65900AB9D08 /* WSService.swift in Sources */,
 				543E48631DBCF5C900AB9D08 /* AppDelegate.swift in Sources */,
+				543E487D1DBCF60A00AB9D08 /* WSLogin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		543E48661DBCF5C900AB9D08 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				543E48671DBCF5C900AB9D08 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		543E486B1DBCF5C900AB9D08 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -258,9 +406,11 @@
 		};
 		543E48721DBCF5C900AB9D08 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FA04F8C4CA218F18B06F365 /* Pods-12306foriPhone.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 12306foriPhone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "WS.-2306foriPhone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -270,9 +420,11 @@
 		};
 		543E48731DBCF5C900AB9D08 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C0BED7311D0D7C7883A25D1 /* Pods-12306foriPhone.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 12306foriPhone/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "WS.-2306foriPhone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,6 +451,7 @@
 				543E48731DBCF5C900AB9D08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

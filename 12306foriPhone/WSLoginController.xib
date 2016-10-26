@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WSLoginController" customModule="_306foriPhone" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WSLoginController" customModule="_2306foriPhone" customModuleProvider="target">
             <connections>
                 <outlet property="accountTF" destination="3dk-06-nn4" id="mQt-uG-igD"/>
                 <outlet property="detailView" destination="nlP-71-OwN" id="pUB-dT-yhT"/>
@@ -73,7 +73,8 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlP-71-OwN">
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="260" id="7ug-gA-DBO"/>
+                                <constraint firstAttribute="height" constant="190" id="7ug-gA-DBO"/>
+                                <constraint firstAttribute="width" constant="293" id="c2b-vd-qPo"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -84,7 +85,6 @@
                         <constraint firstAttribute="trailing" secondItem="mIb-D3-wbG" secondAttribute="trailing" constant="15" id="1Le-TX-Wfg"/>
                         <constraint firstItem="zt4-X9-5Sq" firstAttribute="top" secondItem="3K8-IY-XNM" secondAttribute="bottom" constant="8" id="1gR-Tc-VXM"/>
                         <constraint firstItem="mrF-qY-HrG" firstAttribute="leading" secondItem="ufs-Lb-hjG" secondAttribute="leading" constant="5" id="6xB-4C-xs2"/>
-                        <constraint firstAttribute="trailing" secondItem="nlP-71-OwN" secondAttribute="trailing" id="8H5-9Z-veZ"/>
                         <constraint firstItem="W92-Nw-gSF" firstAttribute="centerY" secondItem="mrF-qY-HrG" secondAttribute="centerY" id="8cA-GQ-Une"/>
                         <constraint firstAttribute="bottom" secondItem="nlP-71-OwN" secondAttribute="bottom" id="C2Q-Sc-HJa"/>
                         <constraint firstItem="zt4-X9-5Sq" firstAttribute="leading" secondItem="ufs-Lb-hjG" secondAttribute="leading" id="Dg8-iF-0g4"/>
@@ -95,6 +95,7 @@
                         <constraint firstItem="3dk-06-nn4" firstAttribute="leading" secondItem="3K8-IY-XNM" secondAttribute="trailing" constant="15" id="PLs-Xd-b6Y"/>
                         <constraint firstItem="mIb-D3-wbG" firstAttribute="top" secondItem="zt4-X9-5Sq" secondAttribute="bottom" constant="1" id="PhT-ZD-i8c"/>
                         <constraint firstItem="nlP-71-OwN" firstAttribute="top" secondItem="W92-Nw-gSF" secondAttribute="bottom" constant="3" id="UoT-2f-abL"/>
+                        <constraint firstItem="nlP-71-OwN" firstAttribute="centerX" secondItem="ufs-Lb-hjG" secondAttribute="centerX" id="ZFG-7D-Joq"/>
                         <constraint firstAttribute="trailing" secondItem="Dcm-k9-jUi" secondAttribute="trailing" id="cKr-Am-f8r"/>
                         <constraint firstItem="zt4-X9-5Sq" firstAttribute="top" secondItem="3dk-06-nn4" secondAttribute="bottom" id="dXM-xt-uFe"/>
                         <constraint firstItem="Dcm-k9-jUi" firstAttribute="leading" secondItem="ufs-Lb-hjG" secondAttribute="leading" id="eJ8-EM-kIr"/>
@@ -103,7 +104,6 @@
                         <constraint firstItem="W5z-7M-b72" firstAttribute="leading" secondItem="ufs-Lb-hjG" secondAttribute="leading" constant="5" id="g4P-gZ-ROD"/>
                         <constraint firstItem="mIb-D3-wbG" firstAttribute="height" secondItem="3dk-06-nn4" secondAttribute="height" id="i2W-YW-FYv"/>
                         <constraint firstAttribute="trailing" secondItem="W92-Nw-gSF" secondAttribute="trailing" constant="5" id="nzl-Zs-POY"/>
-                        <constraint firstItem="nlP-71-OwN" firstAttribute="leading" secondItem="ufs-Lb-hjG" secondAttribute="leading" id="u5h-c6-8xX"/>
                         <constraint firstItem="Dcm-k9-jUi" firstAttribute="top" secondItem="W5z-7M-b72" secondAttribute="bottom" constant="8" id="uwH-iw-GeY"/>
                         <constraint firstAttribute="trailing" secondItem="zt4-X9-5Sq" secondAttribute="trailing" id="wyq-j4-QB2"/>
                     </constraints>

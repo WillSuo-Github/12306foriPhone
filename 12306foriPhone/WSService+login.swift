@@ -17,6 +17,7 @@ extension WSService {
         let url = "https://kyfw.12306.cn/otn/passcodeNew/getPassCodeNew?module=login&rand=sjrand&" + random.description
         let headers = ["refer": "https://kyfw.12306.cn/otn/login/init"]
         
+        print(url)
         WSService.session.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers).responseData { (response) in
             
             switch (response.result) {

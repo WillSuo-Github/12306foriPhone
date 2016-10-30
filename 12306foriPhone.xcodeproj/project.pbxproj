@@ -21,6 +21,8 @@
 		543E48891DBCF65900AB9D08 /* WSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48871DBCF65900AB9D08 /* WSService.swift */; };
 		543E488A1DBCF65900AB9D08 /* WSService+login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48881DBCF65900AB9D08 /* WSService+login.swift */; };
 		543E488D1DBCF67C00AB9D08 /* srca.cer in Resources */ = {isa = PBXBuildFile; fileRef = 543E488C1DBCF67C00AB9D08 /* srca.cer */; };
+		54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */; };
+		54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3321B1DC627DB00796927 /* WSPassCoverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		543E48871DBCF65900AB9D08 /* WSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSService.swift; sourceTree = "<group>"; };
 		543E48881DBCF65900AB9D08 /* WSService+login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WSService+login.swift"; sourceTree = "<group>"; };
 		543E488C1DBCF67C00AB9D08 /* srca.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = srca.cer; sourceTree = "<group>"; };
+		54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLoginRandomCodeView.swift; sourceTree = "<group>"; };
+		54B3321B1DC627DB00796927 /* WSPassCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSPassCoverView.swift; sourceTree = "<group>"; };
 		7C0BED7311D0D7C7883A25D1 /* Pods-12306foriPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-12306foriPhone.release.xcconfig"; path = "Pods/Target Support Files/Pods-12306foriPhone/Pods-12306foriPhone.release.xcconfig"; sourceTree = "<group>"; };
 		F636753D1B88E84D44EEF507 /* Pods_12306foriPhone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_12306foriPhone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,9 +113,9 @@
 		543E48791DBCF5FA00AB9D08 /* login */ = {
 			isa = PBXGroup;
 			children = (
-				543E487A1DBCF60A00AB9D08 /* WSLogin.swift */,
-				543E487B1DBCF60A00AB9D08 /* WSLoginController.swift */,
-				543E487C1DBCF60A00AB9D08 /* WSLoginController.xib */,
+				54B332181DC6243200796927 /* controller */,
+				54B332171DC6242B00796927 /* tool */,
+				54B332161DC6242600796927 /* view */,
 			);
 			name = login;
 			sourceTree = "<group>";
@@ -153,6 +157,32 @@
 			path = 12306foriPhone;
 			sourceTree = "<group>";
 		};
+		54B332161DC6242600796927 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				54B3321B1DC627DB00796927 /* WSPassCoverView.swift */,
+				54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		54B332171DC6242B00796927 /* tool */ = {
+			isa = PBXGroup;
+			children = (
+				543E487A1DBCF60A00AB9D08 /* WSLogin.swift */,
+			);
+			name = tool;
+			sourceTree = "<group>";
+		};
+		54B332181DC6243200796927 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				543E487B1DBCF60A00AB9D08 /* WSLoginController.swift */,
+				543E487C1DBCF60A00AB9D08 /* WSLoginController.xib */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
 		A471CCDFF1142B1427B4EFF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +220,7 @@
 		543E48571DBCF5C900AB9D08 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WS;
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = WS;
@@ -285,8 +316,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */,
 				543E488A1DBCF65900AB9D08 /* WSService+login.swift in Sources */,
 				543E48851DBCF64400AB9D08 /* WSNavigationController.swift in Sources */,
+				54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */,
 				543E48771DBCF5F500AB9D08 /* WSOrderController.swift in Sources */,
 				543E48821DBCF62000AB9D08 /* WSGrapTicketontroller.swift in Sources */,
 				543E487E1DBCF60A00AB9D08 /* WSLoginController.swift in Sources */,

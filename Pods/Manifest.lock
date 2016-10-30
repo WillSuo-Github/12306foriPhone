@@ -1,15 +1,18 @@
 PODS:
   - Alamofire (4.0.1)
   - FLEX (2.1.1)
+  - SnapKit (3.0.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
   - FLEX (~> 2.1.1)
+  - SnapKit (~> 3.0.2)
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   FLEX: 27b768fcae23a313a1eb115076d429180ca9b472
+  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
 
-PODFILE CHECKSUM: eaacc15cb84cbb96246665cda8bf108b548b457f
+PODFILE CHECKSUM: eacb0e9589a796498ae24fe62916748acb9660c8
 
 COCOAPODS: 1.1.1

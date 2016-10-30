@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class WSLoginController: UIViewController {
     
@@ -23,15 +24,30 @@ class WSLoginController: UIViewController {
         requestPassCode()
     }
     
+    
+//MARK: network
     private func requestPassCode() {
-        myService.requestLoginCode(successBlock: { (returnImage) in
+
+        
+        myService.requestLoginCode(randomCode:randomCodeView.randomCode.description, successBlock: { (returnImage) in
             
-            let imageV = UIImageView(image: returnImage)
-            imageV.frame = self.detailView.bounds
-            self.detailView.addSubview(imageV)
+            self.randomCodeView.myImage = returnImage
+            self.detailView.addSubview(self.randomCodeView)
+            self.randomCodeView.snp.makeConstraints({ (make) in
+               make.edges.equalToSuperview()
+            })
+            
             }) { (error) in
                 print(error)
         }
+    }
+    
+    private func requestLogin() {
+        myService.requestLogin(randomCode: randomCodeView.selectCode, successBlock: { responseData in
+            
+        }, failBlock: { error in
+
+        })
     }
 
 //MARK: action
@@ -40,6 +56,11 @@ class WSLoginController: UIViewController {
     }
     @IBAction func loginBtnAction(_ sender: AnyObject) {
         
+        requestLogin()
     }
-
+//MARK: lazy
+    lazy var randomCodeView: WSLoginRandomCodeView = {
+        var tmpView = WSLoginRandomCodeView(frame: self.detailView.bounds)
+        return tmpView
+    }()
 }

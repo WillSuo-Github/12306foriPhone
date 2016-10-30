@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "12306foriPhone/WSService+login.swift"
-            timestampString = "499076205.92026"
+            timestampString = "499529129.357521"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "requestLoginCode(successBlock:failBlock:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "requestLogin(randomCode:successBlock:failBlock:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

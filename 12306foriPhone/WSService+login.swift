@@ -10,14 +10,12 @@ import UIKit
 import Alamofire
 
 extension WSService {
-    
-    func requestLoginCode(successBlock: @escaping (UIImage) -> (), failBlock: @escaping (Error) -> ()) {
+
+    func requestLoginCode(randomCode: String, successBlock: @escaping (UIImage) -> (), failBlock: @escaping (Error) -> ()) {
         
-        let random = CGFloat(Float(arc4random()) / Float(UINT32_MAX))//0~1
-        let url = "https://kyfw.12306.cn/otn/passcodeNew/getPassCodeNew?module=login&rand=sjrand&" + random.description
+        let url = "https://kyfw.12306.cn/otn/passcodeNew/getPassCodeNew?module=login&rand=sjrand&" + randomCode
         let headers = ["refer": "https://kyfw.12306.cn/otn/login/init"]
-        
-        print(url)
+    
         WSService.session.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers).responseData { (response) in
             
             switch (response.result) {
@@ -29,6 +27,20 @@ extension WSService {
             case .failure(let error) :
                 
                 failBlock(error)
+            }
+        }
+    }
+    
+    func requestLogin(randomCode: String, successBlock: @escaping (UIImage) -> (), failBlock: @escaping (Error) -> ()) {
+        let url = "https://kyfw.12306.cn/otn/passcodeNew/checkRandCodeAnsyn"
+        let params = ["randCode":randomCode,"rand":"sjrand"]
+        let headers = ["refer": "https://kyfw.12306.cn/otn/login/init"]
+        WSService.session.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: headers).responseJSON { (response) in
+            switch (response.result){
+            case .success(let data):
+                print(data)
+            case .failure(let error):
+                print(error)
             }
         }
     }

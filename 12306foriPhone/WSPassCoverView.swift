@@ -10,8 +10,8 @@ import UIKit
 
 class WSPassCoverView: UIView {
     
-    var touchBlock: ()->()?
-
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -31,7 +31,7 @@ class WSPassCoverView: UIView {
 
     func didTouchSelf() {
         removeFromSuperview()
-        touchBlock()
+        
         
     }
 }

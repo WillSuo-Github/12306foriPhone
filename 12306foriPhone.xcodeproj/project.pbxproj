@@ -23,6 +23,7 @@
 		543E488D1DBCF67C00AB9D08 /* srca.cer in Resources */ = {isa = PBXBuildFile; fileRef = 543E488C1DBCF67C00AB9D08 /* srca.cer */; };
 		54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */; };
 		54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3321B1DC627DB00796927 /* WSPassCoverView.swift */; };
+		54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		543E488C1DBCF67C00AB9D08 /* srca.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = srca.cer; sourceTree = "<group>"; };
 		54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLoginRandomCodeView.swift; sourceTree = "<group>"; };
 		54B3321B1DC627DB00796927 /* WSPassCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSPassCoverView.swift; sourceTree = "<group>"; };
+		54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRegex.swift; sourceTree = "<group>"; };
 		7C0BED7311D0D7C7883A25D1 /* Pods-12306foriPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-12306foriPhone.release.xcconfig"; path = "Pods/Target Support Files/Pods-12306foriPhone/Pods-12306foriPhone.release.xcconfig"; sourceTree = "<group>"; };
 		F636753D1B88E84D44EEF507 /* Pods_12306foriPhone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_12306foriPhone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 		543E48611DBCF5C900AB9D08 /* 12306foriPhone */ = {
 			isa = PBXGroup;
 			children = (
+				54D5750E1E59DBBD00FA0E7C /* utilities */,
 				543E48861DBCF64700AB9D08 /* service */,
 				543E48831DBCF62400AB9D08 /* order */,
 				543E48801DBCF61300AB9D08 /* ticket */,
@@ -181,6 +184,14 @@
 				543E487C1DBCF60A00AB9D08 /* WSLoginController.xib */,
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		54D5750E1E59DBBD00FA0E7C /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */,
+			);
+			name = utilities;
 			sourceTree = "<group>";
 		};
 		A471CCDFF1142B1427B4EFF5 /* Frameworks */ = {
@@ -321,6 +332,7 @@
 				543E48851DBCF64400AB9D08 /* WSNavigationController.swift in Sources */,
 				54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */,
 				543E48771DBCF5F500AB9D08 /* WSOrderController.swift in Sources */,
+				54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */,
 				543E48821DBCF62000AB9D08 /* WSGrapTicketontroller.swift in Sources */,
 				543E487E1DBCF60A00AB9D08 /* WSLoginController.swift in Sources */,
 				543E48781DBCF5F500AB9D08 /* WSTabBarController.swift in Sources */,

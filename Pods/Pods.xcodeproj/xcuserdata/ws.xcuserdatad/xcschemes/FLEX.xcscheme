@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A9991F7AB7B53B221A591DCE93E86B39'
+               BlueprintIdentifier = '55C9075C0E851FF8C051AEFE96FB3781'
                BlueprintName = 'FLEX'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'FLEX.framework'>

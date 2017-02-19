@@ -11,7 +11,7 @@ import SnapKit
 
 class WSLoginController: UIViewController {
     
-    var myService = WSService()
+    var myService = WSService.shardInstance
     
 
     @IBOutlet weak var accountTF: UITextField!
@@ -21,33 +21,25 @@ class WSLoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        requestPassCode()
+        requestLoginInit()
+
     }
     
     
 //MARK: network
-    private func requestPassCode() {
-
-        
-        myService.requestLoginCode(randomCode:randomCodeView.randomCode.description, successBlock: { (returnImage) in
+    
+    
+    private func requestLoginInit() {
+        myService.preLoginFlow(success: { image in
             
-            self.randomCodeView.myImage = returnImage
+            self.randomCodeView.myImage = image
             self.detailView.addSubview(self.randomCodeView)
             self.randomCodeView.snp.makeConstraints({ (make) in
-               make.edges.equalToSuperview()
+                make.edges.equalToSuperview()
             })
-            
-            }) { (error) in
-                print(error)
+        }) { error in
+            print(error)
         }
-    }
-    
-    private func requestLogin() {
-        myService.requestLogin(randomCode: randomCodeView.selectCode, successBlock: { responseData in
-            
-        }, failBlock: { error in
-
-        })
     }
 
 //MARK: action
@@ -56,7 +48,7 @@ class WSLoginController: UIViewController {
     }
     @IBAction func loginBtnAction(_ sender: AnyObject) {
         
-        requestLogin()
+        
     }
 //MARK: lazy
     lazy var randomCodeView: WSLoginRandomCodeView = {

@@ -14,7 +14,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FMDB.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>OMGHTTPURLRQ.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-12306foriPhone.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PromiseKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -24,25 +39,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>XCGLogger.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1570F8A6E0F5429AA676030716CAF143</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>251BAD17812F7EBF6532EACF66F941C3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>55C9075C0E851FF8C051AEFE96FB3781</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>78BE4D083F1E420DD2BD35F81DDD058F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>86A1D72DEFEB2D43841F278916B7C0AE</key>
+		<key>5AD1507205D908987C216D989FDDD0CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -52,17 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A9991F7AB7B53B221A591DCE93E86B39</key>
+		<key>C278C932E86CA4E39C1238CEBCF281C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DDAC5DD4DAC85FDF1E20F85FFADB2BD2</key>
+		<key>DA8BF87317B4E9C665EF1FB7CBB6CB40</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F8BFFC480DB417DDB274AB8074692F41</key>
+		<key>F69CE8E8ED3BA106D32F0EC6DE77A83B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

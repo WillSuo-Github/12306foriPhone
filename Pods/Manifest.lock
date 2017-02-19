@@ -1,18 +1,50 @@
 PODS:
   - Alamofire (4.0.1)
   - FLEX (2.1.1)
-  - SnapKit (3.0.2)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - OMGHTTPURLRQ (3.2.2):
+    - OMGHTTPURLRQ/RQ (= 3.2.2)
+  - OMGHTTPURLRQ/FormURLEncode (3.2.2)
+  - OMGHTTPURLRQ/RQ (3.2.2):
+    - OMGHTTPURLRQ/FormURLEncode
+    - OMGHTTPURLRQ/UserAgent
+  - OMGHTTPURLRQ/UserAgent (3.2.2)
+  - PromiseKit (4.1.7):
+    - PromiseKit/Foundation (= 4.1.7)
+    - PromiseKit/QuartzCore (= 4.1.7)
+    - PromiseKit/UIKit (= 4.1.7)
+  - PromiseKit/CorePromise (4.1.7)
+  - PromiseKit/Foundation (4.1.7):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.1.7):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.1.7):
+    - PromiseKit/CorePromise
+  - SnapKit (3.1.2)
+  - XCGLogger (4.0.0):
+    - XCGLogger/Core (= 4.0.0)
+  - XCGLogger/Core (4.0.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.0)
+  - Alamofire (~> 4.0.0)
   - FLEX (~> 2.1.1)
-  - SnapKit (~> 3.0.2)
+  - FMDB (~> 2.6.2)
+  - OMGHTTPURLRQ (~> 3.2.2)
+  - PromiseKit (~> 4.1.0)
+  - SnapKit
+  - XCGLogger (~> 4.0.0)
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
   FLEX: 27b768fcae23a313a1eb115076d429180ca9b472
-  SnapKit: 2e456761aa92d4d4067a7a5594c18769d451a8ad
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  OMGHTTPURLRQ: edb14c7d28add69226b79d826f930805927a0ffa
+  PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
+  SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
+  XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
 
-PODFILE CHECKSUM: eacb0e9589a796498ae24fe62916748acb9660c8
+PODFILE CHECKSUM: 3024bdac75f5bab2ad41fdaeac6c5a91f0f8b63f
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

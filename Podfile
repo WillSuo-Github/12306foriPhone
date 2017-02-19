@@ -4,8 +4,12 @@ use_frameworks!
 
 target "12306foriPhone" do
     
-pod 'Alamofire', '~> 4.0'
-pod 'SnapKit', '~> 3.0.2'
+pod 'Alamofire', '~> 4.0.0'
+  pod 'FMDB', '~> 2.6.2'
+  pod 'OMGHTTPURLRQ', '~> 3.2.2'
+  pod 'PromiseKit', '~> 4.1.0'
+  pod 'XCGLogger', '~> 4.0.0'
+pod 'SnapKit'
 
 pod 'FLEX', '~> 2.1.1', :configurations => ['Debug']
 

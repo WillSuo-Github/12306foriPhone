@@ -27,8 +27,6 @@ class WSLoginController: UIViewController {
     
     
 //MARK: network
-    
-    
     private func requestLoginInit() {
         myService.preLoginFlow(success: { image in
             
@@ -48,7 +46,23 @@ class WSLoginController: UIViewController {
     }
     @IBAction func loginBtnAction(_ sender: AnyObject) {
         
+        if accountTF.text == "" || pwdTF.text == "" {
+            return
+        }
         
+        if randomCodeView.selectCode == "" {
+            return
+        }
+        
+        let failureHandler = { error in
+            print(error)
+        }
+        
+        let successHandler = {
+            
+        }
+        
+        myService.loginFlow(user: accountTF.text!, passWord: pwdTF.text!, randCodeStr: self.randomCodeView.selectCode, success: successHandler, failure: failureHandler)
     }
 //MARK: lazy
     lazy var randomCodeView: WSLoginRandomCodeView = {

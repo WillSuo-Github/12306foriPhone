@@ -22,7 +22,8 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (4.1.7):
     - PromiseKit/CorePromise
-  - SnapKit (3.1.2)
+  - SnapKit (3.2.0)
+  - SwiftyJSON (3.1.4)
   - XCGLogger (4.0.0):
     - XCGLogger/Core (= 4.0.0)
   - XCGLogger/Core (4.0.0)
@@ -34,6 +35,7 @@ DEPENDENCIES:
   - OMGHTTPURLRQ (~> 3.2.2)
   - PromiseKit (~> 4.1.0)
   - SnapKit
+  - SwiftyJSON
   - XCGLogger (~> 4.0.0)
 
 SPEC CHECKSUMS:
@@ -42,9 +44,10 @@ SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   OMGHTTPURLRQ: edb14c7d28add69226b79d826f930805927a0ffa
   PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
-  SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
 
-PODFILE CHECKSUM: 3024bdac75f5bab2ad41fdaeac6c5a91f0f8b63f
+PODFILE CHECKSUM: 7f32602d18817bb046e39c2f381c58aabc58c3f7
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

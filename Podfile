@@ -9,8 +9,8 @@ pod 'Alamofire', '~> 4.0.0'
   pod 'OMGHTTPURLRQ', '~> 3.2.2'
   pod 'PromiseKit', '~> 4.1.0'
   pod 'XCGLogger', '~> 4.0.0'
-pod 'SnapKit'
-
-pod 'FLEX', '~> 2.1.1', :configurations => ['Debug']
+  pod 'SnapKit'
+  pod 'SwiftyJSON'
+  pod 'FLEX', '~> 2.1.1', :configurations => ['Debug']
 
 end

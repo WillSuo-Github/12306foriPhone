@@ -21,6 +21,8 @@
 		543E48891DBCF65900AB9D08 /* WSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48871DBCF65900AB9D08 /* WSService.swift */; };
 		543E488A1DBCF65900AB9D08 /* WSService+login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48881DBCF65900AB9D08 /* WSService+login.swift */; };
 		543E488D1DBCF67C00AB9D08 /* srca.cer in Resources */ = {isa = PBXBuildFile; fileRef = 543E488C1DBCF67C00AB9D08 /* srca.cer */; };
+		5442F8F21ECD80F900D236D0 /* WSServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F8F11ECD80F900D236D0 /* WSServiceError.swift */; };
+		5442F8F51ECDA3A400D236D0 /* WSUserModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F8F41ECDA3A400D236D0 /* WSUserModule.swift */; };
 		54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */; };
 		54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3321B1DC627DB00796927 /* WSPassCoverView.swift */; };
 		54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */; };
@@ -43,6 +45,8 @@
 		543E48871DBCF65900AB9D08 /* WSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSService.swift; sourceTree = "<group>"; };
 		543E48881DBCF65900AB9D08 /* WSService+login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WSService+login.swift"; sourceTree = "<group>"; };
 		543E488C1DBCF67C00AB9D08 /* srca.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = srca.cer; sourceTree = "<group>"; };
+		5442F8F11ECD80F900D236D0 /* WSServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSServiceError.swift; sourceTree = "<group>"; };
+		5442F8F41ECDA3A400D236D0 /* WSUserModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSUserModule.swift; sourceTree = "<group>"; };
 		54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLoginRandomCodeView.swift; sourceTree = "<group>"; };
 		54B3321B1DC627DB00796927 /* WSPassCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSPassCoverView.swift; sourceTree = "<group>"; };
 		54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRegex.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 		543E48791DBCF5FA00AB9D08 /* login */ = {
 			isa = PBXGroup;
 			children = (
+				5442F8F31ECDA38800D236D0 /* module */,
 				54B332181DC6243200796927 /* controller */,
 				54B332171DC6242B00796927 /* tool */,
 				54B332161DC6242600796927 /* view */,
@@ -144,6 +149,7 @@
 			children = (
 				543E48871DBCF65900AB9D08 /* WSService.swift */,
 				543E48881DBCF65900AB9D08 /* WSService+login.swift */,
+				5442F8F11ECD80F900D236D0 /* WSServiceError.swift */,
 			);
 			name = service;
 			sourceTree = "<group>";
@@ -158,6 +164,14 @@
 			);
 			name = productFile;
 			path = 12306foriPhone;
+			sourceTree = "<group>";
+		};
+		5442F8F31ECDA38800D236D0 /* module */ = {
+			isa = PBXGroup;
+			children = (
+				5442F8F41ECDA3A400D236D0 /* WSUserModule.swift */,
+			);
+			name = module;
 			sourceTree = "<group>";
 		};
 		54B332161DC6242600796927 /* view */ = {
@@ -287,7 +301,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		86853E2B144E2D1E673857F7 /* [CP] Embed Pods Frameworks */ = {
@@ -329,10 +343,12 @@
 			files = (
 				54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */,
 				543E488A1DBCF65900AB9D08 /* WSService+login.swift in Sources */,
+				5442F8F51ECDA3A400D236D0 /* WSUserModule.swift in Sources */,
 				543E48851DBCF64400AB9D08 /* WSNavigationController.swift in Sources */,
 				54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */,
 				543E48771DBCF5F500AB9D08 /* WSOrderController.swift in Sources */,
 				54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */,
+				5442F8F21ECD80F900D236D0 /* WSServiceError.swift in Sources */,
 				543E48821DBCF62000AB9D08 /* WSGrapTicketontroller.swift in Sources */,
 				543E487E1DBCF60A00AB9D08 /* WSLoginController.swift in Sources */,
 				543E48781DBCF5F500AB9D08 /* WSTabBarController.swift in Sources */,
@@ -453,6 +469,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0FA04F8C4CA218F18B06F365 /* Pods-12306foriPhone.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 12306foriPhone/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -467,6 +484,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C0BED7311D0D7C7883A25D1 /* Pods-12306foriPhone.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 12306foriPhone/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

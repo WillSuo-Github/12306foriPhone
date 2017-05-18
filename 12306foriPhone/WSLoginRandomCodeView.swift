@@ -21,14 +21,15 @@ class WSLoginRandomCodeView: UIView {
                 return ""
             }else{
                 var tmpStr = ""
-//                for (index, view) in self.myImageV.subviews.enumerated() {
-//                    if index == 1 {
-//                        tmpStr.append("\(view.frame.origin.x + 40.0),\(view.frame.origin.y)")
-//                    }else{
-//                        tmpStr.append(",\(view.frame.origin.x + 40.0),\(view.frame.origin.y)")
-//                    }
-//                }
-                
+                for (index, view) in self.myImageV.subviews.enumerated() {
+                    let pointX = Int(view.frame.origin.x + 40.0)
+                    let pointY = Int(view.frame.origin.y)
+                    if index == 0 {
+                        tmpStr.append("\(pointX),\(pointY)")
+                    }else{
+                        tmpStr.append(",\(pointX),\(pointY)")
+                    }
+                }
                 return tmpStr
             }
         }
@@ -73,8 +74,8 @@ class WSLoginRandomCodeView: UIView {
         
         let point = transformTouchLocation(locationPoint: gesture.location(in: myImageV))
         print(point as Any)
-        if point != nil {
-            let coverView = WSPassCoverView(frame: CGRect(x: point!.x, y: point!.y, width: 67.3, height: 67.3))
+        if let point = point {
+            let coverView = WSPassCoverView(frame: CGRect(x: point.x, y: point.y, width: 67.3, height: 67.3))
             myImageV.addSubview(coverView)
         }
         
@@ -88,9 +89,9 @@ class WSLoginRandomCodeView: UIView {
         let imageLocation = getTouchIndex(locationPoint: locationPoint)
         if imageLocation.rowIndex != 0 && imageLocation.colIndex != 0 {
             if imageLocation.rowIndex == 1 {
-                return CGPoint(x: Double(imageLocation.colIndex - 1) * (imageWH + 5) + 5.6, y: 42.0)
+                return CGPoint(x: Double(imageLocation.colIndex - 1) * (imageWH + 5) + 4.5, y: 41)
             }else{
-                return CGPoint(x: Double(imageLocation.colIndex - 1) * (imageWH + 5) + 5.6, y: 114.0)
+                return CGPoint(x: Double(imageLocation.colIndex - 1) * (imageWH + 5) + 4.5, y: 113)
             }
         }else{
             return nil

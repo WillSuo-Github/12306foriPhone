@@ -28,11 +28,19 @@ extension WSService {
         }
     }
     
-    func loginFlow(user: String, passWord: String, randCodeStr: String, success: () -> Void, failure: (NSError)->Void) {
+    func loginFlow(user: String, passWord: String, randCodeStr: String, success: @escaping () -> Void, failure: @escaping (NSError)->Void) {
         after(interval: 2).then {
             self.verifyRandomCodeForLogin(randCodeStr)
         }.then { () -> Promise<Void> in
             return self.loginUserWith(user, passWord: passWord, randCodeStr: randCodeStr)
+        }.then { () -> Promise<Void> in
+            return self.initMy12306()
+        }.then { () -> Promise<Void> in
+            return self.getPassengerDTOs(isSubmit: false)
+        }.then { _ in
+            success()
+        }.catch { error in
+            failure(error as NSError)
         }
     }
     
@@ -169,5 +177,7 @@ extension WSService {
             })
         }
     }
+    
+    
     
 }

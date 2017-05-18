@@ -23,6 +23,8 @@
 		543E488D1DBCF67C00AB9D08 /* srca.cer in Resources */ = {isa = PBXBuildFile; fileRef = 543E488C1DBCF67C00AB9D08 /* srca.cer */; };
 		5442F8F21ECD80F900D236D0 /* WSServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F8F11ECD80F900D236D0 /* WSServiceError.swift */; };
 		5442F8F51ECDA3A400D236D0 /* WSUserModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F8F41ECDA3A400D236D0 /* WSUserModule.swift */; };
+		5442F8F71ECDABAD00D236D0 /* WSPassengerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F8F61ECDABAD00D236D0 /* WSPassengerDTO.swift */; };
+		5442F8F91ECDAE1000D236D0 /* WSService+Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F8F81ECDAE1000D236D0 /* WSService+Order.swift */; };
 		54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */; };
 		54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3321B1DC627DB00796927 /* WSPassCoverView.swift */; };
 		54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */; };
@@ -47,6 +49,8 @@
 		543E488C1DBCF67C00AB9D08 /* srca.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = srca.cer; sourceTree = "<group>"; };
 		5442F8F11ECD80F900D236D0 /* WSServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSServiceError.swift; sourceTree = "<group>"; };
 		5442F8F41ECDA3A400D236D0 /* WSUserModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSUserModule.swift; sourceTree = "<group>"; };
+		5442F8F61ECDABAD00D236D0 /* WSPassengerDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSPassengerDTO.swift; sourceTree = "<group>"; };
+		5442F8F81ECDAE1000D236D0 /* WSService+Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WSService+Order.swift"; sourceTree = "<group>"; };
 		54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLoginRandomCodeView.swift; sourceTree = "<group>"; };
 		54B3321B1DC627DB00796927 /* WSPassCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSPassCoverView.swift; sourceTree = "<group>"; };
 		54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRegex.swift; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 			children = (
 				543E48871DBCF65900AB9D08 /* WSService.swift */,
 				543E48881DBCF65900AB9D08 /* WSService+login.swift */,
+				5442F8F81ECDAE1000D236D0 /* WSService+Order.swift */,
 				5442F8F11ECD80F900D236D0 /* WSServiceError.swift */,
 			);
 			name = service;
@@ -170,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				5442F8F41ECDA3A400D236D0 /* WSUserModule.swift */,
+				5442F8F61ECDABAD00D236D0 /* WSPassengerDTO.swift */,
 			);
 			name = module;
 			sourceTree = "<group>";
@@ -343,11 +349,13 @@
 			files = (
 				54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */,
 				543E488A1DBCF65900AB9D08 /* WSService+login.swift in Sources */,
+				5442F8F91ECDAE1000D236D0 /* WSService+Order.swift in Sources */,
 				5442F8F51ECDA3A400D236D0 /* WSUserModule.swift in Sources */,
 				543E48851DBCF64400AB9D08 /* WSNavigationController.swift in Sources */,
 				54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */,
 				543E48771DBCF5F500AB9D08 /* WSOrderController.swift in Sources */,
 				54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */,
+				5442F8F71ECDABAD00D236D0 /* WSPassengerDTO.swift in Sources */,
 				5442F8F21ECD80F900D236D0 /* WSServiceError.swift in Sources */,
 				543E48821DBCF62000AB9D08 /* WSGrapTicketontroller.swift in Sources */,
 				543E487E1DBCF60A00AB9D08 /* WSLoginController.swift in Sources */,

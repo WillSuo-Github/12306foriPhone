@@ -11,4 +11,10 @@ import UIKit
 class WSUserModule {
     static var userName = ""
     static var realName = ""
+    
+    static var passengers = [WSPassengerDTO]()
+    static var selectPassengers = [WSPassengerDTO]()
+    static var isGetPassengersInfo = false
+    
+    static var globalRepeatSubmitToken: String = ""
 }

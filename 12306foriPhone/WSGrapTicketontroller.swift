@@ -1,9 +1,9 @@
 //
 //  WSGrapTicketontroller.swift
-//  1306foriPhone
+//  12306foriPhone
 //
-//  Created by ws on 2016/10/22.
-//  Copyright © 2016年 WS. All rights reserved.
+//  Created by WS on 2017/5/22.
+//  Copyright © 2017年 WS. All rights reserved.
 //
 
 import UIKit
@@ -12,37 +12,23 @@ class WSGrapTicketontroller: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "抢票"
-        view.backgroundColor = .brown
+
+        // Do any additional setup after loading the view.
+    }
+
+//MARK:- tapped response
+    
+    @IBAction func fromStationDidTapped(_ sender: Any) {
         
-        setUpNavItem()
     }
     
-    private func setUpNavItem() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "tab_grap"), landscapeImagePhone: UIImage(named: "tab_grap"), style: .plain, target: self, action: #selector(WSGrapTicketontroller.startGrapTicket))
-    }
-    
-// MARK: action
-    func startGrapTicket() {
+    @IBAction func toStationDidTapped(_ sender: Any) {
         
-        if !WSLogin.checkLogin() {return}
-        print(11111)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+
+
+
+

@@ -16,7 +16,6 @@
 		543E487D1DBCF60A00AB9D08 /* WSLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E487A1DBCF60A00AB9D08 /* WSLogin.swift */; };
 		543E487E1DBCF60A00AB9D08 /* WSLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E487B1DBCF60A00AB9D08 /* WSLoginController.swift */; };
 		543E487F1DBCF60A00AB9D08 /* WSLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 543E487C1DBCF60A00AB9D08 /* WSLoginController.xib */; };
-		543E48821DBCF62000AB9D08 /* WSGrapTicketontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48811DBCF62000AB9D08 /* WSGrapTicketontroller.swift */; };
 		543E48851DBCF64400AB9D08 /* WSNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48841DBCF64400AB9D08 /* WSNavigationController.swift */; };
 		543E48891DBCF65900AB9D08 /* WSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48871DBCF65900AB9D08 /* WSService.swift */; };
 		543E488A1DBCF65900AB9D08 /* WSService+login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48881DBCF65900AB9D08 /* WSService+login.swift */; };
@@ -64,6 +63,11 @@
 		5442F94A1ECEEDAF00D236D0 /* NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F9241ECEEDAF00D236D0 /* NVActivityIndicatorView.swift */; };
 		5442F94B1ECEEDAF00D236D0 /* NVActivityIndicatorViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F9251ECEEDAF00D236D0 /* NVActivityIndicatorViewable.swift */; };
 		5442F94F1ED2B9E200D236D0 /* WSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F94E1ED2B9E200D236D0 /* WSConfig.swift */; };
+		5442F9521ED2D28400D236D0 /* WSGrapTicketontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F9501ED2D28400D236D0 /* WSGrapTicketontroller.swift */; };
+		5442F9531ED2D28400D236D0 /* WSGrapTicketontroller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5442F9511ED2D28400D236D0 /* WSGrapTicketontroller.xib */; };
+		5442F9561ED2D90700D236D0 /* station_name.js in Resources */ = {isa = PBXBuildFile; fileRef = 5442F9551ED2D90700D236D0 /* station_name.js */; };
+		5442F9581ED2D93100D236D0 /* WSStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F9571ED2D93100D236D0 /* WSStation.swift */; };
+		5442F95C1ED2DF7A00D236D0 /* WSStationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F95B1ED2DF7A00D236D0 /* WSStationController.swift */; };
 		54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */; };
 		54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3321B1DC627DB00796927 /* WSPassCoverView.swift */; };
 		54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */; };
@@ -81,7 +85,6 @@
 		543E487A1DBCF60A00AB9D08 /* WSLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLogin.swift; sourceTree = "<group>"; };
 		543E487B1DBCF60A00AB9D08 /* WSLoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLoginController.swift; sourceTree = "<group>"; };
 		543E487C1DBCF60A00AB9D08 /* WSLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSLoginController.xib; sourceTree = "<group>"; };
-		543E48811DBCF62000AB9D08 /* WSGrapTicketontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSGrapTicketontroller.swift; sourceTree = "<group>"; };
 		543E48841DBCF64400AB9D08 /* WSNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSNavigationController.swift; sourceTree = "<group>"; };
 		543E48871DBCF65900AB9D08 /* WSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSService.swift; sourceTree = "<group>"; };
 		543E48881DBCF65900AB9D08 /* WSService+login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WSService+login.swift"; sourceTree = "<group>"; };
@@ -130,6 +133,11 @@
 		5442F9241ECEEDAF00D236D0 /* NVActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorView.swift; sourceTree = "<group>"; };
 		5442F9251ECEEDAF00D236D0 /* NVActivityIndicatorViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorViewable.swift; sourceTree = "<group>"; };
 		5442F94E1ED2B9E200D236D0 /* WSConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSConfig.swift; sourceTree = "<group>"; };
+		5442F9501ED2D28400D236D0 /* WSGrapTicketontroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSGrapTicketontroller.swift; sourceTree = "<group>"; };
+		5442F9511ED2D28400D236D0 /* WSGrapTicketontroller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSGrapTicketontroller.xib; sourceTree = "<group>"; };
+		5442F9551ED2D90700D236D0 /* station_name.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = station_name.js; sourceTree = "<group>"; };
+		5442F9571ED2D93100D236D0 /* WSStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSStation.swift; sourceTree = "<group>"; };
+		5442F95B1ED2DF7A00D236D0 /* WSStationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSStationController.swift; sourceTree = "<group>"; };
 		54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLoginRandomCodeView.swift; sourceTree = "<group>"; };
 		54B3321B1DC627DB00796927 /* WSPassCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSPassCoverView.swift; sourceTree = "<group>"; };
 		54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRegex.swift; sourceTree = "<group>"; };
@@ -215,7 +223,8 @@
 		543E48801DBCF61300AB9D08 /* ticket */ = {
 			isa = PBXGroup;
 			children = (
-				543E48811DBCF62000AB9D08 /* WSGrapTicketontroller.swift */,
+				5442F95A1ED2DEE600D236D0 /* station */,
+				5442F9591ED2DEB000D236D0 /* grapTicked */,
 			);
 			name = ticket;
 			sourceTree = "<group>";
@@ -263,6 +272,7 @@
 		5442F8FC1ECEED6C00D236D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5442F9541ED2D8F100D236D0 /* StationInfo */,
 				5442F8FD1ECEEDAF00D236D0 /* NVActivityIndicatorView */,
 			);
 			name = Resources;
@@ -327,6 +337,32 @@
 				5442F9251ECEEDAF00D236D0 /* NVActivityIndicatorViewable.swift */,
 			);
 			name = other;
+			sourceTree = "<group>";
+		};
+		5442F9541ED2D8F100D236D0 /* StationInfo */ = {
+			isa = PBXGroup;
+			children = (
+				5442F9571ED2D93100D236D0 /* WSStation.swift */,
+				5442F9551ED2D90700D236D0 /* station_name.js */,
+			);
+			name = StationInfo;
+			sourceTree = "<group>";
+		};
+		5442F9591ED2DEB000D236D0 /* grapTicked */ = {
+			isa = PBXGroup;
+			children = (
+				5442F9501ED2D28400D236D0 /* WSGrapTicketontroller.swift */,
+				5442F9511ED2D28400D236D0 /* WSGrapTicketontroller.xib */,
+			);
+			name = grapTicked;
+			sourceTree = "<group>";
+		};
+		5442F95A1ED2DEE600D236D0 /* station */ = {
+			isa = PBXGroup;
+			children = (
+				5442F95B1ED2DF7A00D236D0 /* WSStationController.swift */,
+			);
+			name = station;
 			sourceTree = "<group>";
 		};
 		54B332161DC6242600796927 /* view */ = {
@@ -436,9 +472,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5442F9531ED2D28400D236D0 /* WSGrapTicketontroller.xib in Resources */,
 				543E486D1DBCF5C900AB9D08 /* LaunchScreen.storyboard in Resources */,
 				543E488D1DBCF67C00AB9D08 /* srca.cer in Resources */,
 				543E487F1DBCF60A00AB9D08 /* WSLoginController.xib in Resources */,
+				5442F9561ED2D90700D236D0 /* station_name.js in Resources */,
 				543E486A1DBCF5C900AB9D08 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +542,7 @@
 				5442F92D1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
 				543E488A1DBCF65900AB9D08 /* WSService+login.swift in Sources */,
 				5442F9311ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,
+				5442F95C1ED2DF7A00D236D0 /* WSStationController.swift in Sources */,
 				5442F8F91ECDAE1000D236D0 /* WSService+Order.swift in Sources */,
 				5442F8F51ECDA3A400D236D0 /* WSUserModule.swift in Sources */,
 				5442F94A1ECEEDAF00D236D0 /* NVActivityIndicatorView.swift in Sources */,
@@ -520,6 +559,7 @@
 				5442F9291ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				5442F9421ECEEDAF00D236D0 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
 				5442F9491ECEEDAF00D236D0 /* NVActivityIndicatorShape.swift in Sources */,
+				5442F9521ED2D28400D236D0 /* WSGrapTicketontroller.swift in Sources */,
 				54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */,
 				5442F9361ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				5442F92B1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
@@ -530,7 +570,6 @@
 				5442F9451ECEEDAF00D236D0 /* NVActivityIndicatorAnimationTriangleSkewSpin.swift in Sources */,
 				5442F8F21ECD80F900D236D0 /* WSServiceError.swift in Sources */,
 				5442F93F1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationLineScalePulseOutRapid.swift in Sources */,
-				543E48821DBCF62000AB9D08 /* WSGrapTicketontroller.swift in Sources */,
 				543E487E1DBCF60A00AB9D08 /* WSLoginController.swift in Sources */,
 				5442F9331ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
 				5442F94B1ECEEDAF00D236D0 /* NVActivityIndicatorViewable.swift in Sources */,
@@ -552,6 +591,7 @@
 				5442F9371ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
 				5442F8FB1ECE9E9800D236D0 /* WSHub.swift in Sources */,
 				543E487D1DBCF60A00AB9D08 /* WSLogin.swift in Sources */,
+				5442F9581ED2D93100D236D0 /* WSStation.swift in Sources */,
 				5442F93D1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationLineScaleParty.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

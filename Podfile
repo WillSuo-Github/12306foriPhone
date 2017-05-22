@@ -11,6 +11,8 @@ pod 'Alamofire', '~> 4.0.0'
   pod 'XCGLogger', '~> 4.0.0'
   pod 'SnapKit'
   pod 'SwiftyJSON'
+  pod 'MBProgressHUD'
+  pod 'YYCategories'
   pod 'FLEX', '~> 2.1.1', :configurations => ['Debug']
   
 end

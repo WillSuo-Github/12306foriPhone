@@ -63,6 +63,7 @@
 		5442F9491ECEEDAF00D236D0 /* NVActivityIndicatorShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F9221ECEEDAF00D236D0 /* NVActivityIndicatorShape.swift */; };
 		5442F94A1ECEEDAF00D236D0 /* NVActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F9241ECEEDAF00D236D0 /* NVActivityIndicatorView.swift */; };
 		5442F94B1ECEEDAF00D236D0 /* NVActivityIndicatorViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F9251ECEEDAF00D236D0 /* NVActivityIndicatorViewable.swift */; };
+		5442F94F1ED2B9E200D236D0 /* WSConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F94E1ED2B9E200D236D0 /* WSConfig.swift */; };
 		54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */; };
 		54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3321B1DC627DB00796927 /* WSPassCoverView.swift */; };
 		54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */; };
@@ -128,6 +129,7 @@
 		5442F9231ECEEDAF00D236D0 /* NVActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVActivityIndicatorView.h; sourceTree = "<group>"; };
 		5442F9241ECEEDAF00D236D0 /* NVActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorView.swift; sourceTree = "<group>"; };
 		5442F9251ECEEDAF00D236D0 /* NVActivityIndicatorViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NVActivityIndicatorViewable.swift; sourceTree = "<group>"; };
+		5442F94E1ED2B9E200D236D0 /* WSConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSConfig.swift; sourceTree = "<group>"; };
 		54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLoginRandomCodeView.swift; sourceTree = "<group>"; };
 		54B3321B1DC627DB00796927 /* WSPassCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSPassCoverView.swift; sourceTree = "<group>"; };
 		54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRegex.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 			children = (
 				54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */,
 				5442F8FA1ECE9E9800D236D0 /* WSHub.swift */,
+				5442F94E1ED2B9E200D236D0 /* WSConfig.swift */,
 			);
 			name = utilities;
 			sourceTree = "<group>";
@@ -531,6 +534,7 @@
 				543E487E1DBCF60A00AB9D08 /* WSLoginController.swift in Sources */,
 				5442F9331ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallScaleMultiple.swift in Sources */,
 				5442F94B1ECEEDAF00D236D0 /* NVActivityIndicatorViewable.swift in Sources */,
+				5442F94F1ED2B9E200D236D0 /* WSConfig.swift in Sources */,
 				543E48781DBCF5F500AB9D08 /* WSTabBarController.swift in Sources */,
 				5442F9381ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
 				5442F9431ECEEDAF00D236D0 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,

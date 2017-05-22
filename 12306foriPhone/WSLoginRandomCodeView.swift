@@ -55,10 +55,15 @@ class WSLoginRandomCodeView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    public func clearCode() {
+        myImageV.removeAllSubviews()
+    }
 
     private func setUpSubViews() {
         
         myImageV = UIImageView(frame: self.frame)
+        myImageV.image = UIImage(color: placeHolderColor)!
         myImageV.isUserInteractionEnabled = true
         myImageV.contentMode = .scaleToFill
         addSubview(myImageV)
@@ -80,6 +85,8 @@ class WSLoginRandomCodeView: UIView {
         }
         
     }
+    
+    
     
     
     //转换点击的区域

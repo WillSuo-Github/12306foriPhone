@@ -160,12 +160,12 @@ extension WSService {
         return Promise { fulfill, reject in
             let url = "https://kyfw.12306.cn/otn/index/initMy12306"
             let headers = ["refer": "https://kyfw.12306.cn/otn/login/init"]
-            WSService.manager.request(url, method: .post, headers: headers).responseJSON(completionHandler: { response in
+            WSService.manager.request(url, method: .post, headers: headers).responseString(completionHandler: { response in
                 switch response.result {
                 case .failure(let error):
                     reject(error)
                 case .success(let data):
-                    if let matches = Regex("(var user_name='[^']+')").getMatches(data as! String) {
+                    if let matches = Regex("(var user_name='[^']+')").getMatches(data) {
                         let context = JSContext()!
                         context.evaluateScript(matches[0][0])
                         WSUserModule.realName = context.objectForKeyedSubscript("user_name").toString()

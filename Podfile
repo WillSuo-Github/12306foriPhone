@@ -12,5 +12,5 @@ pod 'Alamofire', '~> 4.0.0'
   pod 'SnapKit'
   pod 'SwiftyJSON'
   pod 'FLEX', '~> 2.1.1', :configurations => ['Debug']
-
+  
 end

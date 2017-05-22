@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class WSLoginController: UIViewController {
+class WSLoginController: UIViewController, NVActivityIndicatorViewable {
     
     var myService = WSService.shardInstance
     
@@ -22,14 +22,18 @@ class WSLoginController: UIViewController {
         super.viewDidLoad()
 
         requestLoginInit()
-
+        
+        
     }
     
     
 //MARK: network
     private func requestLoginInit() {
+
+        self.randomCodeView.showHub()
         myService.preLoginFlow(success: { image in
             
+            self.randomCodeView.hideHub()
             self.randomCodeView.myImage = image
             self.detailView.addSubview(self.randomCodeView)
             self.randomCodeView.snp.makeConstraints({ (make) in
@@ -44,6 +48,10 @@ class WSLoginController: UIViewController {
     @IBAction func closeBtnChick(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func reloadImageButtonDidTapped(_ sender: Any) {
+        requestLoginInit()
+    }
     @IBAction func loginBtnAction(_ sender: AnyObject) {
         
         if accountTF.text == "" || pwdTF.text == "" {
@@ -54,12 +62,15 @@ class WSLoginController: UIViewController {
             return
         }
         
-        let failureHandler = { error in
+        self.startAnimating()
+        let failureHandler = { (error: NSError) in
+            self .stopAnimating()
             print(error)
         }
         
         let successHandler = {
             
+            self .stopAnimating()
         }
         
         myService.loginFlow(user: accountTF.text!, passWord: pwdTF.text!, randCodeStr: self.randomCodeView.selectCode, success: successHandler, failure: failureHandler)

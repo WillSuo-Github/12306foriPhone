@@ -81,6 +81,9 @@
                             <rect key="frame" x="292" y="74" width="58" height="29"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="点击刷新"/>
+                            <connections>
+                                <action selector="reloadImageButtonDidTapped:" destination="-1" eventType="touchUpInside" id="aAK-xj-jSE"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlP-71-OwN">
                             <rect key="frame" x="31" y="106" width="293" height="190"/>
@@ -151,7 +154,7 @@
                 <constraint firstItem="uBT-OH-XFH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="cAd-Oe-hH8"/>
                 <constraint firstItem="4V3-SX-kS6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="krf-oe-KLD"/>
             </constraints>
-            <point key="canvasLocation" x="-849" y="-216"/>
+            <point key="canvasLocation" x="-905" y="-261"/>
         </view>
     </objects>
     <resources>

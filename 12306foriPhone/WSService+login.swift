@@ -20,7 +20,7 @@ extension WSService {
         loginInit().then {dynamicJS -> Promise<Void> in
             return self.requestDynamicJs(dynamicJS, referHeader: ["refer": "https://kyfw.12306.cn/otn/login/init"])
             }.then { (_) -> Promise<UIImage> in
-                return self .getPassCodeForLogin()
+                return self.getPassCodeForLogin()
             }.then { image in
                 success(image)
             }.catch { error in

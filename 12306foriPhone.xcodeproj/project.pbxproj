@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		20C30703EC783338271F318E /* Pods_12306foriPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F636753D1B88E84D44EEF507 /* Pods_12306foriPhone.framework */; };
+		543B43581ED4111600230567 /* WSSearchStationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543B43571ED4111600230567 /* WSSearchStationController.swift */; };
 		543E48631DBCF5C900AB9D08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48621DBCF5C900AB9D08 /* AppDelegate.swift */; };
 		543E486A1DBCF5C900AB9D08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 543E48691DBCF5C900AB9D08 /* Assets.xcassets */; };
 		543E486D1DBCF5C900AB9D08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543E486B1DBCF5C900AB9D08 /* LaunchScreen.storyboard */; };
@@ -75,6 +76,7 @@
 
 /* Begin PBXFileReference section */
 		0FA04F8C4CA218F18B06F365 /* Pods-12306foriPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-12306foriPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-12306foriPhone/Pods-12306foriPhone.debug.xcconfig"; sourceTree = "<group>"; };
+		543B43571ED4111600230567 /* WSSearchStationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSSearchStationController.swift; sourceTree = "<group>"; };
 		543E485F1DBCF5C900AB9D08 /* 12306foriPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 12306foriPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		543E48621DBCF5C900AB9D08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		543E48691DBCF5C900AB9D08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 			isa = PBXGroup;
 			children = (
 				5442F95B1ED2DF7A00D236D0 /* WSStationController.swift */,
+				543B43571ED4111600230567 /* WSSearchStationController.swift */,
 			);
 			name = station;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				543B43581ED4111600230567 /* WSSearchStationController.swift in Sources */,
 				5442F9481ECEEDAF00D236D0 /* NVActivityIndicatorPresenter.swift in Sources */,
 				5442F9441ECEEDAF00D236D0 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */,

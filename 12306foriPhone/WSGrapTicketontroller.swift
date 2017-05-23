@@ -27,11 +27,11 @@ class WSGrapTicketontroller: UIViewController {
 //MARK:- tapped response
     
     @IBAction func fromStationDidTapped(_ sender: Any) {
-        
+        navigationController?.pushViewController(WSStationController(), animated: true)
     }
     
     @IBAction func toStationDidTapped(_ sender: Any) {
-        
+        navigationController?.pushViewController(WSStationController(), animated: true)
     }
     
     func startGrapTicket() {

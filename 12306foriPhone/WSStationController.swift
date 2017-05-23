@@ -10,6 +10,8 @@ import UIKit
 
 class WSStationController: UIViewController {
     
+    
+    var selectBlock: ((WSStation)->())?
     var tableView: UITableView!
     var searchController: UISearchController!
     
@@ -20,32 +22,46 @@ class WSStationController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .red
+    
         configSubViews()
+        registerSearchResultControllerSelectBlock()
     }
 
 
-    //MARK:- layout
+//MARK:- layout
     private func configSubViews() {
         
-        self.tableView = UITableView(frame: self.view.bounds)
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        self.view.addSubview(self.tableView)
+        tableView = UITableView(frame: self.view.bounds)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        view.addSubview(self.tableView)
         
-        
-        self.searchController = UISearchController(searchResultsController: searchResultController)
-        self.searchController.searchResultsUpdater = self;
-        self.searchController.dimsBackgroundDuringPresentation = false;
+        searchController = UISearchController(searchResultsController: searchResultController)
+        searchController.searchResultsUpdater = self;
+        searchController.dimsBackgroundDuringPresentation = false;
         
         searchController.searchBar.sizeToFit()
-        
-        self.searchController.searchBar.backgroundColor = .blue;
-        self.tableView.tableHeaderView = self.searchController.searchBar;
+        tableView.tableHeaderView = self.searchController.searchBar;
     }
     
+//MARK:- action response
+    private func registerSearchResultControllerSelectBlock() {
+        searchResultController.selectBlock = { station in
+            
+            self.didSelectItem(station)
+        }
+    }
+    
+    fileprivate func didSelectItem(_ item: WSStation) {
+        
+        searchController.dismiss(animated: true, completion: nil)
+        searchController.isActive = false
+        if let block = self.selectBlock {
+            block(item)
+        }
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 extension WSStationController: UITableViewDelegate, UITableViewDataSource {
@@ -62,6 +78,8 @@ extension WSStationController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        cell?.textLabel?.textColor = UIColor(hexString: "555555")
+        cell?.textLabel?.font = UIFont.init(name: "Helvetica Neue", size: 14)
         cell?.textLabel?.text = allStationMap[allInitials[indexPath.section]]![indexPath.row].Name
         return cell!
     }
@@ -72,6 +90,11 @@ extension WSStationController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return allInitials[section]
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        didSelectItem(allStationMap[allInitials[indexPath.section]]![indexPath.row])
     }
 }
 

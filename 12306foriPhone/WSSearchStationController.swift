@@ -10,6 +10,7 @@ import UIKit
 
 class WSSearchStationController: UIViewController {
     
+    var selectBlock: ((WSStation)->())?
     var tableView: UITableView!
     
     var filteredStation: [WSStation]? {
@@ -59,4 +60,9 @@ extension WSSearchStationController: UITableViewDelegate, UITableViewDataSource 
         return cell!
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let block = selectBlock {   
+            block(filteredStation![indexPath.row])
+        }
+    }
 }

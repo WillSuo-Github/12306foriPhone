@@ -25,13 +25,22 @@ class WSGrapTicketontroller: UIViewController {
     }
 
 //MARK:- tapped response
-    
-    @IBAction func fromStationDidTapped(_ sender: Any) {
-        navigationController?.pushViewController(WSStationController(), animated: true)
+    @IBAction func fromStationDidTapped(_ sender: UIButton) {
+        navigationController?.hidesBottomBarWhenPushed = true;
+        let stationController = WSStationController()
+        navigationController?.pushViewController(stationController, animated: true)
+        stationController.selectBlock = { station in
+            sender.setTitle(station.Name, for: .normal)
+        }
     }
     
-    @IBAction func toStationDidTapped(_ sender: Any) {
-        navigationController?.pushViewController(WSStationController(), animated: true)
+    @IBAction func toStationDidTapped(_ sender: UIButton) {
+        navigationController?.hidesBottomBarWhenPushed = true;
+        let stationController = WSStationController()
+        navigationController?.pushViewController(stationController, animated: true)
+        stationController.selectBlock = { station in
+            sender.setTitle(station.Name, for: .normal)
+        }
     }
     
     func startGrapTicket() {

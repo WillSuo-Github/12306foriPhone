@@ -47,7 +47,7 @@ class WSStationNameJs {
                 let FirstLetter: String = match[3]
                 var Initials: String = ""
                 if !FirstLetter.isEmpty {
-                    Initials = FirstLetter.substring(to: FirstLetter.index(after: FirstLetter.startIndex))
+                    Initials = FirstLetter.substring(to: FirstLetter.index(after: FirstLetter.startIndex)).uppercased()
                     if !allInitials.contains(Initials) {
                         allInitials.append(Initials)
                     }

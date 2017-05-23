@@ -13,7 +13,15 @@ class WSGrapTicketontroller: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        title = "抢票"
+        view.backgroundColor = .brown
+        
+        setUpNavItem()
+    }
+
+//MARK:- layout
+    private func setUpNavItem() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "tab_grap"), landscapeImagePhone: UIImage(named: "tab_grap"), style: .plain, target: self, action: #selector(WSGrapTicketontroller.startGrapTicket))
     }
 
 //MARK:- tapped response
@@ -24,6 +32,12 @@ class WSGrapTicketontroller: UIViewController {
     
     @IBAction func toStationDidTapped(_ sender: Any) {
         
+    }
+    
+    func startGrapTicket() {
+        
+        if !WSLogin.checkLogin() {return}
+        print(11111)
     }
     
 }

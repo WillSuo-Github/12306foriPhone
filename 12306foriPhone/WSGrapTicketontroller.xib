@@ -10,7 +10,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WSGrapTicketontroller" customModule="_2306foriPhone" customModuleProvider="target">
             <connections>
-                <outlet property="fromStationDidTapped" destination="BkG-Lb-ec3" id="7Oz-e9-Wqx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -43,7 +42,7 @@
                                 <color key="titleColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
-                                <action selector="fromStationDidTapped:" destination="-1" eventType="touchUpInside" id="ftZ-Ys-WLN"/>
+                                <action selector="fromStationDidTapped:" destination="-1" eventType="touchUpInside" id="2rI-6s-NxL"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yG-lt-ozs">
@@ -79,7 +78,7 @@
                 <constraint firstItem="FTX-NN-gRT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="NJ7-gN-hpZ"/>
                 <constraint firstItem="FTX-NN-gRT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pWK-ku-iXa"/>
             </constraints>
-            <point key="canvasLocation" x="-274" y="57"/>
+            <point key="canvasLocation" x="-385" y="-51"/>
         </view>
     </objects>
 </document>

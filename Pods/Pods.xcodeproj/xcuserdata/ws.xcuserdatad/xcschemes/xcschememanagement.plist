@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>JTAppleCalendar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,17 +67,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>0FEF13563ED871470C6BB3EC3563CF08</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>14106A8A1A8C42C8A2D5BDEC29D02768</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>251BAD17812F7EBF6532EACF66F941C3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2D27F271832CB940680352C5D0A5797D</key>
+		<key>2C2A1F7BE920D3881B83452C65678381</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3EE00B20AF659696AE967A9C2E27D0E8</key>
+		<key>3D536B4EB1A5372E31596A2453E528A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,27 +107,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5B2E4E0F4AE2E3A418F360AF80BE88BB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C67DB3EAEBDB14743BFC5D833D696743</key>
+		<key>BFED2E29E95E065400F8846E0231A970</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CD03B639A0E8F3E51186080CB13CE2B5</key>
+		<key>CD9AE64BD0C03F4C8F1377E5BE58C19C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DFA3E7A101432310F1CC88990B513762</key>
+		<key>FC76C8380D8DA3859FD86C8EF5A0E24F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

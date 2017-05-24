@@ -10,7 +10,6 @@ import UIKit
 
 class WSStationController: UIViewController {
     
-    
     var selectBlock: ((WSStation)->())?
     var tableView: UITableView!
     var searchController: UISearchController!

@@ -10,7 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WSGrapTicketontroller" customModule="_2306foriPhone" customModuleProvider="target">
             <connections>
+                <outlet property="timeLabel" destination="FOp-GY-0te" id="RCG-i0-vQD"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weekLabel" destination="pFp-Kf-uXz" id="RKh-Oq-eYS"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -57,18 +59,65 @@
                                 <action selector="toStationDidTapped:" destination="-1" eventType="touchUpInside" id="yr2-N3-neD"/>
                             </connections>
                         </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOg-Bk-9cJ">
+                            <rect key="frame" x="15" y="87" width="220" height="1"/>
+                            <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="VcA-mW-Cjx"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jGq-aq-Lxl">
+                            <rect key="frame" x="0.0" y="96" width="250" height="64"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more" translatesAutoresizingMaskIntoConstraints="NO" id="Wlw-v0-vkH">
+                                    <rect key="frame" x="228" y="25.5" width="7" height="13"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOp-GY-0te">
+                                    <rect key="frame" x="15" y="23" width="37.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFp-Kf-uXz">
+                                    <rect key="frame" x="180.5" y="23" width="37.5" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="2C1-it-TN4"/>
+                                <constraint firstItem="Wlw-v0-vkH" firstAttribute="leading" secondItem="pFp-Kf-uXz" secondAttribute="trailing" constant="10" id="3AO-GR-hjQ"/>
+                                <constraint firstItem="Wlw-v0-vkH" firstAttribute="centerY" secondItem="jGq-aq-Lxl" secondAttribute="centerY" id="Yxe-RD-JNk"/>
+                                <constraint firstAttribute="trailing" secondItem="Wlw-v0-vkH" secondAttribute="trailing" constant="15" id="acg-3C-BZM"/>
+                                <constraint firstItem="FOp-GY-0te" firstAttribute="leading" secondItem="jGq-aq-Lxl" secondAttribute="leading" constant="15" id="upg-vF-c5b"/>
+                                <constraint firstItem="FOp-GY-0te" firstAttribute="centerY" secondItem="jGq-aq-Lxl" secondAttribute="centerY" id="w32-WN-RbY"/>
+                                <constraint firstItem="pFp-Kf-uXz" firstAttribute="centerY" secondItem="Wlw-v0-vkH" secondAttribute="centerY" id="z4m-gE-q7X"/>
+                            </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="BjW-3x-BVl" appends="YES" id="KKM-Vc-cXZ"/>
+                            </connections>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="250" id="4hA-UA-LB0"/>
                         <constraint firstItem="zuy-cn-TyG" firstAttribute="leading" secondItem="FTX-NN-gRT" secondAttribute="leading" constant="15" id="Arc-E6-beG"/>
+                        <constraint firstItem="EOg-Bk-9cJ" firstAttribute="top" secondItem="2yG-lt-ozs" secondAttribute="bottom" constant="15" id="AzJ-KX-0Li"/>
                         <constraint firstItem="2yG-lt-ozs" firstAttribute="centerY" secondItem="zuy-cn-TyG" secondAttribute="centerY" id="BkG-Lb-ec3"/>
+                        <constraint firstItem="jGq-aq-Lxl" firstAttribute="top" secondItem="EOg-Bk-9cJ" secondAttribute="bottom" constant="8" id="HRS-hB-ytm"/>
                         <constraint firstItem="Tqf-4m-Lsa" firstAttribute="leading" secondItem="FTX-NN-gRT" secondAttribute="leading" constant="15" id="NYH-xj-Dsp"/>
                         <constraint firstItem="hrw-eO-9sp" firstAttribute="centerY" secondItem="Tqf-4m-Lsa" secondAttribute="centerY" id="P64-ge-qjM"/>
+                        <constraint firstItem="EOg-Bk-9cJ" firstAttribute="leading" secondItem="FTX-NN-gRT" secondAttribute="leading" constant="15" id="Xof-WX-4mU"/>
+                        <constraint firstAttribute="trailing" secondItem="EOg-Bk-9cJ" secondAttribute="trailing" constant="15" id="eUr-tx-wSd"/>
+                        <constraint firstAttribute="trailing" secondItem="jGq-aq-Lxl" secondAttribute="trailing" id="ffN-vL-l3h"/>
                         <constraint firstItem="zuy-cn-TyG" firstAttribute="top" secondItem="Tqf-4m-Lsa" secondAttribute="bottom" constant="2.5" id="joC-My-B26"/>
                         <constraint firstAttribute="height" constant="300" id="m5w-P3-fNF"/>
                         <constraint firstAttribute="trailing" secondItem="hrw-eO-9sp" secondAttribute="trailing" constant="15" id="nbB-wP-Kbw"/>
                         <constraint firstAttribute="trailing" secondItem="2yG-lt-ozs" secondAttribute="trailing" constant="15" id="uVI-Hg-yle"/>
+                        <constraint firstItem="jGq-aq-Lxl" firstAttribute="leading" secondItem="FTX-NN-gRT" secondAttribute="leading" id="wCW-xe-6n5"/>
                         <constraint firstItem="Tqf-4m-Lsa" firstAttribute="top" secondItem="FTX-NN-gRT" secondAttribute="top" constant="25" id="zII-AO-LUM"/>
                     </constraints>
                 </view>
@@ -78,7 +127,15 @@
                 <constraint firstItem="FTX-NN-gRT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="NJ7-gN-hpZ"/>
                 <constraint firstItem="FTX-NN-gRT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="pWK-ku-iXa"/>
             </constraints>
-            <point key="canvasLocation" x="-385" y="-51"/>
+            <point key="canvasLocation" x="-1090" y="-142"/>
         </view>
+        <tapGestureRecognizer id="BjW-3x-BVl" userLabel="calendarTap">
+            <connections>
+                <action selector="calendarDidTapped:" destination="-1" id="54V-XO-vk7"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
+    <resources>
+        <image name="more" width="7" height="13"/>
+    </resources>
 </document>

@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		20C30703EC783338271F318E /* Pods_12306foriPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F636753D1B88E84D44EEF507 /* Pods_12306foriPhone.framework */; };
 		543B43581ED4111600230567 /* WSSearchStationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543B43571ED4111600230567 /* WSSearchStationController.swift */; };
+		543B435C1ED53BEE00230567 /* WSCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543B435A1ED53BEE00230567 /* WSCalendarViewController.swift */; };
+		543B435D1ED53BEE00230567 /* WSCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 543B435B1ED53BEE00230567 /* WSCalendarViewController.xib */; };
+		543B435F1ED5689B00230567 /* WSCalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543B435E1ED5689B00230567 /* WSCalendarHeaderView.swift */; };
+		543B43641ED56C3500230567 /* WSCalendarHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543B43621ED56C3500230567 /* WSCalendarHeaderCell.swift */; };
+		543B43651ED56C3500230567 /* WSCalendarHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 543B43631ED56C3500230567 /* WSCalendarHeaderCell.xib */; };
 		543E48631DBCF5C900AB9D08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48621DBCF5C900AB9D08 /* AppDelegate.swift */; };
 		543E486A1DBCF5C900AB9D08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 543E48691DBCF5C900AB9D08 /* Assets.xcassets */; };
 		543E486D1DBCF5C900AB9D08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543E486B1DBCF5C900AB9D08 /* LaunchScreen.storyboard */; };
@@ -77,6 +82,11 @@
 /* Begin PBXFileReference section */
 		0FA04F8C4CA218F18B06F365 /* Pods-12306foriPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-12306foriPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-12306foriPhone/Pods-12306foriPhone.debug.xcconfig"; sourceTree = "<group>"; };
 		543B43571ED4111600230567 /* WSSearchStationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSSearchStationController.swift; sourceTree = "<group>"; };
+		543B435A1ED53BEE00230567 /* WSCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarViewController.swift; sourceTree = "<group>"; };
+		543B435B1ED53BEE00230567 /* WSCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSCalendarViewController.xib; sourceTree = "<group>"; };
+		543B435E1ED5689B00230567 /* WSCalendarHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarHeaderView.swift; sourceTree = "<group>"; };
+		543B43621ED56C3500230567 /* WSCalendarHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarHeaderCell.swift; sourceTree = "<group>"; };
+		543B43631ED56C3500230567 /* WSCalendarHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSCalendarHeaderCell.xib; sourceTree = "<group>"; };
 		543E485F1DBCF5C900AB9D08 /* 12306foriPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 12306foriPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		543E48621DBCF5C900AB9D08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		543E48691DBCF5C900AB9D08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,6 +178,34 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		543B43591ED53BD400230567 /* calendar */ = {
+			isa = PBXGroup;
+			children = (
+				543B43611ED56C0700230567 /* view */,
+				543B43601ED56C0000230567 /* controller */,
+			);
+			name = calendar;
+			sourceTree = "<group>";
+		};
+		543B43601ED56C0000230567 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				543B435A1ED53BEE00230567 /* WSCalendarViewController.swift */,
+				543B435B1ED53BEE00230567 /* WSCalendarViewController.xib */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		543B43611ED56C0700230567 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				543B435E1ED5689B00230567 /* WSCalendarHeaderView.swift */,
+				543B43621ED56C3500230567 /* WSCalendarHeaderCell.swift */,
+				543B43631ED56C3500230567 /* WSCalendarHeaderCell.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		543E48561DBCF5C900AB9D08 = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +263,7 @@
 		543E48801DBCF61300AB9D08 /* ticket */ = {
 			isa = PBXGroup;
 			children = (
+				543B43591ED53BD400230567 /* calendar */,
 				5442F95A1ED2DEE600D236D0 /* station */,
 				5442F9591ED2DEB000D236D0 /* grapTicked */,
 			);
@@ -476,10 +515,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				5442F9531ED2D28400D236D0 /* WSGrapTicketontroller.xib in Resources */,
+				543B435D1ED53BEE00230567 /* WSCalendarViewController.xib in Resources */,
 				543E486D1DBCF5C900AB9D08 /* LaunchScreen.storyboard in Resources */,
 				543E488D1DBCF67C00AB9D08 /* srca.cer in Resources */,
 				543E487F1DBCF60A00AB9D08 /* WSLoginController.xib in Resources */,
 				5442F9561ED2D90700D236D0 /* station_name.js in Resources */,
+				543B43651ED56C3500230567 /* WSCalendarHeaderCell.xib in Resources */,
 				543E486A1DBCF5C900AB9D08 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,8 +586,10 @@
 				54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */,
 				5442F92D1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallPulse.swift in Sources */,
 				543E488A1DBCF65900AB9D08 /* WSService+login.swift in Sources */,
+				543B435C1ED53BEE00230567 /* WSCalendarViewController.swift in Sources */,
 				5442F9311ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,
 				5442F95C1ED2DF7A00D236D0 /* WSStationController.swift in Sources */,
+				543B435F1ED5689B00230567 /* WSCalendarHeaderView.swift in Sources */,
 				5442F8F91ECDAE1000D236D0 /* WSService+Order.swift in Sources */,
 				5442F8F51ECDA3A400D236D0 /* WSUserModule.swift in Sources */,
 				5442F94A1ECEEDAF00D236D0 /* NVActivityIndicatorView.swift in Sources */,
@@ -566,6 +609,7 @@
 				5442F9521ED2D28400D236D0 /* WSGrapTicketontroller.swift in Sources */,
 				54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */,
 				5442F9361ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
+				543B43641ED56C3500230567 /* WSCalendarHeaderCell.swift in Sources */,
 				5442F92B1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				5442F9471ECEEDAF00D236D0 /* NVActivityIndicatorAnimationDelegate.swift in Sources */,
 				5442F9391ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallZigZagDeflect.swift in Sources */,

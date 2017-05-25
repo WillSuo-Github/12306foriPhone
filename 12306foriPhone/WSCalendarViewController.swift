@@ -11,7 +11,6 @@ import JTAppleCalendar
 
 class WSCalendarViewController: UIViewController {
 
-    var calendarView: JTAppleCalendarView!
     @IBOutlet weak var headerView: UIView!
     
 //MARK:- life cycle
@@ -26,6 +25,11 @@ class WSCalendarViewController: UIViewController {
 //MARK:- layout
     private func configSubViews() {
         
+        configHeaderView()
+        configCalendarView()
+    }
+    
+    private func configHeaderView() {
         let calendarHeaderView = WSCalendarHeaderView()
         headerView.addSubview(calendarHeaderView)
         calendarHeaderView.snp.makeConstraints { make in
@@ -33,9 +37,14 @@ class WSCalendarViewController: UIViewController {
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    private func configCalendarView() {
+        view.addSubview(calendarView)
         
     }
-
+    
+//MARK:- lazy
+    private var calendarView: JTAppleCalendarView = {
+        let tmp = JTAppleCalendarView()
+        return tmp
+    }()
 }

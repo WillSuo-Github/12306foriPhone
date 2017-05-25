@@ -11,8 +11,15 @@ import UIKit
 class WSCalendarHeaderView: UIView {
     
     private var collectionView: UICollectionView!
-    private var layout: UICollectionViewFlowLayout!
-
+    
+    fileprivate var layout: WSCalendarHeaderLayout = WSCalendarHeaderLayout()
+    var monthIndex: Int!
+    var yearIndex: Int {
+        get {
+            return Int(yearLabel.text!)!
+        }
+    }
+    
 //MARK:- life cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,33 +33,55 @@ class WSCalendarHeaderView: UIView {
     
 //MARK:- layout
     private func configSubViews() {
-        layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 0
         
+        backgroundColor = UIColor(hexString: "2D3037")
+        
+        self.addSubview(yearLabel)
+        yearLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(self).offset(10)
+        }
+    
         collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
         self.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+            make.top.equalTo(yearLabel.snp.bottom).offset(10)
+            make.left.bottom.right.equalToSuperview()
         }
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "WSCalendarHeaderCell", bundle: nil), forCellWithReuseIdentifier: "cell")
-        
-        
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        let itemWidth = (self.width - 50) / 2
+        let itemWidth = self.width / 2
         layout.itemSize = CGSize(width: itemWidth, height: self.height)
         collectionView.collectionViewLayout = layout
     }
     
+    fileprivate func scrollToIndex(_ index: Int) {
+        
+        let position = CGPoint(x: (CGFloat(index) + 0.5) * layout.itemSize.width, y: collectionView.contentOffset.y)
+        collectionView.setContentOffset(position, animated: true)
+        
+        monthIndex = index % 12
+    }
+    
 //MARK:- lazy
-    var sourceArr: Array = {
+    fileprivate var sourceArr: Array = {
         return ["十二月", "一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月", "一月"]
+    }()
+    
+    fileprivate var yearLabel: UILabel = {
+        let tmp = UILabel()
+        tmp.font = UIFont.systemFont(ofSize: 15)
+        tmp.textColor = UIColor(hexString: "bbbbbb")
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy"
+        tmp.text = formatter.string(from: Date())
+        return tmp
     }()
 }
 
@@ -74,13 +103,28 @@ extension WSCalendarHeaderView: UICollectionViewDelegateFlowLayout, UICollection
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
+        var nowYear = Int(yearLabel.text!)!
         if scrollView.contentSize.width < scrollView.contentOffset.x + scrollView.width {
             scrollView.contentOffset.x = 0
+            nowYear += 1
+            yearLabel.text = ("\(nowYear)")
         }
         
         if scrollView.contentOffset.x < 0 {
             scrollView.contentOffset.x = scrollView.contentSize.width - scrollView.width
+            nowYear -= 1
+            yearLabel.text = ("\(nowYear)")
         }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let itemIndex: Int = Int(scrollView.contentOffset.x / layout.itemSize.width)
+        scrollToIndex(itemIndex)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, targetContentOffsetForProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint {
+        let itemIndex: Int = Int(proposedContentOffset.x / layout.itemSize.width)
+        return CGPoint(x: (CGFloat(itemIndex) + 0.5) * layout.itemSize.width, y: proposedContentOffset.y)
     }
 }
 

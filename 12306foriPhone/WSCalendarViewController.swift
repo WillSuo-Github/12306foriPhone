@@ -15,6 +15,8 @@ class WSCalendarViewController: UIViewController {
     
     @IBOutlet weak var calendarView: CVCalendarView!
     var currentCalendar: Calendar?
+    var calendarHeaderView = WSCalendarHeaderView()
+    
     
     struct Color {
         static let backgroundColor = UIColor(hexString: "2D3037")
@@ -35,6 +37,11 @@ class WSCalendarViewController: UIViewController {
         configSubViews()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+    }
+    
     
 //MARK:- layout
     private func configSubViews() {
@@ -53,7 +60,6 @@ class WSCalendarViewController: UIViewController {
     }
     
     private func configHeaderView() {
-        let calendarHeaderView = WSCalendarHeaderView()
         headerView.addSubview(calendarHeaderView)
         calendarHeaderView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
@@ -87,7 +93,9 @@ extension WSCalendarViewController: CVCalendarViewDelegate {
         return .sunday
     }
     
-    // MARK: Optional methods
+    func didShowNextMonthView(_ date: Date) {
+        
+    }
     
     func calendar() -> Calendar? {
         return currentCalendar

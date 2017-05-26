@@ -11,9 +11,9 @@ import UIKit
 class WSCalendarHeaderView: UIView {
     
     private var collectionView: UICollectionView!
-    
     fileprivate var layout: WSCalendarHeaderLayout = WSCalendarHeaderLayout()
-    var monthIndex: Int!
+    
+    public var monthIndex: Int!
     var yearIndex: Int {
         get {
             return Int(yearLabel.text!)!
@@ -25,6 +25,13 @@ class WSCalendarHeaderView: UIView {
         super.init(frame: frame)
         
         configSubViews()
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "MM"
+            let month = formatter.string(from: Date())
+            self.scrollToIndex(Int(month)! - 1, animated: false)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -32,6 +39,9 @@ class WSCalendarHeaderView: UIView {
     }
     
 //MARK:- layout
+    
+    
+    
     private func configSubViews() {
         
         backgroundColor = UIColor(hexString: "2D3037")
@@ -61,10 +71,10 @@ class WSCalendarHeaderView: UIView {
         collectionView.collectionViewLayout = layout
     }
     
-    fileprivate func scrollToIndex(_ index: Int) {
+    public func scrollToIndex(_ index: Int, animated: Bool = true) {
         
         let position = CGPoint(x: (CGFloat(index) + 0.5) * layout.itemSize.width, y: collectionView.contentOffset.y)
-        collectionView.setContentOffset(position, animated: true)
+        collectionView.setContentOffset(position, animated: animated)
         
         monthIndex = index % 12
     }

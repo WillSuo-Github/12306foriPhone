@@ -125,10 +125,6 @@ extension WSCalendarViewController: CVCalendarViewDelegate {
         return false
     }
     
-    func presentedDateUpdated(_ date: CVDate) {
-        
-    }
-    
     func topMarker(shouldDisplayOnDayView dayView: CVCalendarDayView) -> Bool {
         return false
     }

@@ -17,7 +17,6 @@ class WSCalendarHeaderCell: UICollectionViewCell {
             monthLabel.text = titleText
         }
     }
-    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,3 +24,4 @@ class WSCalendarHeaderCell: UICollectionViewCell {
     }
 
 }
+

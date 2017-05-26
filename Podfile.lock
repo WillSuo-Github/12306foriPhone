@@ -1,10 +1,10 @@
 PODS:
   - Alamofire (4.0.1)
+  - CVCalendar (1.5.0)
   - FLEX (2.1.1)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
-  - JTAppleCalendar (7.0.2)
   - MBProgressHUD (1.0.0)
   - OMGHTTPURLRQ (3.2.2):
     - OMGHTTPURLRQ/RQ (= 3.2.2)
@@ -35,9 +35,9 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0.0)
+  - CVCalendar
   - FLEX (~> 2.1.1)
   - FMDB (~> 2.6.2)
-  - JTAppleCalendar
   - MBProgressHUD
   - OMGHTTPURLRQ (~> 3.2.2)
   - PromiseKit (~> 4.1.0)
@@ -48,9 +48,9 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  CVCalendar: 5d51a7bda1b9439b612de69d86a91a73befa1936
   FLEX: 27b768fcae23a313a1eb115076d429180ca9b472
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  JTAppleCalendar: c14685634064ef67a68209548ff3443208af48a3
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   OMGHTTPURLRQ: edb14c7d28add69226b79d826f930805927a0ffa
   PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
@@ -59,6 +59,6 @@ SPEC CHECKSUMS:
   XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
 
-PODFILE CHECKSUM: b44082e8234f5855ed904a70c3a422822315bb0a
+PODFILE CHECKSUM: 4ef3386580c446ac33eb2d67d59c2c88e9e7626a
 
 COCOAPODS: 1.2.1

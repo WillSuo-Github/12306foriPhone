@@ -40,6 +40,16 @@ class WSCalendarHeaderView: UIView {
     
 //MARK:- layout
     
+    public func scrollToNextMonth() {
+        monthIndex += 1
+        scrollToIndex(monthIndex, true)
+    }
+    
+    public func srollToPreviousMonth() {
+        monthIndex -= 1
+        scrollToIndex(monthIndex, true)
+    }
+    
     private func configSubViews() {
         
         backgroundColor = UIColor(hexString: "2D3037")
@@ -59,7 +69,7 @@ class WSCalendarHeaderView: UIView {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "WSCalendarHeaderCell", bundle: nil), forCellWithReuseIdentifier: "cell")
-        collectionView.isUserInteractionEnabled = false
+//        collectionView.isUserInteractionEnabled = false
     }
     
     override func layoutSubviews() {
@@ -70,7 +80,7 @@ class WSCalendarHeaderView: UIView {
         collectionView.collectionViewLayout = layout
     }
     
-    func scrollToIndex(_ index: Int,_ animated: Bool = true) {
+    fileprivate func scrollToIndex(_ index: Int,_ animated: Bool = true) {
         
         let position = CGPoint(x: (CGFloat(index) + 0.5) * layout.itemSize.width, y: collectionView.contentOffset.y)
         collectionView.setContentOffset(position, animated: animated)
@@ -78,15 +88,6 @@ class WSCalendarHeaderView: UIView {
         monthIndex = index % 12
     }
     
-    public func scrollToNextMonth() {
-        monthIndex += 1
-        scrollToIndex(monthIndex, true)
-    }
-    
-    public func srollToPreviousMonth() {
-        monthIndex -= 1
-        scrollToIndex(monthIndex, true)
-    }
     
 //MARK:- lazy
     fileprivate var sourceArr: Array = {
@@ -134,6 +135,7 @@ extension WSCalendarHeaderView: UICollectionViewDelegateFlowLayout, UICollection
             nowYear -= 1
             yearLabel.text = ("\(nowYear)")
         }
+        print("\(Int(scrollView.contentOffset.x / layout.itemSize.width)) 月")
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

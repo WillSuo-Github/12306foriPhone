@@ -52,7 +52,7 @@ class WSCalendarViewController: UIViewController {
     }
     
     private func configValue() {
-        let timeZoneBias = 480 // (UTC+08:00)
+        let timeZoneBias = 480
         currentCalendar = Calendar.init(identifier: .gregorian)
         if let timeZone = TimeZone.init(secondsFromGMT: -timeZoneBias * 60) {
             currentCalendar?.timeZone = timeZone
@@ -94,7 +94,11 @@ extension WSCalendarViewController: CVCalendarViewDelegate {
     }
     
     func didShowNextMonthView(_ date: Date) {
-        
+        calendarHeaderView.scrollToNextMonth()
+    }
+    
+    func didShowPreviousMonthView(_ date: Date) {
+        calendarHeaderView.srollToPreviousMonth()
     }
     
     func calendar() -> Calendar? {
@@ -201,7 +205,8 @@ extension WSCalendarViewController: CVCalendarViewDelegate {
     }
     
     func disableScrollingBeforeDate() -> Date {
-        return Date()
+        print()
+        return Date(timeIntervalSinceNow: -86400 * 2)
     }
     
     func maxSelectableRange() -> Int {

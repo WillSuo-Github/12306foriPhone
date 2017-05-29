@@ -13,7 +13,7 @@ class WSCalendarHeaderView: UIView {
     private var collectionView: UICollectionView!
     fileprivate var layout: WSCalendarHeaderLayout = WSCalendarHeaderLayout()
     
-    public var monthIndex: Int!
+    public var monthIndex: Int = 0
     var yearIndex: Int {
         get {
             return Int(yearLabel.text!)!
@@ -30,7 +30,7 @@ class WSCalendarHeaderView: UIView {
             let formatter = DateFormatter()
             formatter.dateFormat = "MM"
             let month = formatter.string(from: Date())
-            self.scrollToIndex(Int(month)! - 1, animated: false)
+            self.scrollToIndex(Int(month)! - 1, false)
         }
     }
     
@@ -39,8 +39,6 @@ class WSCalendarHeaderView: UIView {
     }
     
 //MARK:- layout
-    
-    
     
     private func configSubViews() {
         
@@ -61,6 +59,7 @@ class WSCalendarHeaderView: UIView {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "WSCalendarHeaderCell", bundle: nil), forCellWithReuseIdentifier: "cell")
+        collectionView.isUserInteractionEnabled = false
     }
     
     override func layoutSubviews() {
@@ -71,12 +70,22 @@ class WSCalendarHeaderView: UIView {
         collectionView.collectionViewLayout = layout
     }
     
-    public func scrollToIndex(_ index: Int, animated: Bool = true) {
+    func scrollToIndex(_ index: Int,_ animated: Bool = true) {
         
         let position = CGPoint(x: (CGFloat(index) + 0.5) * layout.itemSize.width, y: collectionView.contentOffset.y)
         collectionView.setContentOffset(position, animated: animated)
         
         monthIndex = index % 12
+    }
+    
+    public func scrollToNextMonth() {
+        monthIndex += 1
+        scrollToIndex(monthIndex, true)
+    }
+    
+    public func srollToPreviousMonth() {
+        monthIndex -= 1
+        scrollToIndex(monthIndex, true)
     }
     
 //MARK:- lazy

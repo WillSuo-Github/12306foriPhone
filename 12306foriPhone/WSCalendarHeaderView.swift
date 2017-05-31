@@ -13,6 +13,8 @@ class WSCalendarHeaderView: UIView {
     private var collectionView: UICollectionView!
     fileprivate var layout: WSCalendarHeaderLayout = WSCalendarHeaderLayout()
     
+    
+    /// (0...11)
     public var monthIndex: Int = 0
     var yearIndex: Int {
         get {
@@ -69,7 +71,7 @@ class WSCalendarHeaderView: UIView {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(UINib(nibName: "WSCalendarHeaderCell", bundle: nil), forCellWithReuseIdentifier: "cell")
-//        collectionView.isUserInteractionEnabled = false
+        collectionView.isUserInteractionEnabled = false
     }
     
     override func layoutSubviews() {
@@ -135,7 +137,6 @@ extension WSCalendarHeaderView: UICollectionViewDelegateFlowLayout, UICollection
             nowYear -= 1
             yearLabel.text = ("\(nowYear)")
         }
-        print("\(Int(scrollView.contentOffset.x / layout.itemSize.width)) 月")
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {

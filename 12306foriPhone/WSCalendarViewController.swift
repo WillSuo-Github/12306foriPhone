@@ -205,8 +205,7 @@ extension WSCalendarViewController: CVCalendarViewDelegate {
     }
     
     func disableScrollingBeforeDate() -> Date {
-        print()
-        return Date(timeIntervalSinceNow: -86400 * 2)
+        return Date(timeIntervalSinceNow: -86400)
     }
     
     func maxSelectableRange() -> Int {

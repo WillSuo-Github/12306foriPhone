@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12120"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13122.17"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WSCalendarViewController" customModule="_2306foriPhone" customModuleProvider="target">
             <connections>
-                <outlet property="calendarView" destination="E0u-3E-rc6" id="6zR-3p-9XZ"/>
                 <outlet property="headerView" destination="Y3Q-Qv-LVM" id="xS0-SL-1uQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -27,25 +27,11 @@
                         <constraint firstAttribute="height" constant="70" id="lu9-al-VUR"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E0u-3E-rc6" customClass="CVCalendarView" customModule="CVCalendar">
-                    <rect key="frame" x="0.0" y="150" width="375" height="400"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="400" id="bYA-2V-Vim"/>
-                    </constraints>
-                    <connections>
-                        <outlet property="calendarAppearanceDelegate" destination="-1" id="i8A-11-AiL"/>
-                        <outlet property="calendarDelegate" destination="-1" id="fni-2n-Myq"/>
-                    </connections>
-                </view>
             </subviews>
             <color key="backgroundColor" red="0.1764705882352941" green="0.18823529411764706" blue="0.21568627450980393" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="E0u-3E-rc6" secondAttribute="trailing" id="BNR-sh-fYp"/>
                 <constraint firstAttribute="trailing" secondItem="Y3Q-Qv-LVM" secondAttribute="trailing" id="IIa-pv-6GC"/>
-                <constraint firstItem="E0u-3E-rc6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="eQb-x2-5we"/>
                 <constraint firstItem="Y3Q-Qv-LVM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fm9-5L-VRC"/>
-                <constraint firstItem="E0u-3E-rc6" firstAttribute="top" secondItem="Y3Q-Qv-LVM" secondAttribute="bottom" id="if0-RH-DP8"/>
                 <constraint firstItem="Y3Q-Qv-LVM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="zL4-jL-QHl"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>

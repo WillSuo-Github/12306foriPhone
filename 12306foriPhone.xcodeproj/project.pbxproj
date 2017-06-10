@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		20C30703EC783338271F318E /* Pods_12306foriPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F636753D1B88E84D44EEF507 /* Pods_12306foriPhone.framework */; };
+		54279D821EEBE21E00300AFF /* WSCalendarCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54279D7B1EEBE21E00300AFF /* WSCalendarCollectionLayout.swift */; };
+		54279D831EEBE21E00300AFF /* WSCalendarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54279D7C1EEBE21E00300AFF /* WSCalendarConfig.swift */; };
+		54279D841EEBE21E00300AFF /* WSCalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54279D7D1EEBE21E00300AFF /* WSCalendarDate.swift */; };
+		54279D851EEBE21E00300AFF /* WSCalendarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54279D7E1EEBE21E00300AFF /* WSCalendarItem.swift */; };
+		54279D861EEBE21E00300AFF /* WSCalendarTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54279D7F1EEBE21E00300AFF /* WSCalendarTool.swift */; };
+		54279D871EEBE21E00300AFF /* WSCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54279D801EEBE21E00300AFF /* WSCalendarView.swift */; };
+		54279D881EEBE21E00300AFF /* WSCalendarViewModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54279D811EEBE21E00300AFF /* WSCalendarViewModule.swift */; };
 		543B43581ED4111600230567 /* WSSearchStationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543B43571ED4111600230567 /* WSSearchStationController.swift */; };
 		543B435C1ED53BEE00230567 /* WSCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543B435A1ED53BEE00230567 /* WSCalendarViewController.swift */; };
 		543B435D1ED53BEE00230567 /* WSCalendarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 543B435B1ED53BEE00230567 /* WSCalendarViewController.xib */; };
@@ -82,6 +89,13 @@
 
 /* Begin PBXFileReference section */
 		0FA04F8C4CA218F18B06F365 /* Pods-12306foriPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-12306foriPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-12306foriPhone/Pods-12306foriPhone.debug.xcconfig"; sourceTree = "<group>"; };
+		54279D7B1EEBE21E00300AFF /* WSCalendarCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarCollectionLayout.swift; sourceTree = "<group>"; };
+		54279D7C1EEBE21E00300AFF /* WSCalendarConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarConfig.swift; sourceTree = "<group>"; };
+		54279D7D1EEBE21E00300AFF /* WSCalendarDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarDate.swift; sourceTree = "<group>"; };
+		54279D7E1EEBE21E00300AFF /* WSCalendarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarItem.swift; sourceTree = "<group>"; };
+		54279D7F1EEBE21E00300AFF /* WSCalendarTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarTool.swift; sourceTree = "<group>"; };
+		54279D801EEBE21E00300AFF /* WSCalendarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarView.swift; sourceTree = "<group>"; };
+		54279D811EEBE21E00300AFF /* WSCalendarViewModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarViewModule.swift; sourceTree = "<group>"; };
 		543B43571ED4111600230567 /* WSSearchStationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSSearchStationController.swift; sourceTree = "<group>"; };
 		543B435A1ED53BEE00230567 /* WSCalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarViewController.swift; sourceTree = "<group>"; };
 		543B435B1ED53BEE00230567 /* WSCalendarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSCalendarViewController.xib; sourceTree = "<group>"; };
@@ -178,6 +192,21 @@
 				7C0BED7311D0D7C7883A25D1 /* Pods-12306foriPhone.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		54279D7A1EEBE21E00300AFF /* WSCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				54279D7B1EEBE21E00300AFF /* WSCalendarCollectionLayout.swift */,
+				54279D7C1EEBE21E00300AFF /* WSCalendarConfig.swift */,
+				54279D7D1EEBE21E00300AFF /* WSCalendarDate.swift */,
+				54279D7E1EEBE21E00300AFF /* WSCalendarItem.swift */,
+				54279D7F1EEBE21E00300AFF /* WSCalendarTool.swift */,
+				54279D801EEBE21E00300AFF /* WSCalendarView.swift */,
+				54279D811EEBE21E00300AFF /* WSCalendarViewModule.swift */,
+			);
+			name = WSCalendar;
+			path = ../../WSCalendar/WSCalendar;
 			sourceTree = "<group>";
 		};
 		543B43591ED53BD400230567 /* calendar */ = {
@@ -316,6 +345,7 @@
 		5442F8FC1ECEED6C00D236D0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				54279D7A1EEBE21E00300AFF /* WSCalendar */,
 				5442F9541ED2D8F100D236D0 /* StationInfo */,
 				5442F8FD1ECEEDAF00D236D0 /* NVActivityIndicatorView */,
 			);
@@ -584,6 +614,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				543B43581ED4111600230567 /* WSSearchStationController.swift in Sources */,
+				54279D821EEBE21E00300AFF /* WSCalendarCollectionLayout.swift in Sources */,
 				5442F9481ECEEDAF00D236D0 /* NVActivityIndicatorPresenter.swift in Sources */,
 				5442F9441ECEEDAF00D236D0 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
 				54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */,
@@ -593,7 +624,10 @@
 				5442F9311ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,
 				5442F95C1ED2DF7A00D236D0 /* WSStationController.swift in Sources */,
 				543B435F1ED5689B00230567 /* WSCalendarHeaderView.swift in Sources */,
+				54279D831EEBE21E00300AFF /* WSCalendarConfig.swift in Sources */,
+				54279D851EEBE21E00300AFF /* WSCalendarItem.swift in Sources */,
 				5442F8F91ECDAE1000D236D0 /* WSService+Order.swift in Sources */,
+				54279D841EEBE21E00300AFF /* WSCalendarDate.swift in Sources */,
 				5442F8F51ECDA3A400D236D0 /* WSUserModule.swift in Sources */,
 				5442F94A1ECEEDAF00D236D0 /* NVActivityIndicatorView.swift in Sources */,
 				543E48851DBCF64400AB9D08 /* WSNavigationController.swift in Sources */,
@@ -605,6 +639,7 @@
 				5442F9281ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				5442F93C1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
 				5442F9401ECEEDAF00D236D0 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
+				54279D871EEBE21E00300AFF /* WSCalendarView.swift in Sources */,
 				5451D1101ED6B57600725F27 /* WSCalendarHeaderLayout.swift in Sources */,
 				543E48771DBCF5F500AB9D08 /* WSOrderController.swift in Sources */,
 				5442F9291ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
@@ -629,7 +664,9 @@
 				543E48781DBCF5F500AB9D08 /* WSTabBarController.swift in Sources */,
 				5442F9381ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallZigZag.swift in Sources */,
 				5442F9431ECEEDAF00D236D0 /* NVActivityIndicatorAnimationSemiCircleSpin.swift in Sources */,
+				54279D881EEBE21E00300AFF /* WSCalendarViewModule.swift in Sources */,
 				543E48891DBCF65900AB9D08 /* WSService.swift in Sources */,
+				54279D861EEBE21E00300AFF /* WSCalendarTool.swift in Sources */,
 				5442F92C1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallGridPulse.swift in Sources */,
 				5442F92F1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				5442F9271ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class WSGrapTicketontroller: UIViewController {
 
@@ -14,6 +15,8 @@ class WSGrapTicketontroller: UIViewController {
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var weekLabel: UILabel!
+    
+    private let calendarVc = WSCalendarViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +35,8 @@ class WSGrapTicketontroller: UIViewController {
         timeLabel.text = dateFormatter.string(from: leaveDate)
         dateFormatter.dateFormat = "EEEE"
         weekLabel.text = dateFormatter.string(from: leaveDate)
+        
+        
     }
     
     private func configNavItem() {
@@ -62,7 +67,7 @@ class WSGrapTicketontroller: UIViewController {
     
     @IBAction func calendarDidTapped(_ sender: Any) {
     
-        navigationController?.pushViewController(WSCalendarViewController(), animated: true)
+        navigationController?.pushViewController(calendarVc, animated: true)
     }
     
     func startGrapTicket() {

@@ -12,9 +12,11 @@ class WSCalendarViewController: UIViewController {
 
     @IBOutlet weak var headerView: UIView!
     
-    var currentCalendar: Calendar?
-    var calendarHeaderView = WSCalendarHeaderView()
-    var calendarView: WSCalendarView!
+    var selectDate: Date?
+    
+    private var currentCalendar: Calendar?
+    fileprivate var calendarHeaderView = WSCalendarHeaderView()
+    private var calendarView: WSCalendarView!
     
 //MARK:- life cycle
     override func viewDidLoad() {
@@ -54,8 +56,19 @@ class WSCalendarViewController: UIViewController {
     }
     
     private func configCalendarView() {
-        let config = WSCalendarConfig()
-        calendarView = WSCalendarView(frame: CGRect(x: 0, y: headerView.bottom, width: view.width, height: 100), config: config)
+        WSCalendarConfig.maxDayAfterStart = 70
+        WSCalendarConfig.scrollBackgroundColor = UIColor(hexString: "212226")!
+        WSCalendarConfig.itemBackgroundColor = UIColor(hexString: "2d3037")!
+        WSCalendarConfig.itemNomalTextColor = .white
+        WSCalendarConfig.itemSpacing = 1
+        WSCalendarConfig.scrollEdgeInset = UIEdgeInsets(top: 1, left: 0, bottom: 1, right: 0)
+        WSCalendarConfig.itemDefaultSelectBgColor = UIColor(hexString: "41303a")!
+        WSCalendarConfig.itemDefaultSelectTextColor = UIColor(hexString: "c9acb1")!
+        WSCalendarConfig.itemUnSelectableTextColor = UIColor(hexString: "777777")!
+        WSCalendarConfig.itemSelectBgColor = UIColor(hexString: "8c2f41")!
+        
+        calendarView = WSCalendarView(frame: CGRect(x: 0, y: headerView.bottom, width: view.width, height: 100))
+        calendarView.calendarDelegate = self
         view.addSubview(calendarView)
     }
 
@@ -68,4 +81,14 @@ class WSCalendarViewController: UIViewController {
     
 //MARK:- lazy
     
+}
+
+extension WSCalendarViewController: WSCalendarViewDelegate {
+    func didShowMonth(currentMonth: Int) {
+        calendarHeaderView.scrollToMonth(currentMonth, true)
+    }
+    
+    func didSelectDate(calendarDate: WSCalendarDate) {
+        selectDate = calendarDate.date
+    }
 }

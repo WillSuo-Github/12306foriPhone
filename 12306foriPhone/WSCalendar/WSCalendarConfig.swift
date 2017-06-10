@@ -9,11 +9,15 @@
 import UIKit
 
 struct WSCalendarConfig {
+    
+    public static var startDate: Date = Date()
+    public static var maxDayAfterStart: Int = 10
 
     public static var itemSpacing: CGFloat = 0.0
     public static var scrollEdgeInset = UIEdgeInsetsMake(10, 10, 10, 10)
     public static var scrollBackgroundColor: UIColor = UIColor(red: 240/255.0, green: 240/255.0, blue: 240/255.0, alpha: 1)
     
+    //不要修改这个是内部用的
     public static var itemSize: CGSize?
     
     public static var itemNomalTextColor: UIColor = UIColor(red: 51/255.0, green: 51/255.0, blue: 51/255.0, alpha: 1)

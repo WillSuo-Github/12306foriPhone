@@ -48,6 +48,7 @@ class WSCalendarItem: UIView {
     private func configSubviews() {
         titleButton = UIButton(frame: self.bounds)
         titleButton.addTarget(self, action: #selector(titleButtonDidTapped(sender:)), for: .touchUpInside)
+        titleButton.ws_setBackgroundColor(WSCalendarConfig.itemBackgroundColor, for: .highlighted)
         self.addSubview(titleButton)
         self.backgroundColor = WSCalendarConfig.itemBackgroundColor
     }

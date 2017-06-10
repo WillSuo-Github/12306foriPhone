@@ -32,7 +32,7 @@ class WSCalendarHeaderView: UIView {
             let formatter = DateFormatter()
             formatter.dateFormat = "MM"
             let month = formatter.string(from: Date())
-            self.scrollToIndex(Int(month)! - 1, false)
+            self.scrollToMonth(Int(month)!, false)
         }
     }
     
@@ -41,16 +41,6 @@ class WSCalendarHeaderView: UIView {
     }
     
 //MARK:- layout
-    
-    public func scrollToNextMonth() {
-        monthIndex += 1
-        scrollToIndex(monthIndex, true)
-    }
-    
-    public func srollToPreviousMonth() {
-        monthIndex -= 1
-        scrollToIndex(monthIndex, true)
-    }
     
     private func configSubViews() {
         
@@ -82,12 +72,14 @@ class WSCalendarHeaderView: UIView {
         collectionView.collectionViewLayout = layout
     }
     
-    fileprivate func scrollToIndex(_ index: Int,_ animated: Bool = true) {
+    public func scrollToMonth(_ month: Int,_ animated: Bool = true) {
         
-        let position = CGPoint(x: (CGFloat(index) + 0.5) * layout.itemSize.width, y: collectionView.contentOffset.y)
+        if month > 12 {
+            return
+        }
+        
+        let position = CGPoint(x: (CGFloat(month) - 0.5) * layout.itemSize.width, y: collectionView.contentOffset.y)
         collectionView.setContentOffset(position, animated: animated)
-        
-        monthIndex = index % 12
     }
     
     
@@ -139,10 +131,10 @@ extension WSCalendarHeaderView: UICollectionViewDelegateFlowLayout, UICollection
         }
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let itemIndex: Int = Int(scrollView.contentOffset.x / layout.itemSize.width)
-        scrollToIndex(itemIndex)
-    }
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        let itemIndex: Int = Int(scrollView.contentOffset.x / layout.itemSize.width)
+//        scrollToMonth(itemIndex)
+//    }
     
     func collectionView(_ collectionView: UICollectionView, targetContentOffsetForProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint {
         let itemIndex: Int = Int(proposedContentOffset.x / layout.itemSize.width)

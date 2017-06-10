@@ -11,7 +11,7 @@ import UIKit
 class WSCalendarTool {
 
 //MARK:- public property
-    public let disableScrollingBeforeDate: Date = Date()
+    public let disableScrollingBeforeDate: Date = WSCalendarConfig.startDate
     public var lastSelectableDate: Date = Date()
     
 //MARK:- private property
@@ -30,7 +30,7 @@ class WSCalendarTool {
     }
     
     init() {
-        lastSelectableDate = getDate(Date(), 63)
+        lastSelectableDate = getDate(WSCalendarConfig.startDate, WSCalendarConfig.maxDayAfterStart)
     }
 
 //MARK:- private func

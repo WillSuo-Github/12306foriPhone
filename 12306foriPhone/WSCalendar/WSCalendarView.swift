@@ -28,7 +28,7 @@ class WSCalendarView: UIView {
     open weak var calendarDelegate: WSCalendarViewDelegate?
     
 //MARK:- life cycle
-    public init(frame: CGRect, config: WSCalendarConfig) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         
         configSourceArr()
@@ -44,6 +44,23 @@ class WSCalendarView: UIView {
     }
 //MARK:- layout
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        if scrollView.frame != self.bounds {
+            
+            scrollView.frame = self.bounds
+            configSourceArr()
+            
+            let itemRow = sourceArr[0].count / 7
+            updateScrollViewFrame(itemRow)
+            
+            scrollView.contentSize = CGSize(width: scrollView.bounds.size.width * CGFloat(sourceArr.count), height: scrollView.bounds.size.height)
+        }
+        
+        reloadData()
+    }
+    
     private func configSubViews() {
         
         scrollView = UIScrollView(frame: self.bounds)
@@ -51,6 +68,8 @@ class WSCalendarView: UIView {
         scrollView.delegate = self
         scrollView.isPagingEnabled = true
         scrollView.bounces = false
+        scrollView.showsHorizontalScrollIndicator = false
+        scrollView.showsVerticalScrollIndicator = false
         self.addSubview(scrollView)
         
         configScrollViewCell()
@@ -67,26 +86,21 @@ class WSCalendarView: UIView {
                 itemView.itemDelegate = self
                 scrollView.addSubview(itemView)
             }
-            
-            if i == 0 {
-                let itemRow = sourceArr[i].count / 7
-                updateScrollViewFrame(itemRow)
-            }
         }
         
         scrollView.contentSize = CGSize(width: scrollView.bounds.size.width * CGFloat(sourceArr.count), height: scrollView.bounds.size.height)
     }
     
-    fileprivate func updateScrollViewFrame(_ width: CGFloat, _ height: CGFloat) {
-        self.frame = CGRect(x: self.frame.origin.x, y: self.frame.origin.y, width: width, height: height)
+    fileprivate func updateScrollViewFrame(_ height: CGFloat) {
+        self.frame = CGRect(x: self.frame.origin.x, y: self.frame.origin.y, width: self.frame.size.width, height: height)
         scrollView.frame = self.bounds
     }
     
     fileprivate func updateScrollViewFrame(_ itemRow: Int) {
         if let itemSize = WSCalendarConfig.itemSize {
             let height = CGFloat(itemRow) * itemSize.height + CGFloat(itemRow - 1) * WSCalendarConfig.itemSpacing + WSCalendarConfig.scrollEdgeInset.top + WSCalendarConfig.scrollEdgeInset.bottom
-            let width = 7.0 * itemSize.width + 6.0 * WSCalendarConfig.itemSpacing + WSCalendarConfig.scrollEdgeInset.left + WSCalendarConfig.scrollEdgeInset.right
-            updateScrollViewFrame(width, height)
+            
+            updateScrollViewFrame(height)
         }
     }
     

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DE78795B212DA9FAD0219E832D1821C7035AFD30",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "86A2EF99977746B0503E1D6938C36E9D9A99B4A8" : 9223372036854775807,
+    "DE78795B212DA9FAD0219E832D1821C7035AFD30" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "9F530D65-A309-4529-996A-17AD9AC0CBB4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "86A2EF99977746B0503E1D6938C36E9D9A99B4A8" : "WSCalendar\/",
+    "DE78795B212DA9FAD0219E832D1821C7035AFD30" : "12306foriPhone\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "12306foriPhone",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "12306foriPhone.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/greatLock\/WSCalendar.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "86A2EF99977746B0503E1D6938C36E9D9A99B4A8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/greatLock\/12306foriPhone.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DE78795B212DA9FAD0219E832D1821C7035AFD30"
+    }
+  ]
+}

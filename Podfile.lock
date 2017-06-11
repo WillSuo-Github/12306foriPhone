@@ -1,0 +1,64 @@
+PODS:
+  - Alamofire (4.0.1)
+  - FLEX (2.1.1)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - MBProgressHUD (1.0.0)
+  - OMGHTTPURLRQ (3.2.2):
+    - OMGHTTPURLRQ/RQ (= 3.2.2)
+  - OMGHTTPURLRQ/FormURLEncode (3.2.2)
+  - OMGHTTPURLRQ/RQ (3.2.2):
+    - OMGHTTPURLRQ/FormURLEncode
+    - OMGHTTPURLRQ/UserAgent
+  - OMGHTTPURLRQ/UserAgent (3.2.2)
+  - PromiseKit (4.1.7):
+    - PromiseKit/Foundation (= 4.1.7)
+    - PromiseKit/QuartzCore (= 4.1.7)
+    - PromiseKit/UIKit (= 4.1.7)
+  - PromiseKit/CorePromise (4.1.7)
+  - PromiseKit/Foundation (4.1.7):
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (4.1.7):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (4.1.7):
+    - PromiseKit/CorePromise
+  - RxSwift (3.5.0)
+  - SnapKit (3.2.0)
+  - SwiftyJSON (3.1.4)
+  - XCGLogger (4.0.0):
+    - XCGLogger/Core (= 4.0.0)
+  - XCGLogger/Core (4.0.0)
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.0.0)
+  - FLEX (~> 2.1.1)
+  - FMDB (~> 2.6.2)
+  - MBProgressHUD
+  - OMGHTTPURLRQ (~> 3.2.2)
+  - PromiseKit (~> 4.1.0)
+  - RxSwift (~> 3.5.0)
+  - SnapKit
+  - SwiftyJSON
+  - XCGLogger (~> 4.0.0)
+  - YYCategories
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  FLEX: 27b768fcae23a313a1eb115076d429180ca9b472
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  OMGHTTPURLRQ: edb14c7d28add69226b79d826f930805927a0ffa
+  PromiseKit: 779f2e41faf62d854e7593026ddbcb0bb5c5002d
+  RxSwift: 18ee9d78b45edb3b0b7e79916b47a116e6dbc842
+  SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
+
+PODFILE CHECKSUM: f395becf26c663e621aeb8bf3f6c2311a26f9670
+
+COCOAPODS: 1.2.1

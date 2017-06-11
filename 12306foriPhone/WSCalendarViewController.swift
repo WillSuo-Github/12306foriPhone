@@ -8,12 +8,17 @@
 
 import UIKit
 
+protocol WSCalendarViewControllerDelegate: class {
+    func WSCalendarViewControllerDidSelectDate(_ date: Date, calendarVc: WSCalendarViewController)
+}
+
 class WSCalendarViewController: UIViewController {
 
     @IBOutlet weak var headerView: UIView!
     
-    var selectDate: Date?
+    public weak var delegate: WSCalendarViewControllerDelegate?
     
+    fileprivate var selectDate: Date?
     private var currentCalendar: Calendar?
     fileprivate var calendarHeaderView = WSCalendarHeaderView()
     private var calendarView: WSCalendarView!
@@ -90,5 +95,8 @@ extension WSCalendarViewController: WSCalendarViewDelegate {
     
     func didSelectDate(calendarDate: WSCalendarDate) {
         selectDate = calendarDate.date
+        if let delegate = delegate {
+            delegate.WSCalendarViewControllerDidSelectDate(calendarDate.date, calendarVc: self)
+        }
     }
 }

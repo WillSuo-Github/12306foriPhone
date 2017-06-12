@@ -795,7 +795,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0FA04F8C4CA218F18B06F365 /* Pods-12306foriPhone.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 12306foriPhone/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -811,7 +811,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7C0BED7311D0D7C7883A25D1 /* Pods-12306foriPhone.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 12306foriPhone/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

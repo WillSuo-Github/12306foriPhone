@@ -6,6 +6,8 @@
 //  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
 
+import Foundation
+
 /// Represents a disposable that does nothing on disposal.
 ///
 /// Nop = No Operation

@@ -6,36 +6,15 @@
 //  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
 
-import class Foundation.NSObject
-import protocol Foundation.NSCopying
-import class Foundation.Thread
+import Foundation
 import Dispatch
 
-#if os(Linux)
-    import struct Foundation.pthread_key_t
-    import func Foundation.pthread_setspecific
-    import func Foundation.pthread_getspecific
-    import func Foundation.pthread_key_create
-    
-    fileprivate enum CurrentThreadSchedulerQueueKey {
-        fileprivate static let instance = "RxSwift.CurrentThreadScheduler.Queue"
-    }
-#else
-    fileprivate class CurrentThreadSchedulerQueueKey: NSObject, NSCopying {
-        static let instance = CurrentThreadSchedulerQueueKey()
-        private override init() {
-            super.init()
-        }
+let CurrentThreadSchedulerKeyInstance       = "RxSwift.CurrentThreadScheduler.SchedulerKey"
+let CurrentThreadSchedulerQueueKeyInstance  = "RxSwift.CurrentThreadScheduler.Queue"
 
-        override var hash: Int {
-            return 0
-        }
+typealias CurrentThreadSchedulerValue       = NSString
+let CurrentThreadSchedulerValueInstance     = "RxSwift.CurrentThreadScheduler.SchedulerKey" as NSString
 
-        public func copy(with zone: NSZone? = nil) -> Any {
-            return self
-        }
-    }
-#endif
 
 /// Represents an object that schedules units of work on the current thread.
 ///
@@ -48,37 +27,23 @@ public class CurrentThreadScheduler : ImmediateSchedulerType {
     /// The singleton instance of the current thread scheduler.
     public static let instance = CurrentThreadScheduler()
 
-    private static var isScheduleRequiredKey: pthread_key_t = { () -> pthread_key_t in
-        let key = UnsafeMutablePointer<pthread_key_t>.allocate(capacity: 1)
-        if pthread_key_create(key, nil) != 0 {
-            rxFatalError("isScheduleRequired key creation failed")
-        }
-
-        return key.pointee
-    }()
-
-    private static var scheduleInProgressSentinel: UnsafeRawPointer = { () -> UnsafeRawPointer in
-        return UnsafeRawPointer(UnsafeMutablePointer<Int>.allocate(capacity: 1))
-    }()
-
     static var queue : ScheduleQueue? {
         get {
-            return Thread.getThreadLocalStorageValueForKey(CurrentThreadSchedulerQueueKey.instance)
+            return Thread.getThreadLocalStorageValueForKey(CurrentThreadSchedulerQueueKeyInstance)
         }
         set {
-            Thread.setThreadLocalStorageValue(newValue, forKey: CurrentThreadSchedulerQueueKey.instance)
+            Thread.setThreadLocalStorageValue(newValue, forKey: CurrentThreadSchedulerQueueKeyInstance)
         }
     }
 
     /// Gets a value that indicates whether the caller must call a `schedule` method.
     public static fileprivate(set) var isScheduleRequired: Bool {
         get {
-            return pthread_getspecific(CurrentThreadScheduler.isScheduleRequiredKey) == nil
+            let value: CurrentThreadSchedulerValue? = Thread.getThreadLocalStorageValueForKey(CurrentThreadSchedulerKeyInstance)
+            return value == nil
         }
         set(isScheduleRequired) {
-            if pthread_setspecific(CurrentThreadScheduler.isScheduleRequiredKey, isScheduleRequired ? nil : scheduleInProgressSentinel) != 0 {
-                rxFatalError("pthread_setspecific failed")
-            }
+            Thread.setThreadLocalStorageValue(isScheduleRequired ? nil : CurrentThreadSchedulerValueInstance, forKey: CurrentThreadSchedulerKeyInstance)
         }
     }
 

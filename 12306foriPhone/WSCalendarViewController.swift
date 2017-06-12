@@ -16,6 +16,7 @@ class WSCalendarViewController: UIViewController {
 
     @IBOutlet weak var headerView: UIView!
     
+    @IBOutlet weak var addTripButton: UIButton!
     public weak var delegate: WSCalendarViewControllerDelegate?
     
     fileprivate var selectDate: Date?
@@ -43,6 +44,7 @@ class WSCalendarViewController: UIViewController {
         configValue()
         configHeaderView()
         configCalendarView()
+        configAddTripButton()
     }
     
     private func configValue() {
@@ -76,6 +78,15 @@ class WSCalendarViewController: UIViewController {
         calendarView.calendarDelegate = self
         view.addSubview(calendarView)
     }
+    
+    private func configAddTripButton() {
+        
+        let str: NSString = "Add a Trip"
+        let attStr: NSMutableAttributedString = NSMutableAttributedString(string: str as String)
+        attStr.addAttributes([NSForegroundColorAttributeName: UIColor(hexString: "ea2d49")!], range: str.range(of: "Trip"))
+        attStr.addAttributes([NSForegroundColorAttributeName: UIColor(hexString: "dddddd")!], range: str.range(of: "Add a"))
+        addTripButton.setAttributedTitle(attStr, for: .normal)
+    }
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -84,7 +95,13 @@ class WSCalendarViewController: UIViewController {
     }
 
     
-//MARK:- lazy
+//MARK:- tapped response
+    
+
+    @IBAction func addTripButtonDidTapped(_ sender: Any) {
+        
+        navigationController?.popViewController(animated: true)
+    }
     
 }
 

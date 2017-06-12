@@ -6,8 +6,7 @@
 //  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
 
-import struct Foundation.TimeInterval
-import struct Foundation.Date
+import Foundation
 import Dispatch
 
 /**
@@ -82,7 +81,7 @@ public class SerialDispatchQueueScheduler : SchedulerType {
     }
     
     /**
-    Schedules an action to be executed immediately.
+    Schedules an action to be executed immediatelly.
     
     - parameter state: State passed to the action to be executed.
     - parameter action: Action to be executed.

@@ -6,6 +6,7 @@
 //  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
 
+import Foundation
 import Swift
 
 let arrayDictionaryMaxSize = 30
@@ -43,9 +44,6 @@ struct Bag<T> : CustomDebugStringConvertible {
     var _key0: BagKey? = nil
     var _value0: T? = nil
 
-    // then fill "array dictionary"
-    var _pairs = ContiguousArray<Entry>()
-
     // last is sparse dictionary
     var _dictionary: [BagKey : T]? = nil
 
@@ -79,11 +77,6 @@ struct Bag<T> : CustomDebugStringConvertible {
             return key
         }
 
-        if _pairs.count < arrayDictionaryMaxSize {
-            _pairs.append(key: key, value: element)
-            return key
-        }
-
         if _dictionary == nil {
             _dictionary = [:]
         }
@@ -96,7 +89,7 @@ struct Bag<T> : CustomDebugStringConvertible {
     /// - returns: Number of elements in bag.
     var count: Int {
         let dictionaryCount: Int = _dictionary?.count ?? 0
-        return (_value0 != nil ? 1 : 0) + _pairs.count + dictionaryCount
+        return (_value0 != nil ? 1 : 0) + dictionaryCount
     }
     
     /// Removes all elements from bag and clears capacity.
@@ -104,7 +97,6 @@ struct Bag<T> : CustomDebugStringConvertible {
         _key0 = nil
         _value0 = nil
 
-        _pairs.removeAll(keepingCapacity: false)
         _dictionary?.removeAll(keepingCapacity: false)
     }
     
@@ -124,14 +116,6 @@ struct Bag<T> : CustomDebugStringConvertible {
 
         if let existingObject = _dictionary?.removeValue(forKey: key) {
             return existingObject
-        }
-
-        for i in 0 ..< _pairs.count {
-            if _pairs[i].key == key {
-                let value = _pairs[i].value
-                _pairs.remove(at: i)
-                return value
-            }
         }
 
         return nil
@@ -162,10 +146,6 @@ extension Bag {
 
         if let value0 = value0 {
             action(value0)
-        }
-
-        for i in 0 ..< _pairs.count {
-            action(_pairs[i].value)
         }
 
         if dictionary?.count ?? 0 > 0 {

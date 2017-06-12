@@ -6,12 +6,14 @@
 //  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
 
+import Foundation
+
 enum SchedulePeriodicRecursiveCommand {
     case tick
     case dispatchStart
 }
 
-final class SchedulePeriodicRecursive<State> {
+class SchedulePeriodicRecursive<State> {
     typealias RecursiveAction = (State) -> State
     typealias RecursiveScheduler = AnyRecursiveScheduler<SchedulePeriodicRecursiveCommand>
 
@@ -43,7 +45,7 @@ final class SchedulePeriodicRecursive<State> {
         case .tick:
             scheduler.schedule(.tick, dueTime: _period)
 
-            // The idea is that if on tick there wasn't any item enqueued, schedule to perform work immediately.
+            // The idea is that if on tick there wasn't any item enqueued, schedule to perform work immediatelly.
             // Else work will be scheduled after previous enqueued work completes.
             if AtomicIncrement(&_pendingTickCount) == 1 {
                 self.tick(.dispatchStart, scheduler: scheduler)

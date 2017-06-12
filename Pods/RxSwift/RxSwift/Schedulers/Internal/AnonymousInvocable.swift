@@ -6,6 +6,8 @@
 //  Copyright © 2015 Krunoslav Zaher. All rights reserved.
 //
 
+import Foundation
+
 struct AnonymousInvocable : InvocableType {
     private let _action: () -> ()
 

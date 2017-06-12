@@ -37,7 +37,7 @@ class WSLoginController: UIViewController, NVActivityIndicatorViewable {
     
 //MARK: network
     private func requestLoginInit() {
-        randomCodeView.myImage = UIImage(color: placeHolderColor)!
+        randomCodeView.myImage = UIImage(color: WSPlaceHolderColor)!
         requestVerifyImage()
     }
     

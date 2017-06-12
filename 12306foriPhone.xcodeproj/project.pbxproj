@@ -82,6 +82,10 @@
 		5442F9581ED2D93100D236D0 /* WSStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F9571ED2D93100D236D0 /* WSStation.swift */; };
 		5442F95C1ED2DF7A00D236D0 /* WSStationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F95B1ED2DF7A00D236D0 /* WSStationController.swift */; };
 		5451D1101ED6B57600725F27 /* WSCalendarHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5451D10F1ED6B57600725F27 /* WSCalendarHeaderLayout.swift */; };
+		545F72D51EEE6DF4005A122B /* WSTrainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F72D31EEE6DF4005A122B /* WSTrainListViewController.swift */; };
+		545F72D61EEE6DF4005A122B /* WSTrainListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545F72D41EEE6DF4005A122B /* WSTrainListViewController.xib */; };
+		545F72DA1EEE6E24005A122B /* WSTrainListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F72D91EEE6E24005A122B /* WSTrainListHeaderView.swift */; };
+		545F72DC1EEE7304005A122B /* WSTrainListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545F72DB1EEE7304005A122B /* WSTrainListHeaderView.xib */; };
 		54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */; };
 		54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3321B1DC627DB00796927 /* WSPassCoverView.swift */; };
 		54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */; };
@@ -166,6 +170,10 @@
 		5442F9571ED2D93100D236D0 /* WSStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSStation.swift; sourceTree = "<group>"; };
 		5442F95B1ED2DF7A00D236D0 /* WSStationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSStationController.swift; sourceTree = "<group>"; };
 		5451D10F1ED6B57600725F27 /* WSCalendarHeaderLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarHeaderLayout.swift; sourceTree = "<group>"; };
+		545F72D31EEE6DF4005A122B /* WSTrainListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainListViewController.swift; sourceTree = "<group>"; };
+		545F72D41EEE6DF4005A122B /* WSTrainListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSTrainListViewController.xib; sourceTree = "<group>"; };
+		545F72D91EEE6E24005A122B /* WSTrainListHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainListHeaderView.swift; sourceTree = "<group>"; };
+		545F72DB1EEE7304005A122B /* WSTrainListHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSTrainListHeaderView.xib; sourceTree = "<group>"; };
 		54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLoginRandomCodeView.swift; sourceTree = "<group>"; };
 		54B3321B1DC627DB00796927 /* WSPassCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSPassCoverView.swift; sourceTree = "<group>"; };
 		54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRegex.swift; sourceTree = "<group>"; };
@@ -294,6 +302,7 @@
 		543E48801DBCF61300AB9D08 /* ticket */ = {
 			isa = PBXGroup;
 			children = (
+				545F72D21EEE6DCC005A122B /* trainList */,
 				543B43591ED53BD400230567 /* calendar */,
 				5442F95A1ED2DEE600D236D0 /* station */,
 				5442F9591ED2DEB000D236D0 /* grapTicked */,
@@ -439,6 +448,33 @@
 			name = station;
 			sourceTree = "<group>";
 		};
+		545F72D21EEE6DCC005A122B /* trainList */ = {
+			isa = PBXGroup;
+			children = (
+				545F72D81EEE6E0F005A122B /* view */,
+				545F72D71EEE6E00005A122B /* controller */,
+			);
+			name = trainList;
+			sourceTree = "<group>";
+		};
+		545F72D71EEE6E00005A122B /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				545F72D31EEE6DF4005A122B /* WSTrainListViewController.swift */,
+				545F72D41EEE6DF4005A122B /* WSTrainListViewController.xib */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		545F72D81EEE6E0F005A122B /* view */ = {
+			isa = PBXGroup;
+			children = (
+				545F72D91EEE6E24005A122B /* WSTrainListHeaderView.swift */,
+				545F72DB1EEE7304005A122B /* WSTrainListHeaderView.xib */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		54B332161DC6242600796927 /* view */ = {
 			isa = PBXGroup;
 			children = (
@@ -548,12 +584,14 @@
 			files = (
 				5442F9531ED2D28400D236D0 /* WSGrapTicketontroller.xib in Resources */,
 				543B435D1ED53BEE00230567 /* WSCalendarViewController.xib in Resources */,
+				545F72DC1EEE7304005A122B /* WSTrainListHeaderView.xib in Resources */,
 				543E486D1DBCF5C900AB9D08 /* LaunchScreen.storyboard in Resources */,
 				543E488D1DBCF67C00AB9D08 /* srca.cer in Resources */,
 				543E487F1DBCF60A00AB9D08 /* WSLoginController.xib in Resources */,
 				5442F9561ED2D90700D236D0 /* station_name.js in Resources */,
 				543B43651ED56C3500230567 /* WSCalendarHeaderCell.xib in Resources */,
 				543E486A1DBCF5C900AB9D08 /* Assets.xcassets in Resources */,
+				545F72D61EEE6DF4005A122B /* WSTrainListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,6 +667,7 @@
 				5426752D1EEBEE0100C2689F /* WSCalendarDate.swift in Sources */,
 				5442F8F51ECDA3A400D236D0 /* WSUserModule.swift in Sources */,
 				5442F94A1ECEEDAF00D236D0 /* NVActivityIndicatorView.swift in Sources */,
+				545F72DA1EEE6E24005A122B /* WSTrainListHeaderView.swift in Sources */,
 				543E48851DBCF64400AB9D08 /* WSNavigationController.swift in Sources */,
 				5442F9261ECEEDAF00D236D0 /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				5442F9351ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
@@ -647,6 +686,7 @@
 				5442F9521ED2D28400D236D0 /* WSGrapTicketontroller.swift in Sources */,
 				54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */,
 				5442F9361ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
+				545F72D51EEE6DF4005A122B /* WSTrainListViewController.swift in Sources */,
 				543B43641ED56C3500230567 /* WSCalendarHeaderCell.swift in Sources */,
 				5442F92B1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
 				5442F9471ECEEDAF00D236D0 /* NVActivityIndicatorAnimationDelegate.swift in Sources */,

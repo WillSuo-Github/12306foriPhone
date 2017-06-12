@@ -11,7 +11,9 @@ import RxSwift
 
 class WSGrapTicketontroller: UIViewController {
 
-    var leaveDate = Date()
+    fileprivate var leaveDate = Date()
+    fileprivate var fromStation: WSStation?
+    fileprivate var toStation: WSStation?
     
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var weekLabel: UILabel!
@@ -55,6 +57,7 @@ class WSGrapTicketontroller: UIViewController {
         let stationController = WSStationController()
         navigationController?.pushViewController(stationController, animated: true)
         stationController.selectBlock = { station in
+            self.fromStation = station
             sender.setTitle(station.Name, for: .normal)
         }
     }
@@ -64,6 +67,7 @@ class WSGrapTicketontroller: UIViewController {
         let stationController = WSStationController()
         navigationController?.pushViewController(stationController, animated: true)
         stationController.selectBlock = { station in
+            self.toStation = station
             sender.setTitle(station.Name, for: .normal)
         }
     }
@@ -79,10 +83,23 @@ class WSGrapTicketontroller: UIViewController {
         print(11111)
     }
     
+
+    @IBAction func searchButtonDidTapped(_ sender: Any) {
+        
+        if let from = fromStation, let to = toStation {
+            let trainListVc = WSTrainListViewController()
+            trainListVc.headerData = WSTrainListHeaderData(fromStation: from, toStation: to, departureDate: leaveDate)
+            navigationController?.pushViewController(trainListVc, animated: true)
+        }else{
+            self.view.showMessage("请选择出发和到达城市")
+        }
+        
+    }
 }
 
 extension WSGrapTicketontroller: WSCalendarViewControllerDelegate {
     func WSCalendarViewControllerDidSelectDate(_ date: Date, calendarVc: WSCalendarViewController) {
+        leaveDate = date
         configDate(date)
     }
 }

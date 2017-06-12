@@ -34,6 +34,7 @@ class WSTrainListViewController: UIViewController {
         tableView?.dataSource = self
 //        tableView?.tableHeaderView = WSTrainListHeaderView(frame: CGRect.zero)
         tableView?.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView?.backgroundColor = UIColor(hexString: "f6fcfe")
     }
     
     override func viewDidLayoutSubviews() {

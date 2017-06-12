@@ -86,6 +86,8 @@
 		545F72D61EEE6DF4005A122B /* WSTrainListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545F72D41EEE6DF4005A122B /* WSTrainListViewController.xib */; };
 		545F72DA1EEE6E24005A122B /* WSTrainListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F72D91EEE6E24005A122B /* WSTrainListHeaderView.swift */; };
 		545F72DC1EEE7304005A122B /* WSTrainListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545F72DB1EEE7304005A122B /* WSTrainListHeaderView.xib */; };
+		545F72DF1EEE9237005A122B /* WSTrainListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F72DD1EEE9237005A122B /* WSTrainListCell.swift */; };
+		545F72E01EEE9237005A122B /* WSTrainListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545F72DE1EEE9237005A122B /* WSTrainListCell.xib */; };
 		54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */; };
 		54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3321B1DC627DB00796927 /* WSPassCoverView.swift */; };
 		54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */; };
@@ -174,6 +176,8 @@
 		545F72D41EEE6DF4005A122B /* WSTrainListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSTrainListViewController.xib; sourceTree = "<group>"; };
 		545F72D91EEE6E24005A122B /* WSTrainListHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainListHeaderView.swift; sourceTree = "<group>"; };
 		545F72DB1EEE7304005A122B /* WSTrainListHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSTrainListHeaderView.xib; sourceTree = "<group>"; };
+		545F72DD1EEE9237005A122B /* WSTrainListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainListCell.swift; sourceTree = "<group>"; };
+		545F72DE1EEE9237005A122B /* WSTrainListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSTrainListCell.xib; sourceTree = "<group>"; };
 		54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLoginRandomCodeView.swift; sourceTree = "<group>"; };
 		54B3321B1DC627DB00796927 /* WSPassCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSPassCoverView.swift; sourceTree = "<group>"; };
 		54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRegex.swift; sourceTree = "<group>"; };
@@ -471,6 +475,8 @@
 			children = (
 				545F72D91EEE6E24005A122B /* WSTrainListHeaderView.swift */,
 				545F72DB1EEE7304005A122B /* WSTrainListHeaderView.xib */,
+				545F72DD1EEE9237005A122B /* WSTrainListCell.swift */,
+				545F72DE1EEE9237005A122B /* WSTrainListCell.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -591,6 +597,7 @@
 				5442F9561ED2D90700D236D0 /* station_name.js in Resources */,
 				543B43651ED56C3500230567 /* WSCalendarHeaderCell.xib in Resources */,
 				543E486A1DBCF5C900AB9D08 /* Assets.xcassets in Resources */,
+				545F72E01EEE9237005A122B /* WSTrainListCell.xib in Resources */,
 				545F72D61EEE6DF4005A122B /* WSTrainListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -710,6 +717,7 @@
 				5442F92F1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallPulseSync.swift in Sources */,
 				5442F9271ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallBeat.swift in Sources */,
 				543E48631DBCF5C900AB9D08 /* AppDelegate.swift in Sources */,
+				545F72DF1EEE9237005A122B /* WSTrainListCell.swift in Sources */,
 				5442F9301ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallRotate.swift in Sources */,
 				5442F92A1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				5442F92E1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,

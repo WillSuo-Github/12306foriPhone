@@ -9,16 +9,29 @@
 import UIKit
 
 class WSTrainListCell: UITableViewCell {
-
+    
+    @IBOutlet weak var trainNameLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var ticketsLeftLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var buyButton: UIButton!
+  
+//MARK:- life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        configSubviews()
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+//MARK:- layout
+    private func configSubviews() {
+        buyButton.layer.cornerRadius = 15
+        buyButton.layer.masksToBounds = true
+    }
+    
+//MARK:- tapped response
+    @IBAction func buyButtonDidTapped(_ sender: Any) {
+        
     }
     
 }

@@ -32,9 +32,9 @@ class WSTrainListViewController: UIViewController {
         view.addSubview(tableView!)
         tableView?.delegate = self
         tableView?.dataSource = self
-//        tableView?.tableHeaderView = WSTrainListHeaderView(frame: CGRect.zero)
-        tableView?.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView?.register(UINib(nibName: "WSTrainListCell", bundle: nil), forCellReuseIdentifier: "cell")
         tableView?.backgroundColor = UIColor(hexString: "f6fcfe")
+        tableView?.allowsSelection = false
     }
     
     override func viewDidLayoutSubviews() {
@@ -46,12 +46,16 @@ class WSTrainListViewController: UIViewController {
 
 extension WSTrainListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 110
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -61,4 +65,5 @@ extension WSTrainListViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 200
     }
+
 }

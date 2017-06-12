@@ -88,6 +88,7 @@
 		545F72DC1EEE7304005A122B /* WSTrainListHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545F72DB1EEE7304005A122B /* WSTrainListHeaderView.xib */; };
 		545F72DF1EEE9237005A122B /* WSTrainListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F72DD1EEE9237005A122B /* WSTrainListCell.swift */; };
 		545F72E01EEE9237005A122B /* WSTrainListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545F72DE1EEE9237005A122B /* WSTrainListCell.xib */; };
+		545F72E31EEE9B5F005A122B /* WSTrainListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F72E21EEE9B5F005A122B /* WSTrainListModule.swift */; };
 		54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */; };
 		54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3321B1DC627DB00796927 /* WSPassCoverView.swift */; };
 		54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */; };
@@ -178,6 +179,7 @@
 		545F72DB1EEE7304005A122B /* WSTrainListHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSTrainListHeaderView.xib; sourceTree = "<group>"; };
 		545F72DD1EEE9237005A122B /* WSTrainListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainListCell.swift; sourceTree = "<group>"; };
 		545F72DE1EEE9237005A122B /* WSTrainListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSTrainListCell.xib; sourceTree = "<group>"; };
+		545F72E21EEE9B5F005A122B /* WSTrainListModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainListModule.swift; sourceTree = "<group>"; };
 		54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLoginRandomCodeView.swift; sourceTree = "<group>"; };
 		54B3321B1DC627DB00796927 /* WSPassCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSPassCoverView.swift; sourceTree = "<group>"; };
 		54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRegex.swift; sourceTree = "<group>"; };
@@ -455,6 +457,7 @@
 		545F72D21EEE6DCC005A122B /* trainList */ = {
 			isa = PBXGroup;
 			children = (
+				545F72E11EEE9B3F005A122B /* module */,
 				545F72D81EEE6E0F005A122B /* view */,
 				545F72D71EEE6E00005A122B /* controller */,
 			);
@@ -479,6 +482,14 @@
 				545F72DE1EEE9237005A122B /* WSTrainListCell.xib */,
 			);
 			name = view;
+			sourceTree = "<group>";
+		};
+		545F72E11EEE9B3F005A122B /* module */ = {
+			isa = PBXGroup;
+			children = (
+				545F72E21EEE9B5F005A122B /* WSTrainListModule.swift */,
+			);
+			name = module;
 			sourceTree = "<group>";
 		};
 		54B332161DC6242600796927 /* view */ = {
@@ -722,6 +733,7 @@
 				5442F92A1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallClipRotatePulse.swift in Sources */,
 				5442F92E1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallPulseRise.swift in Sources */,
 				5442F93A1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBlank.swift in Sources */,
+				545F72E31EEE9B5F005A122B /* WSTrainListModule.swift in Sources */,
 				5442F93B1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				5442F9411ECEEDAF00D236D0 /* NVActivityIndicatorAnimationOrbit.swift in Sources */,
 				5442F9371ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,

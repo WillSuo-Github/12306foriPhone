@@ -29,14 +29,17 @@ class WSStationNameJs {
     
     var allStation: [WSStation]
     
-    var allStationMap: [String: [WSStation]]
+    var allStationSectionMap: [String: [WSStation]]
+    
+    var allStationMap: [String: WSStation]
     
     var allInitials: [String]
     
     
     fileprivate init() {
         allStation = [WSStation]()
-        allStationMap = [String: [WSStation]]()
+        allStationSectionMap = [String: [WSStation]]()
+        allStationMap = [String: WSStation]()
         allInitials = [String]()
         
         let path = Bundle.main.path(forResource: "station_name", ofType: "js")
@@ -51,12 +54,14 @@ class WSStationNameJs {
                     if !allInitials.contains(Initials) {
                         allInitials.append(Initials)
                     }
-                    let oneStation = WSStation(Initials:Initials, FirstLetter: match[3], Name: match[0], Code: match[1], Spell: match[2])
-                    if self.allStationMap[oneStation.Initials] != nil {
-                        self.allStationMap[oneStation.Initials]!.append(oneStation)
+                    let stationName = match[0]
+                    let oneStation = WSStation(Initials:Initials, FirstLetter: match[3], Name: stationName, Code: match[1], Spell: match[2])
+                    if self.allStationSectionMap[oneStation.Initials] != nil {
+                        self.allStationSectionMap[oneStation.Initials]!.append(oneStation)
                     }else{
-                        self.allStationMap[oneStation.Initials] = [WSStation]()
+                        self.allStationSectionMap[oneStation.Initials] = [WSStation]()
                     }
+                    self.allStationMap[stationName] = oneStation
                     self.allStation.append(oneStation)
                 }
             }

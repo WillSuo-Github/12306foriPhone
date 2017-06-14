@@ -16,7 +16,7 @@ class WSStationController: UIViewController {
     
     let allInitials: [String] = WSStationNameJs.sharedInstance.allInitials
     let allStation: [WSStation] = WSStationNameJs.sharedInstance.allStation
-    let allStationMap: [String: [WSStation]] = WSStationNameJs.sharedInstance.allStationMap
+    let allStationSectionMap: [String: [WSStation]] = WSStationNameJs.sharedInstance.allStationSectionMap
     let searchResultController: WSSearchStationController = WSSearchStationController()
     
     override func viewDidLoad() {
@@ -71,7 +71,7 @@ extension WSStationController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return allStationMap[allInitials[section]]!.count
+        return allStationSectionMap[allInitials[section]]!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -79,7 +79,7 @@ extension WSStationController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
         cell?.textLabel?.textColor = UIColor(hexString: "555555")
         cell?.textLabel?.font = UIFont.init(name: "Helvetica Neue", size: 14)
-        cell?.textLabel?.text = allStationMap[allInitials[indexPath.section]]![indexPath.row].Name
+        cell?.textLabel?.text = allStationSectionMap[allInitials[indexPath.section]]![indexPath.row].Name
         return cell!
     }
     
@@ -93,7 +93,7 @@ extension WSStationController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
-        didSelectItem(allStationMap[allInitials[indexPath.section]]![indexPath.row])
+        didSelectItem(allStationSectionMap[allInitials[indexPath.section]]![indexPath.row])
     }
 }
 

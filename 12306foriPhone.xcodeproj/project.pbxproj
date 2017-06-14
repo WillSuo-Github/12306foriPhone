@@ -21,6 +21,7 @@
 		543B435F1ED5689B00230567 /* WSCalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543B435E1ED5689B00230567 /* WSCalendarHeaderView.swift */; };
 		543B43641ED56C3500230567 /* WSCalendarHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543B43621ED56C3500230567 /* WSCalendarHeaderCell.swift */; };
 		543B43651ED56C3500230567 /* WSCalendarHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 543B43631ED56C3500230567 /* WSCalendarHeaderCell.xib */; };
+		543B6A8B1EF1199600E412D7 /* WSDateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543B6A8A1EF1199600E412D7 /* WSDateTool.swift */; };
 		543E48631DBCF5C900AB9D08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48621DBCF5C900AB9D08 /* AppDelegate.swift */; };
 		543E486A1DBCF5C900AB9D08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 543E48691DBCF5C900AB9D08 /* Assets.xcassets */; };
 		543E486D1DBCF5C900AB9D08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 543E486B1DBCF5C900AB9D08 /* LaunchScreen.storyboard */; };
@@ -89,6 +90,10 @@
 		545F72DF1EEE9237005A122B /* WSTrainListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F72DD1EEE9237005A122B /* WSTrainListCell.swift */; };
 		545F72E01EEE9237005A122B /* WSTrainListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545F72DE1EEE9237005A122B /* WSTrainListCell.xib */; };
 		545F72E31EEE9B5F005A122B /* WSTrainListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F72E21EEE9B5F005A122B /* WSTrainListModule.swift */; };
+		549D72C71EF0D6E70033F6A1 /* WSService+QueryTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549D72C61EF0D6E70033F6A1 /* WSService+QueryTicket.swift */; };
+		549D72C91EF0D7910033F6A1 /* WSLeftTicketParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549D72C81EF0D7910033F6A1 /* WSLeftTicketParam.swift */; };
+		549D72CB1EF0D89C0033F6A1 /* WSQueryLeftNewDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549D72CA1EF0D89C0033F6A1 /* WSQueryLeftNewDTO.swift */; };
+		549D72CE1EF0DA6D0033F6A1 /* WSTicketConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549D72CD1EF0DA6C0033F6A1 /* WSTicketConstants.swift */; };
 		54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */; };
 		54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3321B1DC627DB00796927 /* WSPassCoverView.swift */; };
 		54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */; };
@@ -109,6 +114,7 @@
 		543B435E1ED5689B00230567 /* WSCalendarHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarHeaderView.swift; sourceTree = "<group>"; };
 		543B43621ED56C3500230567 /* WSCalendarHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarHeaderCell.swift; sourceTree = "<group>"; };
 		543B43631ED56C3500230567 /* WSCalendarHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSCalendarHeaderCell.xib; sourceTree = "<group>"; };
+		543B6A8A1EF1199600E412D7 /* WSDateTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSDateTool.swift; sourceTree = "<group>"; };
 		543E485F1DBCF5C900AB9D08 /* 12306foriPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 12306foriPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		543E48621DBCF5C900AB9D08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		543E48691DBCF5C900AB9D08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,6 +186,10 @@
 		545F72DD1EEE9237005A122B /* WSTrainListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainListCell.swift; sourceTree = "<group>"; };
 		545F72DE1EEE9237005A122B /* WSTrainListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSTrainListCell.xib; sourceTree = "<group>"; };
 		545F72E21EEE9B5F005A122B /* WSTrainListModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainListModule.swift; sourceTree = "<group>"; };
+		549D72C61EF0D6E70033F6A1 /* WSService+QueryTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WSService+QueryTicket.swift"; sourceTree = "<group>"; };
+		549D72C81EF0D7910033F6A1 /* WSLeftTicketParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLeftTicketParam.swift; sourceTree = "<group>"; };
+		549D72CA1EF0D89C0033F6A1 /* WSQueryLeftNewDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSQueryLeftNewDTO.swift; sourceTree = "<group>"; };
+		549D72CD1EF0DA6C0033F6A1 /* WSTicketConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTicketConstants.swift; sourceTree = "<group>"; };
 		54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLoginRandomCodeView.swift; sourceTree = "<group>"; };
 		54B3321B1DC627DB00796927 /* WSPassCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSPassCoverView.swift; sourceTree = "<group>"; };
 		54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRegex.swift; sourceTree = "<group>"; };
@@ -331,6 +341,7 @@
 				543E48881DBCF65900AB9D08 /* WSService+login.swift */,
 				5442F8F81ECDAE1000D236D0 /* WSService+Order.swift */,
 				5442F8F11ECD80F900D236D0 /* WSServiceError.swift */,
+				549D72C61EF0D6E70033F6A1 /* WSService+QueryTicket.swift */,
 			);
 			name = service;
 			sourceTree = "<group>";
@@ -487,9 +498,20 @@
 		545F72E11EEE9B3F005A122B /* module */ = {
 			isa = PBXGroup;
 			children = (
+				549D72CC1EF0DA4C0033F6A1 /* params */,
 				545F72E21EEE9B5F005A122B /* WSTrainListModule.swift */,
+				549D72CA1EF0D89C0033F6A1 /* WSQueryLeftNewDTO.swift */,
+				549D72CD1EF0DA6C0033F6A1 /* WSTicketConstants.swift */,
 			);
 			name = module;
+			sourceTree = "<group>";
+		};
+		549D72CC1EF0DA4C0033F6A1 /* params */ = {
+			isa = PBXGroup;
+			children = (
+				549D72C81EF0D7910033F6A1 /* WSLeftTicketParam.swift */,
+			);
+			name = params;
 			sourceTree = "<group>";
 		};
 		54B332161DC6242600796927 /* view */ = {
@@ -524,6 +546,7 @@
 				54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */,
 				5442F8FA1ECE9E9800D236D0 /* WSHub.swift */,
 				5442F94E1ED2B9E200D236D0 /* WSConfig.swift */,
+				543B6A8A1EF1199600E412D7 /* WSDateTool.swift */,
 			);
 			name = utilities;
 			sourceTree = "<group>";
@@ -669,6 +692,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				543B43581ED4111600230567 /* WSSearchStationController.swift in Sources */,
+				549D72CE1EF0DA6D0033F6A1 /* WSTicketConstants.swift in Sources */,
 				5426752B1EEBEE0100C2689F /* WSCalendarCollectionLayout.swift in Sources */,
 				5442F9481ECEEDAF00D236D0 /* NVActivityIndicatorPresenter.swift in Sources */,
 				5442F9441ECEEDAF00D236D0 /* NVActivityIndicatorAnimationSquareSpin.swift in Sources */,
@@ -692,6 +716,7 @@
 				54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */,
 				5442F9341ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				5442F93E1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
+				549D72C71EF0D6E70033F6A1 /* WSService+QueryTicket.swift in Sources */,
 				5442F9281ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				5442F93C1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
 				5442F9401ECEEDAF00D236D0 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
@@ -704,6 +729,8 @@
 				5442F9521ED2D28400D236D0 /* WSGrapTicketontroller.swift in Sources */,
 				54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */,
 				5442F9361ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
+				549D72C91EF0D7910033F6A1 /* WSLeftTicketParam.swift in Sources */,
+				549D72CB1EF0D89C0033F6A1 /* WSQueryLeftNewDTO.swift in Sources */,
 				545F72D51EEE6DF4005A122B /* WSTrainListViewController.swift in Sources */,
 				543B43641ED56C3500230567 /* WSCalendarHeaderCell.swift in Sources */,
 				5442F92B1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallGridBeat.swift in Sources */,
@@ -737,6 +764,7 @@
 				5442F93B1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationCubeTransition.swift in Sources */,
 				5442F9411ECEEDAF00D236D0 /* NVActivityIndicatorAnimationOrbit.swift in Sources */,
 				5442F9371ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallTrianglePath.swift in Sources */,
+				543B6A8B1EF1199600E412D7 /* WSDateTool.swift in Sources */,
 				5442F8FB1ECE9E9800D236D0 /* WSHub.swift in Sources */,
 				543E487D1DBCF60A00AB9D08 /* WSLogin.swift in Sources */,
 				5442F9581ED2D93100D236D0 /* WSStation.swift in Sources */,

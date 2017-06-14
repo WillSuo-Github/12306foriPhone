@@ -9,6 +9,29 @@
 import UIKit
 import SwiftyJSON
 
+enum WSTicketType: String, CustomStringConvertible {
+    case Student = "0X00"
+    case Normal = "ADULT"
+    
+    var description: String {
+        switch self {
+        case .Student:
+            return "学生"
+        case .Normal:
+            return "成人"
+        }
+    }
+    
+    var id_type_code:String {
+        switch self {
+        case .Student:
+            return "3"
+        case .Normal:
+            return "1"
+        }
+    }
+}
+
 class WSPassengerDTO: NSObject {
 
     let code :String

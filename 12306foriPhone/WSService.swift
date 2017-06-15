@@ -34,7 +34,7 @@ class WSService: SessionDelegate{
             "User-Agent" : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:36.0) Gecko/20100101 Firefox/36.0",
             "Connection" : "keep-alive"
         ]
-        configuration.timeoutIntervalForRequest = 5
+        configuration.timeoutIntervalForRequest = 20
         let manager = Alamofire.SessionManager(
             configuration:configuration,
             serverTrustPolicyManager:ServerTrustPolicyManager(policies: serverTrustPolicies)

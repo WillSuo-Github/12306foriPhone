@@ -45,6 +45,8 @@ class WSTrainListViewController: UIViewController {
         tableView?.backgroundColor = UIColor(hexString: "f6fcfe")
         tableView?.allowsSelection = false
         tableView?.tableHeaderView = tableHeaderView
+        tableView?.tableFooterView = UIView()
+        tableView?.separatorStyle = .none
     }
     
     override func viewDidLayoutSubviews() {
@@ -57,15 +59,20 @@ class WSTrainListViewController: UIViewController {
     private func requestTrainList() {
         
         if let headerData = headerData {
+            
+            self.tableView?.showLoading()
+            
             let fromStationCode = WSStationNameJs.sharedInstance.allStationMap[headerData.fromStation.Name]!.Code
             let toStationCode = WSStationNameJs.sharedInstance.allStationMap[headerData.toStation.Name]!.Code
             
             let successHanlder = { (tickets:[WSQueryLeftNewDTO]) in
                 
+                self.tableView?.hideHub()
                 self.ticketQueryResult = tickets
                 self.tableView?.reloadData()
             }
             let failureHanlder = { (error: Error) in
+                self.tableView?.showMessage("网络请求失败")
                 print(error)
             }
             

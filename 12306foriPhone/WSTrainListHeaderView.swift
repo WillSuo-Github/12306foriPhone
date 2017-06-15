@@ -28,8 +28,10 @@ class WSTrainListHeaderView: UIView {
     @IBOutlet weak var toName: UIButton!
     @IBOutlet weak var departureDate: UIButton!
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var bottomView: UIView!
     
     private var xibView: UIView?
+    private var gradientLayer = CAGradientLayer()
     
 //MARK:- life cycle
     override init(frame: CGRect) {
@@ -44,12 +46,30 @@ class WSTrainListHeaderView: UIView {
 //MARK:- layout
     private func configSubviews() {
         
+        configXibView()
+        configBottomView()
+        configSearchButton()
+        
+    }
+    
+    private func configXibView() {
         xibView = loadViewFromNib()
         if let v = xibView {
             v.frame = self.frame
             self.addSubview(v)
         }
+    }
+    
+    private func configBottomView() {
         
+        gradientLayer.colors = [UIColor(hexString: "eeeeee")!.cgColor, UIColor(hexString: "f6fcfe")!.cgColor]
+        gradientLayer.locations = [0.1, 0.4]
+        gradientLayer.startPoint = CGPoint(x: 0, y: 0)
+        gradientLayer.endPoint = CGPoint(x: 0.0, y: 1.0)
+        bottomView.layer.addSublayer(gradientLayer)
+    }
+    
+    private func configSearchButton() {
         searchButton.layer.cornerRadius = 2
         searchButton.layer.masksToBounds = true
     }
@@ -62,6 +82,7 @@ class WSTrainListHeaderView: UIView {
         super.layoutSubviews()
         
         xibView?.frame = self.frame
+        gradientLayer.frame = bottomView.bounds
     }
     
 //MARK:- tapped response

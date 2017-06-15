@@ -31,6 +31,8 @@ extension UIView {
     
     public func showMessage(_ message: String) {
         
+        self.hideHub()
+        self.hideLoading()
         let hub = MBProgressHUD.showAdded(to: self, animated: true)
         hub.mode = .text
         hub.label.text = message

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WSTrainListHeaderView" customModule="_2306foriPhone" customModuleProvider="target">
             <connections>
+                <outlet property="bottomView" destination="Sq5-JA-KV0" id="h7G-Wc-gBr"/>
                 <outlet property="departureDate" destination="2UK-by-yRA" id="IDV-ud-EIR"/>
                 <outlet property="fromName" destination="Xxo-2z-pzw" id="7dK-Ai-7Fb"/>
                 <outlet property="searchButton" destination="ev3-eu-Uni" id="I47-XA-tk9"/>
@@ -21,8 +22,8 @@
             <rect key="frame" x="0.0" y="0.0" width="401" height="220"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sq5-JA-KV0">
-                    <rect key="frame" x="0.0" y="200" width="401" height="20"/>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sq5-JA-KV0">
+                    <rect key="frame" x="0.0" y="199" width="401" height="20"/>
                     <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="pRT-uC-sGP"/>
@@ -153,7 +154,7 @@
                 <constraint firstItem="AtM-uy-dvO" firstAttribute="leading" secondItem="p0d-yc-tya" secondAttribute="trailing" id="zwb-12-3dY"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-63.5" y="-225"/>
+            <point key="canvasLocation" x="-31" y="-245"/>
         </view>
     </objects>
 </document>

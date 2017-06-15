@@ -595,6 +595,7 @@
 				TargetAttributes = {
 					543E485E1DBCF5C900AB9D08 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = NT9VR9C9HY;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -885,10 +886,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NT9VR9C9HY;
 				INFOPLIST_FILE = 12306foriPhone/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "WS.-2306foriPhone";
+				PRODUCT_BUNDLE_IDENTIFIER = WS.12306foriPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				cc = "${SRCROOT}/ccache-clang";
@@ -901,10 +903,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NT9VR9C9HY;
 				INFOPLIST_FILE = 12306foriPhone/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "WS.-2306foriPhone";
+				PRODUCT_BUNDLE_IDENTIFIER = WS.12306foriPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				cc = "${SRCROOT}/ccache-clang";

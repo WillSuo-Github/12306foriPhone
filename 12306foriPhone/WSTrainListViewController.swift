@@ -28,15 +28,10 @@ class WSTrainListViewController: UIViewController {
         configTableView()
         requestTrainList()
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        
-    }
 
 //MARK:- layout
     private func configTableView() {
+        
         tableView = UITableView(frame: self.view.bounds)
         view.addSubview(tableView!)
         tableView?.delegate = self
@@ -47,12 +42,18 @@ class WSTrainListViewController: UIViewController {
         tableView?.tableHeaderView = tableHeaderView
         tableView?.tableFooterView = UIView()
         tableView?.separatorStyle = .none
+        
+        tableHeaderView.delegate = self
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         tableView?.frame = view.frame
+    }
+    
+    fileprivate func refreshData() {
+        requestTrainList()
     }
 
 //MARK:- network
@@ -101,4 +102,10 @@ extension WSTrainListViewController: UITableViewDelegate, UITableViewDataSource 
         return 110
     }
 
+}
+
+extension WSTrainListViewController: WSTrainListHeaderViewDelegate {
+    func WSTrainListHeaderViewDidChickRefresh(headerView: WSTrainListHeaderView) {
+        refreshData()
+    }
 }

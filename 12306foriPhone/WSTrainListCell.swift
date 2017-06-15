@@ -17,9 +17,9 @@ class WSTrainListCell: UITableViewCell {
     }
     
     @IBOutlet weak var trainNameLabel: UILabel!
+    @IBOutlet weak var addressStationLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var ticketsLeftLabel: UILabel!
-    @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var buyButton: UIButton!
   
 //MARK:- life cycle
@@ -40,7 +40,7 @@ class WSTrainListCell: UITableViewCell {
         trainNameLabel.text = ticketInfo.TrainCode!
         timeLabel.text = "\(ticketInfo.start_time!) - \(ticketInfo.arrive_time!)"
         ticketsLeftLabel.text = getSeatStates(ticketInfo)
-        durationLabel.text = ticketInfo.lishi!
+        addressStationLabel.text = "\(ticketInfo.FromStationName!) - \(ticketInfo.ToStationName!)"
         
     }
     

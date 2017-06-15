@@ -13,7 +13,7 @@
                 <outlet property="bottomView" destination="Sq5-JA-KV0" id="h7G-Wc-gBr"/>
                 <outlet property="departureDate" destination="2UK-by-yRA" id="IDV-ud-EIR"/>
                 <outlet property="fromName" destination="Xxo-2z-pzw" id="7dK-Ai-7Fb"/>
-                <outlet property="searchButton" destination="ev3-eu-Uni" id="I47-XA-tk9"/>
+                <outlet property="refreshButton" destination="ev3-eu-Uni" id="SFm-wg-d0i"/>
                 <outlet property="toName" destination="D1b-8P-RAk" id="HO5-8D-7MK"/>
             </connections>
         </placeholder>
@@ -22,8 +22,8 @@
             <rect key="frame" x="0.0" y="0.0" width="401" height="220"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sq5-JA-KV0">
-                    <rect key="frame" x="0.0" y="199" width="401" height="20"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sq5-JA-KV0">
+                    <rect key="frame" x="0.0" y="200" width="401" height="20"/>
                     <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="pRT-uC-sGP"/>
@@ -35,27 +35,27 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FROM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xI-CY-0qD">
                             <rect key="frame" x="25" y="20" width="32" height="13.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xxo-2z-pzw">
-                            <rect key="frame" x="25" y="43.5" width="68" height="29"/>
+                            <rect key="frame" x="25" y="41.5" width="68" height="29"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="fromName">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEPARTURE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CdX-fr-zof">
-                            <rect key="frame" x="25" y="87.5" width="65.5" height="13.5"/>
+                            <rect key="frame" x="25" y="85.5" width="65.5" height="13.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UK-by-yRA">
-                            <rect key="frame" x="25" y="111" width="94" height="29"/>
+                            <rect key="frame" x="25" y="107" width="94" height="29"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="departureDate">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZd-oT-ASP">
@@ -85,14 +85,14 @@
                         <constraint firstAttribute="bottom" secondItem="Exn-B4-8Zw" secondAttribute="bottom" constant="15" id="3qj-YA-rV1"/>
                         <constraint firstItem="CdX-fr-zof" firstAttribute="leading" secondItem="p0d-yc-tya" secondAttribute="leading" constant="25" id="4LN-jn-re5"/>
                         <constraint firstItem="2UK-by-yRA" firstAttribute="leading" secondItem="p0d-yc-tya" secondAttribute="leading" constant="25" id="8W7-jB-jTZ"/>
-                        <constraint firstItem="2UK-by-yRA" firstAttribute="top" secondItem="CdX-fr-zof" secondAttribute="bottom" constant="10" id="ELS-Jx-ZMB"/>
+                        <constraint firstItem="2UK-by-yRA" firstAttribute="top" secondItem="CdX-fr-zof" secondAttribute="bottom" constant="8" id="ELS-Jx-ZMB"/>
                         <constraint firstItem="Xxo-2z-pzw" firstAttribute="leading" secondItem="p0d-yc-tya" secondAttribute="leading" constant="25" id="MEa-yp-MfO"/>
                         <constraint firstAttribute="bottom" secondItem="jZd-oT-ASP" secondAttribute="bottom" constant="15" id="OoR-3B-lJH"/>
                         <constraint firstItem="Exn-B4-8Zw" firstAttribute="leading" secondItem="jZd-oT-ASP" secondAttribute="trailing" constant="36" id="eRT-QJ-Gw6"/>
                         <constraint firstItem="CdX-fr-zof" firstAttribute="top" secondItem="Xxo-2z-pzw" secondAttribute="bottom" constant="15" id="hMp-UM-Ocu"/>
                         <constraint firstItem="jZd-oT-ASP" firstAttribute="leading" secondItem="p0d-yc-tya" secondAttribute="leading" constant="25" id="hiF-xZ-2sU"/>
                         <constraint firstItem="9xI-CY-0qD" firstAttribute="top" secondItem="p0d-yc-tya" secondAttribute="top" constant="20" id="mLl-p4-xnd"/>
-                        <constraint firstItem="Xxo-2z-pzw" firstAttribute="top" secondItem="9xI-CY-0qD" secondAttribute="bottom" constant="10" id="zq0-CD-UKl"/>
+                        <constraint firstItem="Xxo-2z-pzw" firstAttribute="top" secondItem="9xI-CY-0qD" secondAttribute="bottom" constant="8" id="zq0-CD-UKl"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AtM-uy-dvO">
@@ -101,14 +101,14 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmi-ot-oeH">
                             <rect key="frame" x="25" y="20" width="15.5" height="13.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1b-8P-RAk">
-                            <rect key="frame" x="25" y="43.5" width="51" height="29"/>
+                            <rect key="frame" x="25" y="41.5" width="51" height="29"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <state key="normal" title="toName">
-                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ev3-eu-Uni">
@@ -119,11 +119,11 @@
                                 <constraint firstAttribute="width" constant="100" id="uwp-J2-Pa4"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                            <state key="normal" title="search">
+                            <state key="normal" title="刷新">
                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
-                                <action selector="searchButtonDidTapped:" destination="-1" eventType="touchUpInside" id="zuK-Mk-RKH"/>
+                                <action selector="refreshButtonDidTapped:" destination="-1" eventType="touchUpInside" id="TbP-rZ-vKs"/>
                             </connections>
                         </button>
                     </subviews>
@@ -131,7 +131,7 @@
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="ev3-eu-Uni" secondAttribute="bottom" constant="15" id="JPu-Pr-Pjp"/>
                         <constraint firstAttribute="trailing" secondItem="ev3-eu-Uni" secondAttribute="trailing" constant="25" id="eZm-8Z-DJg"/>
-                        <constraint firstItem="D1b-8P-RAk" firstAttribute="top" secondItem="xmi-ot-oeH" secondAttribute="bottom" constant="10" id="kQ1-Qw-wuz"/>
+                        <constraint firstItem="D1b-8P-RAk" firstAttribute="top" secondItem="xmi-ot-oeH" secondAttribute="bottom" constant="8" id="kQ1-Qw-wuz"/>
                         <constraint firstItem="xmi-ot-oeH" firstAttribute="top" secondItem="AtM-uy-dvO" secondAttribute="top" constant="20" id="nXd-h3-2GF"/>
                         <constraint firstItem="xmi-ot-oeH" firstAttribute="leading" secondItem="AtM-uy-dvO" secondAttribute="leading" constant="25" id="tLd-VO-auc"/>
                         <constraint firstItem="D1b-8P-RAk" firstAttribute="leading" secondItem="AtM-uy-dvO" secondAttribute="leading" constant="25" id="xPE-YC-1tm"/>
@@ -154,7 +154,7 @@
                 <constraint firstItem="AtM-uy-dvO" firstAttribute="leading" secondItem="p0d-yc-tya" secondAttribute="trailing" id="zwb-12-3dY"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-31" y="-245"/>
+            <point key="canvasLocation" x="-542" y="-257"/>
         </view>
     </objects>
 </document>

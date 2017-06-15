@@ -14,6 +14,10 @@ struct WSTrainListHeaderData {
     var departureDate: Date
 }
 
+protocol WSTrainListHeaderViewDelegate: class {
+    func WSTrainListHeaderViewDidChickRefresh(headerView: WSTrainListHeaderView)
+}
+
 class WSTrainListHeaderView: UIView {
     
     public var headerData: WSTrainListHeaderData? {
@@ -23,11 +27,13 @@ class WSTrainListHeaderView: UIView {
             departureDate.setTitle(transformDepartureDate(headerData!.departureDate), for: .normal)
         }
     }
+    
+    public weak var delegate: WSTrainListHeaderViewDelegate?
 
     @IBOutlet weak var fromName: UIButton!
     @IBOutlet weak var toName: UIButton!
     @IBOutlet weak var departureDate: UIButton!
-    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var refreshButton: UIButton!
     @IBOutlet weak var bottomView: UIView!
     
     private var xibView: UIView?
@@ -70,8 +76,8 @@ class WSTrainListHeaderView: UIView {
     }
     
     private func configSearchButton() {
-        searchButton.layer.cornerRadius = 2
-        searchButton.layer.masksToBounds = true
+        refreshButton.layer.cornerRadius = 2
+        refreshButton.layer.masksToBounds = true
     }
     
     private func loadViewFromNib() -> UIView{
@@ -95,8 +101,10 @@ class WSTrainListHeaderView: UIView {
         
     }
     
-    @IBAction func searchButtonDidTapped(_ sender: Any) {
-        
+    @IBAction func refreshButtonDidTapped(_ sender: Any) {
+        if let delegate = delegate {
+            delegate.WSTrainListHeaderViewDidChickRefresh(headerView: self)
+        }
     }
     
 //MARK:- other 

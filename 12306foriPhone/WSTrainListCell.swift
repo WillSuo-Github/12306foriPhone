@@ -21,7 +21,9 @@ class WSTrainListCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var ticketsLeftLabel: UILabel!
     @IBOutlet weak var buyButton: UIButton!
-  
+    @IBOutlet weak var detailView: UIView!
+    
+    
 //MARK:- life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,6 +43,7 @@ class WSTrainListCell: UITableViewCell {
         timeLabel.text = "\(ticketInfo.start_time!) - \(ticketInfo.arrive_time!)"
         ticketsLeftLabel.text = getSeatStates(ticketInfo)
         addressStationLabel.text = "\(ticketInfo.FromStationName!) - \(ticketInfo.ToStationName!)"
+        detailView.isHidden = !ticketInfo.isShowDetail 
         
     }
     

@@ -38,7 +38,6 @@ class WSTrainListViewController: UIViewController {
         tableView?.dataSource = self
         tableView?.register(UINib(nibName: "WSTrainListCell", bundle: nil), forCellReuseIdentifier: "cell")
         tableView?.backgroundColor = UIColor(hexString: "f6fcfe")
-        tableView?.allowsSelection = false
         tableView?.tableHeaderView = tableHeaderView
         tableView?.tableFooterView = UIView()
         tableView?.separatorStyle = .none
@@ -54,6 +53,12 @@ class WSTrainListViewController: UIViewController {
     
     fileprivate func refreshData() {
         requestTrainList()
+    }
+    
+    fileprivate func reloadCellWith(_ indexPathes: [IndexPath]) {
+        for indexPath in indexPathes {
+            tableView?.reloadRow(at: indexPath, with: .bottom)
+        }
     }
 
 //MARK:- network
@@ -95,11 +100,42 @@ extension WSTrainListViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! WSTrainListCell
         cell.ticketInfo = ticketQueryResult[indexPath.row]
+        if ticketQueryResult[indexPath.row].isShowDetail {
+            tableView.reloadRow(at: indexPath, with: .none)
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110
+        if ticketQueryResult[indexPath.row].isShowDetail {
+            return 550
+        }else {
+            return 110
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        
+        var index: Int?
+        for (i, result) in ticketQueryResult.enumerated() {
+            if i == indexPath.row { break }
+            if result.isShowDetail {
+                result.isShowDetail = false
+                index = i
+            }
+        }
+        ticketQueryResult[indexPath.row].isShowDetail = !ticketQueryResult[indexPath.row].isShowDetail
+        var tmpIndexPath: IndexPath?
+        if let index = index {
+            tmpIndexPath = IndexPath(item: index, section: indexPath.section)
+        }
+        
+        if let tmpIndexPath = tmpIndexPath {
+            reloadCellWith([tmpIndexPath, indexPath])
+        }else {
+            reloadCellWith([indexPath])
+        }
     }
 
 }

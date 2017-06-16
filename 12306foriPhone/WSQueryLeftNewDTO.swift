@@ -98,6 +98,8 @@ class WSQueryLeftNewDTO: NSObject {
     let Swz_Num:String!
     
 // MARK: Custom Property
+    var isShowDetail: Bool
+    
     var seatTypePairDic = [String:SeatTypePair]()
     
     let isStartStation:Bool
@@ -255,6 +257,7 @@ class WSQueryLeftNewDTO: NSObject {
         FromStationName = map[FromStationCode].stringValue
         ToStationName = map[ToStationCode].stringValue
         
+        isShowDetail = false
         isStartStation = (FromStationCode == start_station_telecode)
         isEndStation = (ToStationCode == end_station_telecode)
         

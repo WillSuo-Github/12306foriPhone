@@ -100,9 +100,6 @@ extension WSTrainListViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! WSTrainListCell
         cell.ticketInfo = ticketQueryResult[indexPath.row]
-        if ticketQueryResult[indexPath.row].isShowDetail {
-            tableView.reloadRow(at: indexPath, with: .none)
-        }
         return cell
     }
     
@@ -119,12 +116,13 @@ extension WSTrainListViewController: UITableViewDelegate, UITableViewDataSource 
         
         var index: Int?
         for (i, result) in ticketQueryResult.enumerated() {
-            if i == indexPath.row { break }
+            if i == indexPath.row { continue }
             if result.isShowDetail {
                 result.isShowDetail = false
                 index = i
             }
         }
+        
         ticketQueryResult[indexPath.row].isShowDetail = !ticketQueryResult[indexPath.row].isShowDetail
         var tmpIndexPath: IndexPath?
         if let index = index {

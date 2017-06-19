@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -156,10 +156,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4V3-SX-kS6">
-                    <rect key="frame" x="15" y="25" width="20" height="20"/>
+                    <rect key="frame" x="15" y="25" width="13" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="dWu-42-DH9"/>
-                        <constraint firstAttribute="width" constant="20" id="svP-ml-iYd"/>
+                        <constraint firstAttribute="width" constant="13" id="svP-ml-iYd"/>
                     </constraints>
                     <state key="normal" image="pass_close"/>
                     <connections>
@@ -167,7 +167,7 @@
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMp-5b-mPY">
-                    <rect key="frame" x="170" y="25" width="35" height="21"/>
+                    <rect key="frame" x="173" y="25" width="35" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="35" id="0r3-sn-kH9"/>
                         <constraint firstAttribute="height" constant="21" id="g43-vs-Eoc"/>
@@ -190,7 +190,7 @@
                 <constraint firstItem="ufs-Lb-hjG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="200" id="OfL-pM-hp3"/>
                 <constraint firstItem="8C9-eC-BfA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Xbp-Xv-8Qe"/>
                 <constraint firstItem="uBT-OH-XFH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="cAd-Oe-hH8"/>
-                <constraint firstItem="XMp-5b-mPY" firstAttribute="leading" secondItem="4V3-SX-kS6" secondAttribute="trailing" constant="135" id="dnM-wd-0sE"/>
+                <constraint firstItem="XMp-5b-mPY" firstAttribute="leading" secondItem="4V3-SX-kS6" secondAttribute="trailing" constant="145" id="dnM-wd-0sE"/>
                 <constraint firstItem="4V3-SX-kS6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="krf-oe-KLD"/>
                 <constraint firstItem="8C9-eC-BfA" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ml9-cn-m9q"/>
             </constraints>
@@ -198,10 +198,10 @@
         </view>
     </objects>
     <resources>
-        <image name="pass_close" width="49" height="49"/>
+        <image name="pass_close" width="27" height="49"/>
         <image name="password_binding" width="40" height="49"/>
-        <image name="user_binding" width="49" height="49"/>
-        <image name="刷新" width="48" height="49"/>
+        <image name="user_binding" width="42" height="50"/>
+        <image name="刷新" width="49" height="50"/>
         <image name="背景" width="1242" height="2208"/>
     </resources>
 </document>

@@ -57,7 +57,7 @@ class WSTrainListViewController: UIViewController {
     
     fileprivate func reloadCellWith(_ indexPathes: [IndexPath]) {
         for indexPath in indexPathes {
-            tableView?.reloadRow(at: indexPath, with: .bottom)
+            tableView?.reloadRow(at: indexPath, with: .middle)
         }
     }
 

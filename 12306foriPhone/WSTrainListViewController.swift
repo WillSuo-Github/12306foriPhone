@@ -105,7 +105,7 @@ extension WSTrainListViewController: UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if ticketQueryResult[indexPath.row].isShowDetail {
-            return 550
+            return 450
         }else {
             return 110
         }

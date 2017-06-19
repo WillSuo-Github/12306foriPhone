@@ -24,6 +24,14 @@ class WSTrainListCell: UITableViewCell {
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var detailView: UIView!
     
+    //detail
+    @IBOutlet weak var fromStationName: UILabel!
+    @IBOutlet weak var toStationName: UILabel!
+    @IBOutlet weak var selectSeatButton: UIButton!
+     @IBOutlet weak var selectPersonButton: UIButton!
+    @IBOutlet weak var detailTrainName: UILabel!
+    @IBOutlet weak var startTime: UILabel!
+    @IBOutlet weak var addGrapTicketButton: UIButton!
     
 //MARK:- life cycle
     override func awakeFromNib() {
@@ -36,6 +44,9 @@ class WSTrainListCell: UITableViewCell {
     private func configSubviews() {
         buyButton.layer.cornerRadius = 15
         buyButton.layer.masksToBounds = true
+        
+        addGrapTicketButton.layer.cornerRadius = 5
+        addGrapTicketButton.layer.masksToBounds = true
     }
     
     private func updateUI() {
@@ -44,18 +55,36 @@ class WSTrainListCell: UITableViewCell {
         timeLabel.text = "\(ticketInfo.start_time!) - \(ticketInfo.arrive_time!)"
         ticketsLeftLabel.text = getSeatStates(ticketInfo)
         addressStationLabel.text = "\(ticketInfo.FromStationName!) - \(ticketInfo.ToStationName!)"
+        detailTrainName.text = ticketInfo.TrainCode!
+        startTime.text = ticketInfo.start_time!
+        fromStationName.text = ticketInfo.FromStationName!
+        toStationName.text = ticketInfo.ToStationName!
         
+        updateShadowColor()
+        updateSeatAndPerson()
+    }
+    
+    private func updateShadowColor() {
         
-        self.mainView.layer.shadowColor = UIColor(hexString: "AAAAAA")?.cgColor
-        self.mainView.layer.shadowRadius = 3
-        self.mainView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        mainView.layer.shadowColor = UIColor(hexString: "AAAAAA")?.cgColor
+        mainView.layer.shadowRadius = 3
+        mainView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        
+        detailView.layer.shadowColor = UIColor(hexString: "AAAAAA")?.cgColor
+        detailView.layer.shadowRadius = 3
+        detailView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        detailView.layer.shadowOpacity = 0.5
         if ticketInfo.isShowDetail {
             detailView.isHidden = false
-            self.mainView.layer.shadowOpacity = 1
+            mainView.layer.shadowOpacity = 0.5
         }else{
             detailView.isHidden = true
-            self.mainView.layer.shadowOpacity = 0.2
+            mainView.layer.shadowOpacity = 0.1
         }
+    }
+    
+    private func updateSeatAndPerson() {
+        
     }
     
     private func getSeatStates(_ ticket: WSQueryLeftNewDTO) -> String {
@@ -84,4 +113,12 @@ class WSTrainListCell: UITableViewCell {
         
     }
     
+    @IBAction func selectSeatDidTapped(_ sender: Any) {
+    }
+    
+    @IBAction func selectPersonDidTapped(_ sender: Any) {
+    }
+    
+    @IBAction func addGrapTicketDidTapped(_ sender: Any) {
+    }
 }

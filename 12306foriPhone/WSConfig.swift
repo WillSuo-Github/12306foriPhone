@@ -9,3 +9,5 @@
 import UIKit
 
 let WSPlaceHolderColor = UIColor(red: 245/255.0, green: 245/255.0, blue: 245/255.0, alpha: 1)
+
+let SizeScale = UIScreen.main.bounds.size.width / 414.0

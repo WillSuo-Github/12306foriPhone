@@ -117,6 +117,7 @@
                 <outlet property="addressStationLabel" destination="gPs-zq-8Z0" id="CaQ-bf-rbc"/>
                 <outlet property="buyButton" destination="jiS-GY-olj" id="fkf-Ny-xuH"/>
                 <outlet property="detailView" destination="2CQ-O0-sda" id="Sfh-uc-9bu"/>
+                <outlet property="mainView" destination="Dwc-RA-Idw" id="yAz-mz-J1K"/>
                 <outlet property="ticketsLeftLabel" destination="hyz-QT-ON5" id="xgO-93-SfK"/>
                 <outlet property="timeLabel" destination="qYP-L8-gnU" id="Yfe-UJ-e1c"/>
                 <outlet property="trainNameLabel" destination="G9l-u8-s2I" id="ujb-ws-M5G"/>

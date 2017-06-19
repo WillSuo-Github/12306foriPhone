@@ -21,6 +21,7 @@ class WSTrainListCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var ticketsLeftLabel: UILabel!
     @IBOutlet weak var buyButton: UIButton!
+    @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var detailView: UIView!
     
     
@@ -43,8 +44,18 @@ class WSTrainListCell: UITableViewCell {
         timeLabel.text = "\(ticketInfo.start_time!) - \(ticketInfo.arrive_time!)"
         ticketsLeftLabel.text = getSeatStates(ticketInfo)
         addressStationLabel.text = "\(ticketInfo.FromStationName!) - \(ticketInfo.ToStationName!)"
-        detailView.isHidden = !ticketInfo.isShowDetail 
         
+        
+        self.mainView.layer.shadowColor = UIColor(hexString: "AAAAAA")?.cgColor
+        self.mainView.layer.shadowRadius = 3
+        self.mainView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        if ticketInfo.isShowDetail {
+            detailView.isHidden = false
+            self.mainView.layer.shadowOpacity = 1
+        }else{
+            detailView.isHidden = true
+            self.mainView.layer.shadowOpacity = 0.2
+        }
     }
     
     private func getSeatStates(_ ticket: WSQueryLeftNewDTO) -> String {

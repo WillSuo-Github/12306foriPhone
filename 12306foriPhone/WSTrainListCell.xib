@@ -318,6 +318,8 @@
                 <outlet property="buyButton" destination="jiS-GY-olj" id="fkf-Ny-xuH"/>
                 <outlet property="detailTrainName" destination="bgI-B5-etq" id="P8B-Ab-0Mx"/>
                 <outlet property="detailView" destination="2CQ-O0-sda" id="Sfh-uc-9bu"/>
+                <outlet property="detailViewLeading" destination="gym-e6-yle" id="mj3-hD-pSE"/>
+                <outlet property="detailViewTrailing" destination="l7C-cX-iEN" id="eaR-QM-PKt"/>
                 <outlet property="fromStationName" destination="3Z4-7n-i9O" id="eDQ-WV-Z7P"/>
                 <outlet property="mainView" destination="Dwc-RA-Idw" id="yAz-mz-J1K"/>
                 <outlet property="selectPersonButton" destination="5gf-1Y-sEu" id="ahb-vo-Fzd"/>
@@ -328,7 +330,7 @@
                 <outlet property="toStationName" destination="yVR-P2-nmF" id="bbU-Sy-Hyh"/>
                 <outlet property="trainNameLabel" destination="G9l-u8-s2I" id="dhn-pQ-uXA"/>
             </connections>
-            <point key="canvasLocation" x="-789" y="-355"/>
+            <point key="canvasLocation" x="-665" y="-356"/>
         </tableViewCell>
     </objects>
 </document>

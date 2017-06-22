@@ -33,6 +33,9 @@ class WSTrainListCell: UITableViewCell {
     @IBOutlet weak var startTime: UILabel!
     @IBOutlet weak var addGrapTicketButton: UIButton!
     
+    @IBOutlet weak var detailViewTrailing: NSLayoutConstraint!
+    @IBOutlet weak var detailViewLeading: NSLayoutConstraint!
+    
 //MARK:- life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -62,6 +65,7 @@ class WSTrainListCell: UITableViewCell {
         
         updateShadowColor()
         updateSeatAndPerson()
+        updateLayoutConstraint()
     }
     
     private func updateShadowColor() {
@@ -85,6 +89,11 @@ class WSTrainListCell: UITableViewCell {
     
     private func updateSeatAndPerson() {
         
+    }
+    
+    private func updateLayoutConstraint() {
+        detailViewTrailing.constant = detailViewTrailing.constant * WSConfig.SizeScale
+        detailViewLeading.constant = detailViewLeading.constant * WSConfig.SizeScale
     }
     
     private func getSeatStates(_ ticket: WSQueryLeftNewDTO) -> String {

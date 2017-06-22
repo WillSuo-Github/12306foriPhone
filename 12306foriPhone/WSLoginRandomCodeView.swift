@@ -63,7 +63,7 @@ class WSLoginRandomCodeView: UIView {
     private func setUpSubViews() {
         
         myImageV = UIImageView(frame: self.frame)
-        myImageV.image = UIImage(color: WSPlaceHolderColor)!
+        myImageV.image = UIImage(color: WSConfig.WSPlaceHolderColor)!
         myImageV.isUserInteractionEnabled = true
         myImageV.contentMode = .scaleToFill
         addSubview(myImageV)

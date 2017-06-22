@@ -1,15 +1,15 @@
 //
-//  UILabel+WSScaleLabel.m
+//  UIButton+WSScaleButton.m
 //  12306foriPhone
 //
 //  Created by WS on 2017/6/22.
 //  Copyright © 2017年 WS. All rights reserved.
 //
 
-#import "UILabel+WSScaleLabel.h"
+#import "UIButton+WSScaleButton.h"
 #import "_2306foriPhone-Swift.h"
 
-@implementation UILabel (WSScaleLabel)
+@implementation UIButton (WSScaleButton)
 
 + (void)load {
     
@@ -32,9 +32,10 @@
     [self myInitWithCoder:aDecoder];
     
     if (self) {
-        CGFloat fontSize = self.font.pointSize;
-        self.font = [UIFont systemFontOfSize:fontSize * WSConfig.SizeScale];
+        CGFloat fontSize = self.titleLabel.font.pointSize;
+        self.titleLabel.font = [UIFont systemFontOfSize:fontSize * WSConfig.SizeScale];
     }
     return self;
 }
+
 @end

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		20C30703EC783338271F318E /* Pods_12306foriPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F636753D1B88E84D44EEF507 /* Pods_12306foriPhone.framework */; };
 		540535841EFBB825001653E8 /* UILabel+WSScaleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 540535831EFBB825001653E8 /* UILabel+WSScaleLabel.m */; };
+		5405358A1EFBBC87001653E8 /* UIButton+WSScaleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 540535891EFBBC87001653E8 /* UIButton+WSScaleButton.m */; };
 		5426752B1EEBEE0100C2689F /* WSCalendarCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542675241EEBEE0100C2689F /* WSCalendarCollectionLayout.swift */; };
 		5426752C1EEBEE0100C2689F /* WSCalendarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542675251EEBEE0100C2689F /* WSCalendarConfig.swift */; };
 		5426752D1EEBEE0100C2689F /* WSCalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542675261EEBEE0100C2689F /* WSCalendarDate.swift */; };
@@ -105,6 +106,8 @@
 		540535811EFBB824001653E8 /* 12306foriPhone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "12306foriPhone-Bridging-Header.h"; sourceTree = "<group>"; };
 		540535821EFBB825001653E8 /* UILabel+WSScaleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+WSScaleLabel.h"; sourceTree = "<group>"; };
 		540535831EFBB825001653E8 /* UILabel+WSScaleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+WSScaleLabel.m"; sourceTree = "<group>"; };
+		540535881EFBBC87001653E8 /* UIButton+WSScaleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WSScaleButton.h"; sourceTree = "<group>"; };
+		540535891EFBBC87001653E8 /* UIButton+WSScaleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WSScaleButton.m"; sourceTree = "<group>"; };
 		542675241EEBEE0100C2689F /* WSCalendarCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarCollectionLayout.swift; sourceTree = "<group>"; };
 		542675251EEBEE0100C2689F /* WSCalendarConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarConfig.swift; sourceTree = "<group>"; };
 		542675261EEBEE0100C2689F /* WSCalendarDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarDate.swift; sourceTree = "<group>"; };
@@ -553,6 +556,8 @@
 				543B6A8A1EF1199600E412D7 /* WSDateTool.swift */,
 				540535821EFBB825001653E8 /* UILabel+WSScaleLabel.h */,
 				540535831EFBB825001653E8 /* UILabel+WSScaleLabel.m */,
+				540535881EFBBC87001653E8 /* UIButton+WSScaleButton.h */,
+				540535891EFBBC87001653E8 /* UIButton+WSScaleButton.m */,
 				540535811EFBB824001653E8 /* 12306foriPhone-Bridging-Header.h */,
 			);
 			name = utilities;
@@ -722,6 +727,7 @@
 				543E48851DBCF64400AB9D08 /* WSNavigationController.swift in Sources */,
 				5442F9261ECEEDAF00D236D0 /* NVActivityIndicatorAnimationAudioEqualizer.swift in Sources */,
 				5442F9351ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
+				5405358A1EFBBC87001653E8 /* UIButton+WSScaleButton.m in Sources */,
 				54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */,
 				5442F9341ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				5442F93E1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,

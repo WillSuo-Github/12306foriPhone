@@ -60,6 +60,11 @@ class WSTrainListViewController: UIViewController {
             tableView?.reloadRow(at: indexPath, with: .middle)
         }
     }
+    
+    fileprivate func scrollCellToTop(_ indexPath: IndexPath) {
+        tableView?.scrollToRow(at: indexPath, at: .top, animated: true)
+//        tableView?.scroll(toRow: UInt(indexPath.row), inSection: UInt(indexPath.section), at: .top, animated: true)
+    }
 
 //MARK:- network
     private func requestTrainList() {
@@ -134,6 +139,8 @@ extension WSTrainListViewController: UITableViewDelegate, UITableViewDataSource 
         }else {
             reloadCellWith([indexPath])
         }
+        
+        ticketQueryResult[indexPath.row].isShowDetail ? scrollCellToTop(indexPath) : ()
     }
 
 }

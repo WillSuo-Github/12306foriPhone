@@ -1,9 +1,4 @@
 //
-//  12306foriPhone-Bridging-Header.h
-//  12306foriPhone
+//  Use this file to import your target's public headers that you would like to expose to Swift.
 //
-//  Created by WS on 2017/6/19.
-//  Copyright © 2017年 WS. All rights reserved.
-//
-
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		20C30703EC783338271F318E /* Pods_12306foriPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F636753D1B88E84D44EEF507 /* Pods_12306foriPhone.framework */; };
+		540535841EFBB825001653E8 /* UILabel+WSScaleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 540535831EFBB825001653E8 /* UILabel+WSScaleLabel.m */; };
 		5426752B1EEBEE0100C2689F /* WSCalendarCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542675241EEBEE0100C2689F /* WSCalendarCollectionLayout.swift */; };
 		5426752C1EEBEE0100C2689F /* WSCalendarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542675251EEBEE0100C2689F /* WSCalendarConfig.swift */; };
 		5426752D1EEBEE0100C2689F /* WSCalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542675261EEBEE0100C2689F /* WSCalendarDate.swift */; };
@@ -101,6 +102,9 @@
 
 /* Begin PBXFileReference section */
 		0FA04F8C4CA218F18B06F365 /* Pods-12306foriPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-12306foriPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-12306foriPhone/Pods-12306foriPhone.debug.xcconfig"; sourceTree = "<group>"; };
+		540535811EFBB824001653E8 /* 12306foriPhone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "12306foriPhone-Bridging-Header.h"; sourceTree = "<group>"; };
+		540535821EFBB825001653E8 /* UILabel+WSScaleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+WSScaleLabel.h"; sourceTree = "<group>"; };
+		540535831EFBB825001653E8 /* UILabel+WSScaleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+WSScaleLabel.m"; sourceTree = "<group>"; };
 		542675241EEBEE0100C2689F /* WSCalendarCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarCollectionLayout.swift; sourceTree = "<group>"; };
 		542675251EEBEE0100C2689F /* WSCalendarConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarConfig.swift; sourceTree = "<group>"; };
 		542675261EEBEE0100C2689F /* WSCalendarDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarDate.swift; sourceTree = "<group>"; };
@@ -547,6 +551,9 @@
 				5442F8FA1ECE9E9800D236D0 /* WSHub.swift */,
 				5442F94E1ED2B9E200D236D0 /* WSConfig.swift */,
 				543B6A8A1EF1199600E412D7 /* WSDateTool.swift */,
+				540535821EFBB825001653E8 /* UILabel+WSScaleLabel.h */,
+				540535831EFBB825001653E8 /* UILabel+WSScaleLabel.m */,
+				540535811EFBB824001653E8 /* 12306foriPhone-Bridging-Header.h */,
 			);
 			name = utilities;
 			sourceTree = "<group>";
@@ -596,6 +603,7 @@
 					543E485E1DBCF5C900AB9D08 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = NT9VR9C9HY;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -728,6 +736,7 @@
 				5442F9421ECEEDAF00D236D0 /* NVActivityIndicatorAnimationPacman.swift in Sources */,
 				5442F9491ECEEDAF00D236D0 /* NVActivityIndicatorShape.swift in Sources */,
 				5442F9521ED2D28400D236D0 /* WSGrapTicketontroller.swift in Sources */,
+				540535841EFBB825001653E8 /* UILabel+WSScaleLabel.m in Sources */,
 				54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */,
 				5442F9361ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallSpinFadeLoader.swift in Sources */,
 				549D72C91EF0D7910033F6A1 /* WSLeftTicketParam.swift in Sources */,
@@ -886,12 +895,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = NT9VR9C9HY;
 				INFOPLIST_FILE = 12306foriPhone/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WS.12306foriPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "12306foriPhone/12306foriPhone-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				cc = "${SRCROOT}/ccache-clang";
 			};
@@ -903,12 +915,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = NT9VR9C9HY;
 				INFOPLIST_FILE = 12306foriPhone/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = WS.12306foriPhone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "12306foriPhone/12306foriPhone-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				cc = "${SRCROOT}/ccache-clang";
 			};

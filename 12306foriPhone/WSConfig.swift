@@ -13,5 +13,6 @@ class WSConfig: NSObject {
     public static let WSPlaceHolderColor: UIColor = UIColor(red: 245/255.0, green: 245/255.0, blue: 245/255.0, alpha: 1)
     
     public static let SizeScale: CGFloat = UIScreen.main.bounds.size.width / 414.0
+    public static let keywindow = UIApplication.shared.keyWindow!
 }
 

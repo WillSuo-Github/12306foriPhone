@@ -15,9 +15,11 @@ class WSTrainSeatAlert: UIView {
     let coverView: UIView = UIView()
 
 //MARK:- life cycle
-    public class func showSeatAlert() {
+    public class func showSeatAlert(_ onController: UIViewController) {
         
-        let view = WSTrainSeatAlert()
+        WSRotationScaleAnimation.startAnimation(onController)
+        
+        let view = WSTrainSeatAlert(frame: .zero)
         
         WSConfig.keywindow.addSubview(view)
         view.snp.makeConstraints { make in

@@ -85,6 +85,7 @@
 		5442F9561ED2D90700D236D0 /* station_name.js in Resources */ = {isa = PBXBuildFile; fileRef = 5442F9551ED2D90700D236D0 /* station_name.js */; };
 		5442F9581ED2D93100D236D0 /* WSStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F9571ED2D93100D236D0 /* WSStation.swift */; };
 		5442F95C1ED2DF7A00D236D0 /* WSStationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F95B1ED2DF7A00D236D0 /* WSStationController.swift */; };
+		544CCB3A1F000EA000E4D290 /* WSRotationScaleAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544CCB391F000EA000E4D290 /* WSRotationScaleAnimation.swift */; };
 		5451D1101ED6B57600725F27 /* WSCalendarHeaderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5451D10F1ED6B57600725F27 /* WSCalendarHeaderLayout.swift */; };
 		545F72D51EEE6DF4005A122B /* WSTrainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F72D31EEE6DF4005A122B /* WSTrainListViewController.swift */; };
 		545F72D61EEE6DF4005A122B /* WSTrainListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545F72D41EEE6DF4005A122B /* WSTrainListViewController.xib */; };
@@ -187,6 +188,7 @@
 		5442F9551ED2D90700D236D0 /* station_name.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = station_name.js; sourceTree = "<group>"; };
 		5442F9571ED2D93100D236D0 /* WSStation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSStation.swift; sourceTree = "<group>"; };
 		5442F95B1ED2DF7A00D236D0 /* WSStationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSStationController.swift; sourceTree = "<group>"; };
+		544CCB391F000EA000E4D290 /* WSRotationScaleAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSRotationScaleAnimation.swift; sourceTree = "<group>"; };
 		5451D10F1ED6B57600725F27 /* WSCalendarHeaderLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarHeaderLayout.swift; sourceTree = "<group>"; };
 		545F72D31EEE6DF4005A122B /* WSTrainListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainListViewController.swift; sourceTree = "<group>"; };
 		545F72D41EEE6DF4005A122B /* WSTrainListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSTrainListViewController.xib; sourceTree = "<group>"; };
@@ -474,6 +476,14 @@
 			name = station;
 			sourceTree = "<group>";
 		};
+		544CCB381F000D0100E4D290 /* animation */ = {
+			isa = PBXGroup;
+			children = (
+				544CCB391F000EA000E4D290 /* WSRotationScaleAnimation.swift */,
+			);
+			name = animation;
+			sourceTree = "<group>";
+		};
 		545F72D21EEE6DCC005A122B /* trainList */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,6 +518,7 @@
 		545F72E11EEE9B3F005A122B /* module */ = {
 			isa = PBXGroup;
 			children = (
+				544CCB381F000D0100E4D290 /* animation */,
 				549D72CC1EF0DA4C0033F6A1 /* params */,
 				545F72E21EEE9B5F005A122B /* WSTrainListModule.swift */,
 				549D72CA1EF0D89C0033F6A1 /* WSQueryLeftNewDTO.swift */,
@@ -721,6 +732,7 @@
 				5442F95C1ED2DF7A00D236D0 /* WSStationController.swift in Sources */,
 				543B435F1ED5689B00230567 /* WSCalendarHeaderView.swift in Sources */,
 				5426752C1EEBEE0100C2689F /* WSCalendarConfig.swift in Sources */,
+				544CCB3A1F000EA000E4D290 /* WSRotationScaleAnimation.swift in Sources */,
 				5426752E1EEBEE0100C2689F /* WSCalendarItem.swift in Sources */,
 				5442F8F91ECDAE1000D236D0 /* WSService+Order.swift in Sources */,
 				5426752D1EEBEE0100C2689F /* WSCalendarDate.swift in Sources */,

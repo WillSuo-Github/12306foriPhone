@@ -14,5 +14,25 @@ class WSConfig: NSObject {
     
     public static let SizeScale: CGFloat = UIScreen.main.bounds.size.width / 414.0
     public static let keywindow = UIApplication.shared.keyWindow!
+    
+    public static func getViewController(inView: UIView) -> UIViewController? {
+        
+        var view: UIView? = inView
+        
+        while view != nil {
+            let nextResponder = view?.next
+            if let next = nextResponder {
+                if next.isKind(of: UIViewController.self) {
+                    return next as! UIViewController
+                }else{
+                    view = (next as! UIView).superview!
+                }
+            }else{
+                return nil
+            }
+        }
+        
+        return nil
+    }
 }
 

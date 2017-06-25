@@ -123,7 +123,8 @@ class WSTrainListCell: UITableViewCell {
     }
     
     @IBAction func selectSeatDidTapped(_ sender: Any) {
-        WSTrainSeatAlert.showSeatAlert()
+        
+        WSTrainSeatAlert.showSeatAlert(WSConfig.getViewController(inView: self)!)
     }
     
     @IBAction func selectPersonDidTapped(_ sender: Any) {

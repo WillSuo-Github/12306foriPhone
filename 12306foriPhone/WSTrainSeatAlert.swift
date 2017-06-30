@@ -19,13 +19,13 @@ class WSTrainSeatAlert: UIView {
         
         WSRotationScaleAnimation.startAnimation(onController)
         
-        let view = WSTrainSeatAlert(frame: .zero)
-        
-        WSConfig.keywindow.addSubview(view)
-        view.snp.makeConstraints { make in
-            make.bottom.left.right.equalTo(WSConfig.keywindow)
-            make.height.equalTo(300)
-        }
+//        let view = WSTrainSeatAlert(frame: .zero)
+//        
+//        WSConfig.keywindow.addSubview(view)
+//        view.snp.makeConstraints { make in
+//            make.bottom.left.right.equalTo(WSConfig.keywindow)
+//            make.height.equalTo(300)
+//        }
     }
     
     override init(frame: CGRect) {

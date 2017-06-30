@@ -23,7 +23,7 @@ class WSConfig: NSObject {
             let nextResponder = view?.next
             if let next = nextResponder {
                 if next.isKind(of: UIViewController.self) {
-                    return next as! UIViewController
+                    return next as? UIViewController
                 }else{
                     view = (next as! UIView).superview!
                 }

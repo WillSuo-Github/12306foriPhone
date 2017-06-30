@@ -10,7 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WSGrapTicketontroller" customModule="_2306foriPhone" customModuleProvider="target">
             <connections>
+                <outlet property="fromStationButton" destination="zuy-cn-TyG" id="rwf-zZ-ytB"/>
                 <outlet property="timeLabel" destination="FOp-GY-0te" id="RCG-i0-vQD"/>
+                <outlet property="toStationButton" destination="2yG-lt-ozs" id="ZYn-pu-Aq0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="weekLabel" destination="pFp-Kf-uXz" id="RKh-Oq-eYS"/>
             </connections>

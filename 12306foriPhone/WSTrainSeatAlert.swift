@@ -13,19 +13,17 @@ class WSTrainSeatAlert: UIView {
 //MARK:- private property
     let tableView: UITableView = UITableView()
     let coverView: UIView = UIView()
+    let tableViewHeight: CGFloat = 300.0
+    weak var onConotrller: UIViewController?
 
 //MARK:- life cycle
     public class func showSeatAlert(_ onController: UIViewController) {
         
-        WSRotationScaleAnimation.startAnimation(onController)
+        WSRotationScaleAnimation.showAnimation(onController, 1)
         
-//        let view = WSTrainSeatAlert(frame: .zero)
-//        
-//        WSConfig.keywindow.addSubview(view)
-//        view.snp.makeConstraints { make in
-//            make.bottom.left.right.equalTo(WSConfig.keywindow)
-//            make.height.equalTo(300)
-//        }
+        let alertView = WSTrainSeatAlert(frame: WSConfig.keywindow.bounds)
+        alertView.onConotrller = onController
+        WSConfig.keywindow.addSubview(alertView)
     }
     
     override init(frame: CGRect) {
@@ -50,26 +48,58 @@ class WSTrainSeatAlert: UIView {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.frame = CGRect(x: 0, y: WSConfig.keywindow.height, width: WSConfig.keywindow.width, height: tableViewHeight)
         self.addSubview(tableView)
-        tableView.snp.makeConstraints { make in
-            make.edges.equalTo(self)
+        
+        UIView.animate(withDuration: 0.5) { 
+            self.tableView.frame = CGRect(x: 0, y: WSConfig.keywindow.height - self.tableViewHeight, width: WSConfig.keywindow.width, height: self.tableViewHeight)
         }
     }
     
     private func configCoverView() {
         
-        coverView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
+        coverView.frame = WSConfig.keywindow.bounds
+        coverView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
         let tap = UITapGestureRecognizer(target: self, action: #selector(coverViewDidChick))
         coverView.addGestureRecognizer(tap)
-        WSConfig.keywindow.addSubview(coverView)
-        coverView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
+        self.addSubview(coverView)
+        
+        UIView.animate(withDuration: 0.5) { 
+            self.coverView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
         }
     }
     
+    private func hideCoverView() {
+        
+        UIView.animate(withDuration: 0.5, animations: { 
+            self.coverView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
+        }) { _ in
+            self.coverView.removeFromSuperview()
+        }
+    }
+    
+    private func hideTableView() {
+        
+        UIView.animate(withDuration: 0.5, animations: { 
+            self.tableView.frame = CGRect(x: 0, y: WSConfig.keywindow.height, width: WSConfig.keywindow.width, height: self.tableViewHeight)
+        }) { _ in
+            self.tableView.removeFromSuperview()
+        }
+    }
+    
+    
+    
     fileprivate func hideAllView() {
-        coverView.removeFromSuperview()
-        tableView.removeFromSuperview()
+        hideCoverView()
+        hideTableView()
+        
+        if let controller = onConotrller {
+            WSRotationScaleAnimation.hideAnimation(controller)
+        }
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6) { 
+            self.removeFromSuperview()
+        }
     }
     
 //MARK:- tapped response

@@ -124,7 +124,7 @@ class WSTrainListCell: UITableViewCell {
     
     @IBAction func selectSeatDidTapped(_ sender: Any) {
         
-        WSTrainSeatAlert.showSeatAlert(WSConfig.getViewController(inView: self)!)
+        WSTrainSeatAlert.showSeatAlert(WSConfig.getViewController(inView: self)!, ticketInfo.seatTypePairDic)
     }
     
     @IBAction func selectPersonDidTapped(_ sender: Any) {

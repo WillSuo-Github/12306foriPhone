@@ -202,11 +202,19 @@ class WSQueryLeftNewDTO: NSObject {
                 if (seatVal != "--") && (seatVal != "无") && (seatVal != "*")&&(seatVal != ""){
                     seatInfos[seatName] = SeatTypePair(seatName: seatName, seatCode: seatTypeNameDic[seatName]!, hasTicket: true)
                 }
+                
+                if seatVal == "无" {
+                    seatInfos[seatName] = SeatTypePair(seatName: seatName, seatCode: seatTypeNameDic[seatName]!, hasTicket: false)
+                }
             }
         }
         
         return seatInfos
     }
+    
+//    func getSeatInfos() -> [] {
+//        
+//    }
     
     init(json:JSON, map:JSON, dateStr:String)
     {

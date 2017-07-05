@@ -94,6 +94,8 @@
 		545F72DF1EEE9237005A122B /* WSTrainListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F72DD1EEE9237005A122B /* WSTrainListCell.swift */; };
 		545F72E01EEE9237005A122B /* WSTrainListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545F72DE1EEE9237005A122B /* WSTrainListCell.xib */; };
 		545F72E31EEE9B5F005A122B /* WSTrainListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F72E21EEE9B5F005A122B /* WSTrainListModule.swift */; };
+		548D0C801F0C8A5700368813 /* WSTrainSeatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548D0C7E1F0C8A5700368813 /* WSTrainSeatCell.swift */; };
+		548D0C811F0C8A5700368813 /* WSTrainSeatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548D0C7F1F0C8A5700368813 /* WSTrainSeatCell.xib */; };
 		549D72C71EF0D6E70033F6A1 /* WSService+QueryTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549D72C61EF0D6E70033F6A1 /* WSService+QueryTicket.swift */; };
 		549D72C91EF0D7910033F6A1 /* WSLeftTicketParam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549D72C81EF0D7910033F6A1 /* WSLeftTicketParam.swift */; };
 		549D72CB1EF0D89C0033F6A1 /* WSQueryLeftNewDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549D72CA1EF0D89C0033F6A1 /* WSQueryLeftNewDTO.swift */; };
@@ -197,6 +199,8 @@
 		545F72DD1EEE9237005A122B /* WSTrainListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainListCell.swift; sourceTree = "<group>"; };
 		545F72DE1EEE9237005A122B /* WSTrainListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSTrainListCell.xib; sourceTree = "<group>"; };
 		545F72E21EEE9B5F005A122B /* WSTrainListModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainListModule.swift; sourceTree = "<group>"; };
+		548D0C7E1F0C8A5700368813 /* WSTrainSeatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainSeatCell.swift; sourceTree = "<group>"; };
+		548D0C7F1F0C8A5700368813 /* WSTrainSeatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSTrainSeatCell.xib; sourceTree = "<group>"; };
 		549D72C61EF0D6E70033F6A1 /* WSService+QueryTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WSService+QueryTicket.swift"; sourceTree = "<group>"; };
 		549D72C81EF0D7910033F6A1 /* WSLeftTicketParam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLeftTicketParam.swift; sourceTree = "<group>"; };
 		549D72CA1EF0D89C0033F6A1 /* WSQueryLeftNewDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSQueryLeftNewDTO.swift; sourceTree = "<group>"; };
@@ -511,6 +515,8 @@
 				545F72DD1EEE9237005A122B /* WSTrainListCell.swift */,
 				545F72DE1EEE9237005A122B /* WSTrainListCell.xib */,
 				5405358B1EFBC295001653E8 /* WSTrainSeatAlert.swift */,
+				548D0C7E1F0C8A5700368813 /* WSTrainSeatCell.swift */,
+				548D0C7F1F0C8A5700368813 /* WSTrainSeatCell.xib */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -651,6 +657,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5442F9531ED2D28400D236D0 /* WSGrapTicketontroller.xib in Resources */,
+				548D0C811F0C8A5700368813 /* WSTrainSeatCell.xib in Resources */,
 				543B435D1ED53BEE00230567 /* WSCalendarViewController.xib in Resources */,
 				545F72DC1EEE7304005A122B /* WSTrainListHeaderView.xib in Resources */,
 				543E486D1DBCF5C900AB9D08 /* LaunchScreen.storyboard in Resources */,
@@ -731,6 +738,7 @@
 				5442F9311ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallRotateChase.swift in Sources */,
 				5442F95C1ED2DF7A00D236D0 /* WSStationController.swift in Sources */,
 				543B435F1ED5689B00230567 /* WSCalendarHeaderView.swift in Sources */,
+				548D0C801F0C8A5700368813 /* WSTrainSeatCell.swift in Sources */,
 				5426752C1EEBEE0100C2689F /* WSCalendarConfig.swift in Sources */,
 				544CCB3A1F000EA000E4D290 /* WSRotationScaleAnimation.swift in Sources */,
 				5426752E1EEBEE0100C2689F /* WSCalendarItem.swift in Sources */,

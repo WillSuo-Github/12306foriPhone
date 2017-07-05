@@ -14,15 +14,17 @@ class WSTrainSeatAlert: UIView {
     let tableView: UITableView = UITableView()
     let coverView: UIView = UIView()
     let tableViewHeight: CGFloat = 300.0
+    var sourceDic: [String: SeatTypePair]!
     weak var onConotrller: UIViewController?
 
 //MARK:- life cycle
-    public class func showSeatAlert(_ onController: UIViewController) {
+    public class func showSeatAlert(_ onController: UIViewController, _ sourceDic: [String: SeatTypePair]) {
         
         WSRotationScaleAnimation.showAnimation(onController, 1)
         
         let alertView = WSTrainSeatAlert(frame: WSConfig.keywindow.bounds)
         alertView.onConotrller = onController
+        alertView.sourceDic = sourceDic 
         WSConfig.keywindow.addSubview(alertView)
     }
     
@@ -49,6 +51,7 @@ class WSTrainSeatAlert: UIView {
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.frame = CGRect(x: 0, y: WSConfig.keywindow.height, width: WSConfig.keywindow.width, height: tableViewHeight)
+        tableView.register(UINib(nibName: "WSTrainSeatCell", bundle: nil), forCellReuseIdentifier: "cell")
         self.addSubview(tableView)
         
         UIView.animate(withDuration: 0.5) { 
@@ -110,13 +113,15 @@ class WSTrainSeatAlert: UIView {
 
 extension WSTrainSeatAlert: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1;
+        return sourceDic.count;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        cell.textLabel?.text = "\(indexPath.row)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! WSTrainSeatCell
+        
+        let allValues = [SeatTypePair](sourceDic.values)
+        cell.seatInfo = allValues[indexPath.row]
         return cell
     }
 }

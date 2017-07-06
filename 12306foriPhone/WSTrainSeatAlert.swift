@@ -8,107 +8,48 @@
 
 import UIKit
 
-class WSTrainSeatAlert: UIView {
+class WSTrainSeatAlert: NSObject {
     
 //MARK:- private property
     let tableView: UITableView = UITableView()
-    let coverView: UIView = UIView()
-    let tableViewHeight: CGFloat = 300.0
     var sourceDic: [String: SeatTypePair]!
+    var selectBlock: ((SeatTypePair) -> Void)?
+    let tableViewHeight: CGFloat = 300.0
     weak var onConotrller: UIViewController?
+    var alertView: WSBottomSelectAlert?
+    
 
 //MARK:- life cycle
-    public class func showSeatAlert(_ onController: UIViewController, _ sourceDic: [String: SeatTypePair]) {
+    public class func showSeatAlert(_ onController: UIViewController, _ sourceDic: [String: SeatTypePair], _ selectBlock: @escaping (SeatTypePair) -> Void) {
         
         WSRotationScaleAnimation.showAnimation(onController, 1)
-        
-        let alertView = WSTrainSeatAlert(frame: WSConfig.keywindow.bounds)
-        alertView.onConotrller = onController
-        alertView.sourceDic = sourceDic 
-        WSConfig.keywindow.addSubview(alertView)
+        WSTrainSeatAlert(onController, sourceDic, selectBlock)
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    @discardableResult init(_ onController: UIViewController, _ sourceDic: [String: SeatTypePair], _ selectBlock: @escaping (SeatTypePair) -> Void) {
+        super.init()
         
+        self.onConotrller = onController
+        self.sourceDic = sourceDic
+        self.selectBlock = selectBlock
         configSubviews()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
     }
     
 //MARK:- layout
     private func configSubviews() {
-        
-        configCoverView()
+    
         configTableView()
     }
     
     private func configTableView() {
         
+        alertView = WSBottomSelectAlert.showBottomAlert(onConotrller, tableView, tableViewHeight)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        tableView.frame = CGRect(x: 0, y: WSConfig.keywindow.height, width: WSConfig.keywindow.width, height: tableViewHeight)
         tableView.register(UINib(nibName: "WSTrainSeatCell", bundle: nil), forCellReuseIdentifier: "cell")
-        self.addSubview(tableView)
-        
-        UIView.animate(withDuration: 0.5) { 
-            self.tableView.frame = CGRect(x: 0, y: WSConfig.keywindow.height - self.tableViewHeight, width: WSConfig.keywindow.width, height: self.tableViewHeight)
-        }
     }
-    
-    private func configCoverView() {
-        
-        coverView.frame = WSConfig.keywindow.bounds
-        coverView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
-        let tap = UITapGestureRecognizer(target: self, action: #selector(coverViewDidChick))
-        coverView.addGestureRecognizer(tap)
-        self.addSubview(coverView)
-        
-        UIView.animate(withDuration: 0.5) { 
-            self.coverView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.2)
-        }
-    }
-    
-    private func hideCoverView() {
-        
-        UIView.animate(withDuration: 0.5, animations: { 
-            self.coverView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
-        }) { _ in
-            self.coverView.removeFromSuperview()
-        }
-    }
-    
-    private func hideTableView() {
-        
-        UIView.animate(withDuration: 0.5, animations: { 
-            self.tableView.frame = CGRect(x: 0, y: WSConfig.keywindow.height, width: WSConfig.keywindow.width, height: self.tableViewHeight)
-        }) { _ in
-            self.tableView.removeFromSuperview()
-        }
-    }
-    
-    
-    
-    fileprivate func hideAllView() {
-        hideCoverView()
-        hideTableView()
-        
-        if let controller = onConotrller {
-            WSRotationScaleAnimation.hideAnimation(controller)
-        }
-        
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6) { 
-            self.removeFromSuperview()
-        }
-    }
-    
-//MARK:- tapped response
-    func coverViewDidChick() {
-        hideAllView()
-    }
+
 }
 
 extension WSTrainSeatAlert: UITableViewDelegate, UITableViewDataSource {
@@ -123,5 +64,15 @@ extension WSTrainSeatAlert: UITableViewDelegate, UITableViewDataSource {
         let allValues = [SeatTypePair](sourceDic.values)
         cell.seatInfo = allValues[indexPath.row]
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let allValues = [SeatTypePair](sourceDic.values)
+        if let block = selectBlock {
+            block(allValues[indexPath.row])
+        }
+        if let alert = alertView {
+            alert.hideAllView()
+        }
     }
 }

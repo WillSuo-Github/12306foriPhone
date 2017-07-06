@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		20C30703EC783338271F318E /* Pods_12306foriPhone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F636753D1B88E84D44EEF507 /* Pods_12306foriPhone.framework */; };
+		540487291F0DD6C7002266AE /* WSTrainPersonAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 540487281F0DD6C7002266AE /* WSTrainPersonAlert.swift */; };
+		5404872B1F0DD705002266AE /* WSBottomSelectAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5404872A1F0DD705002266AE /* WSBottomSelectAlert.swift */; };
 		540535841EFBB825001653E8 /* UILabel+WSScaleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 540535831EFBB825001653E8 /* UILabel+WSScaleLabel.m */; };
 		5405358A1EFBBC87001653E8 /* UIButton+WSScaleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 540535891EFBBC87001653E8 /* UIButton+WSScaleButton.m */; };
 		5405358C1EFBC295001653E8 /* WSTrainSeatAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5405358B1EFBC295001653E8 /* WSTrainSeatAlert.swift */; };
@@ -107,6 +109,8 @@
 
 /* Begin PBXFileReference section */
 		0FA04F8C4CA218F18B06F365 /* Pods-12306foriPhone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-12306foriPhone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-12306foriPhone/Pods-12306foriPhone.debug.xcconfig"; sourceTree = "<group>"; };
+		540487281F0DD6C7002266AE /* WSTrainPersonAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainPersonAlert.swift; sourceTree = "<group>"; };
+		5404872A1F0DD705002266AE /* WSBottomSelectAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSBottomSelectAlert.swift; sourceTree = "<group>"; };
 		540535811EFBB824001653E8 /* 12306foriPhone-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "12306foriPhone-Bridging-Header.h"; sourceTree = "<group>"; };
 		540535821EFBB825001653E8 /* UILabel+WSScaleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+WSScaleLabel.h"; sourceTree = "<group>"; };
 		540535831EFBB825001653E8 /* UILabel+WSScaleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+WSScaleLabel.m"; sourceTree = "<group>"; };
@@ -515,6 +519,7 @@
 				545F72DD1EEE9237005A122B /* WSTrainListCell.swift */,
 				545F72DE1EEE9237005A122B /* WSTrainListCell.xib */,
 				5405358B1EFBC295001653E8 /* WSTrainSeatAlert.swift */,
+				540487281F0DD6C7002266AE /* WSTrainPersonAlert.swift */,
 				548D0C7E1F0C8A5700368813 /* WSTrainSeatCell.swift */,
 				548D0C7F1F0C8A5700368813 /* WSTrainSeatCell.xib */,
 			);
@@ -574,6 +579,7 @@
 				5442F8FA1ECE9E9800D236D0 /* WSHub.swift */,
 				5442F94E1ED2B9E200D236D0 /* WSConfig.swift */,
 				543B6A8A1EF1199600E412D7 /* WSDateTool.swift */,
+				5404872A1F0DD705002266AE /* WSBottomSelectAlert.swift */,
 				540535821EFBB825001653E8 /* UILabel+WSScaleLabel.h */,
 				540535831EFBB825001653E8 /* UILabel+WSScaleLabel.m */,
 				540535881EFBBC87001653E8 /* UIButton+WSScaleButton.h */,
@@ -726,6 +732,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5404872B1F0DD705002266AE /* WSBottomSelectAlert.swift in Sources */,
 				543B43581ED4111600230567 /* WSSearchStationController.swift in Sources */,
 				549D72CE1EF0DA6D0033F6A1 /* WSTicketConstants.swift in Sources */,
 				5426752B1EEBEE0100C2689F /* WSCalendarCollectionLayout.swift in Sources */,
@@ -760,6 +767,7 @@
 				5442F9401ECEEDAF00D236D0 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
 				542675301EEBEE0100C2689F /* WSCalendarView.swift in Sources */,
 				5451D1101ED6B57600725F27 /* WSCalendarHeaderLayout.swift in Sources */,
+				540487291F0DD6C7002266AE /* WSTrainPersonAlert.swift in Sources */,
 				543E48771DBCF5F500AB9D08 /* WSOrderController.swift in Sources */,
 				5442F9291ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				5442F9421ECEEDAF00D236D0 /* NVActivityIndicatorAnimationPacman.swift in Sources */,

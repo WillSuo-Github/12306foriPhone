@@ -91,6 +91,16 @@ class WSTrainListCell: UITableViewCell {
         
     }
     
+    private func setSeat(_ seatName: String) {
+        selectSeatButton.setTitleColor(UIColor(hexString: "333333"), for: .normal)
+        selectSeatButton.setTitle(seatName, for: .normal)
+    }
+    
+    private func setPerson(_ personName: String) {
+        selectPersonButton.setTitleColor(UIColor(hexString: "333333"), for: .normal)
+        selectPersonButton.setTitle(personName, for: .normal)
+    }
+    
     private func updateLayoutConstraint() {
         detailViewTrailing.constant = detailViewTrailing.constant * WSConfig.SizeScale
         detailViewLeading.constant = detailViewLeading.constant * WSConfig.SizeScale
@@ -124,7 +134,9 @@ class WSTrainListCell: UITableViewCell {
     
     @IBAction func selectSeatDidTapped(_ sender: Any) {
         
-        WSTrainSeatAlert.showSeatAlert(WSConfig.getViewController(inView: self)!, ticketInfo.seatTypePairDic)
+        WSTrainSeatAlert.showSeatAlert(WSConfig.getViewController(inView: self)!, ticketInfo.seatTypePairDic) { seatInfo in
+            self.setSeat(seatInfo.seatName)
+        }
     }
     
     @IBAction func selectPersonDidTapped(_ sender: Any) {

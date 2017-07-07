@@ -50,15 +50,11 @@ class WSBottomSelectAlert: UIView {
     private func configBottomView() {
         
         
-        bottomView.frame = CGRect(x: 0, y: WSConfig.keywindow.height - 300, width: WSConfig.keywindow.width, height: bottomHeight)
+        bottomView.frame = CGRect(x: 0, y: WSConfig.keywindow.height, width: WSConfig.keywindow.width, height: bottomHeight)
         self.addSubview(bottomView)
         
         bottomSubView.frame = bottomView.bounds
         bottomView.addSubview(bottomSubView)
-        
-//        if bottomSubView.is {
-//            <#code#>
-//        }
         
         UIView.animate(withDuration: 0.5) {
             self.bottomView.frame = CGRect(x: 0, y: WSConfig.keywindow.height - self.bottomHeight, width: WSConfig.keywindow.width, height: self.bottomHeight)

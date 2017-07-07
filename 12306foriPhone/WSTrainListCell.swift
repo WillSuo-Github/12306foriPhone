@@ -36,6 +36,9 @@ class WSTrainListCell: UITableViewCell {
     @IBOutlet weak var detailViewTrailing: NSLayoutConstraint!
     @IBOutlet weak var detailViewLeading: NSLayoutConstraint!
     
+    var seatAlert: WSTrainSeatAlert?
+    var personAlert: WSTrainPersonAlert?
+    
 //MARK:- life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -135,11 +138,18 @@ class WSTrainListCell: UITableViewCell {
     @IBAction func selectSeatDidTapped(_ sender: Any) {
         
         WSTrainSeatAlert.showSeatAlert(WSConfig.getViewController(inView: self)!, ticketInfo.seatTypePairDic) { seatInfo in
+        
             self.setSeat(seatInfo.seatName)
         }
     }
     
     @IBAction func selectPersonDidTapped(_ sender: Any) {
+        
+        if !WSLogin.checkLogin() {return}
+        
+        WSTrainPersonAlert.showPersonAler(WSConfig.getViewController(inView: self)!, WSUserModule.passengers) { passenger in
+            print(passenger)
+        }
     }
     
     @IBAction func addGrapTicketDidTapped(_ sender: Any) {

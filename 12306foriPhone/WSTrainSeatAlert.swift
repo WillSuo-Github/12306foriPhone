@@ -14,16 +14,17 @@ class WSTrainSeatAlert: NSObject {
     let tableView: UITableView = UITableView()
     var sourceDic: [String: SeatTypePair]!
     var selectBlock: ((SeatTypePair) -> Void)?
-    let tableViewHeight: CGFloat = 300.0
+    var tableViewHeight: CGFloat = 300.0
     weak var onConotrller: UIViewController?
     var alertView: WSBottomSelectAlert?
     
+    static var seatAlert: WSTrainSeatAlert?
 
 //MARK:- life cycle
-    public class func showSeatAlert(_ onController: UIViewController, _ sourceDic: [String: SeatTypePair], _ selectBlock: @escaping (SeatTypePair) -> Void) {
+    public class func showSeatAlert(_ onController: UIViewController, _ sourceDic: [String: SeatTypePair], _ selectBlock: @escaping (SeatTypePair) -> Void){
         
         WSRotationScaleAnimation.showAnimation(onController, 1)
-        WSTrainSeatAlert(onController, sourceDic, selectBlock)
+        seatAlert = WSTrainSeatAlert(onController, sourceDic, selectBlock)
     }
     
     @discardableResult init(_ onController: UIViewController, _ sourceDic: [String: SeatTypePair], _ selectBlock: @escaping (SeatTypePair) -> Void) {
@@ -36,6 +37,7 @@ class WSTrainSeatAlert: NSObject {
     }
     
 //MARK:- layout
+    
     private func configSubviews() {
     
         configTableView()
@@ -43,11 +45,15 @@ class WSTrainSeatAlert: NSObject {
     
     private func configTableView() {
         
-        alertView = WSBottomSelectAlert.showBottomAlert(onConotrller, tableView, tableViewHeight)
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.register(UINib(nibName: "WSTrainSeatCell", bundle: nil), forCellReuseIdentifier: "cell")
+        tableView.separatorStyle = .none
+        if sourceDic.count * 44 < 300 {
+            tableViewHeight = CGFloat(sourceDic.count) * 44.0
+        }
+        self.alertView = WSBottomSelectAlert.showBottomAlert(self.onConotrller, self.tableView, self.tableViewHeight)
     }
 
 }
@@ -71,6 +77,7 @@ extension WSTrainSeatAlert: UITableViewDelegate, UITableViewDataSource {
         if let block = selectBlock {
             block(allValues[indexPath.row])
         }
+        
         if let alert = alertView {
             alert.hideAllView()
         }

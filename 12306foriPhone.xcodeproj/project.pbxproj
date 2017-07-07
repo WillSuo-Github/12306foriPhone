@@ -13,6 +13,8 @@
 		540535841EFBB825001653E8 /* UILabel+WSScaleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 540535831EFBB825001653E8 /* UILabel+WSScaleLabel.m */; };
 		5405358A1EFBBC87001653E8 /* UIButton+WSScaleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 540535891EFBBC87001653E8 /* UIButton+WSScaleButton.m */; };
 		5405358C1EFBC295001653E8 /* WSTrainSeatAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5405358B1EFBC295001653E8 /* WSTrainSeatAlert.swift */; };
+		5411C3261F0F29E800F60721 /* WSTrainPersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5411C3241F0F29E800F60721 /* WSTrainPersonCell.swift */; };
+		5411C3271F0F29E800F60721 /* WSTrainPersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5411C3251F0F29E800F60721 /* WSTrainPersonCell.xib */; };
 		5426752B1EEBEE0100C2689F /* WSCalendarCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542675241EEBEE0100C2689F /* WSCalendarCollectionLayout.swift */; };
 		5426752C1EEBEE0100C2689F /* WSCalendarConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542675251EEBEE0100C2689F /* WSCalendarConfig.swift */; };
 		5426752D1EEBEE0100C2689F /* WSCalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542675261EEBEE0100C2689F /* WSCalendarDate.swift */; };
@@ -117,6 +119,8 @@
 		540535881EFBBC87001653E8 /* UIButton+WSScaleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+WSScaleButton.h"; sourceTree = "<group>"; };
 		540535891EFBBC87001653E8 /* UIButton+WSScaleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WSScaleButton.m"; sourceTree = "<group>"; };
 		5405358B1EFBC295001653E8 /* WSTrainSeatAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainSeatAlert.swift; sourceTree = "<group>"; };
+		5411C3241F0F29E800F60721 /* WSTrainPersonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainPersonCell.swift; sourceTree = "<group>"; };
+		5411C3251F0F29E800F60721 /* WSTrainPersonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSTrainPersonCell.xib; sourceTree = "<group>"; };
 		542675241EEBEE0100C2689F /* WSCalendarCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarCollectionLayout.swift; sourceTree = "<group>"; };
 		542675251EEBEE0100C2689F /* WSCalendarConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarConfig.swift; sourceTree = "<group>"; };
 		542675261EEBEE0100C2689F /* WSCalendarDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSCalendarDate.swift; sourceTree = "<group>"; };
@@ -520,6 +524,8 @@
 				545F72DE1EEE9237005A122B /* WSTrainListCell.xib */,
 				5405358B1EFBC295001653E8 /* WSTrainSeatAlert.swift */,
 				540487281F0DD6C7002266AE /* WSTrainPersonAlert.swift */,
+				5411C3241F0F29E800F60721 /* WSTrainPersonCell.swift */,
+				5411C3251F0F29E800F60721 /* WSTrainPersonCell.xib */,
 				548D0C7E1F0C8A5700368813 /* WSTrainSeatCell.swift */,
 				548D0C7F1F0C8A5700368813 /* WSTrainSeatCell.xib */,
 			);
@@ -663,6 +669,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5442F9531ED2D28400D236D0 /* WSGrapTicketontroller.xib in Resources */,
+				5411C3271F0F29E800F60721 /* WSTrainPersonCell.xib in Resources */,
 				548D0C811F0C8A5700368813 /* WSTrainSeatCell.xib in Resources */,
 				543B435D1ED53BEE00230567 /* WSCalendarViewController.xib in Resources */,
 				545F72DC1EEE7304005A122B /* WSTrainListHeaderView.xib in Resources */,
@@ -759,6 +766,7 @@
 				5442F9351ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallScaleRippleMultiple.swift in Sources */,
 				5405358A1EFBBC87001653E8 /* UIButton+WSScaleButton.m in Sources */,
 				54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */,
+				5411C3261F0F29E800F60721 /* WSTrainPersonCell.swift in Sources */,
 				5442F9341ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallScaleRipple.swift in Sources */,
 				5442F93E1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationLineScalePulseOut.swift in Sources */,
 				549D72C71EF0D6E70033F6A1 /* WSService+QueryTicket.swift in Sources */,

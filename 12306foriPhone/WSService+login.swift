@@ -50,7 +50,7 @@ extension WSService {
         return Promise{ fulfill, reject in
             
             let randomCode = CGFloat(Float(arc4random()) / Float(UINT32_MAX))//0~1
-            let url = "https://kyfw.12306.cn/otn/passcodeNew/getPassCodeNew?module=login&rand=sjrand&" + randomCode.description
+            let url = "https://kyfw.12306.cn/passport/captcha/captcha-image?login_site=E&module=login&rand=sjrand&" + randomCode.description
             let headers = ["refer": "https://kyfw.12306.cn/otn/login/init"]
             
             WSService.manager.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: headers).responseData { (response) in
@@ -132,7 +132,7 @@ extension WSService {
     func loginUserWith(_ user: String, passWord: String, randCodeStr: String) -> Promise<Void> {
         return Promise { fulfill, reject in
             let url = "https://kyfw.12306.cn/otn/login/loginAysnSuggest"
-            let params = ["loginUserDTO.user_name":user,"userDTO.password":passWord,"randCode":randCodeStr]
+            let params =        ["loginUserDTO.user_name":user,"userDTO.password":passWord,"randCode":randCodeStr]
             let headers = ["refer": "https://kyfw.12306.cn/otn/login/init"]
             WSService.manager.request(url, method: .post, parameters: params, headers: headers).responseJSON(completionHandler: { response in
                 switch response.result {

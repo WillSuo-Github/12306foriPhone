@@ -11,6 +11,7 @@ import UIKit
 class WSUserModule {
     static var userName = ""
     static var realName = ""
+    static var apptk = ""
     
     static var passengers = [WSPassengerDTO]()
     static var selectPassengers = [WSPassengerDTO]()

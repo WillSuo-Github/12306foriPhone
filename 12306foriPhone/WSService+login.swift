@@ -32,9 +32,11 @@ extension WSService {
         after(interval: 2).then {
             self.verifyRandomCodeForLogin(randCodeStr)
         }.then { () -> Promise<Void> in
-            return self.loginUserWith(user, passWord: passWord, randCodeStr: randCodeStr)
+                return self.loginUserWith(user, passWord: passWord, randCodeStr: randCodeStr)
         }.then { () -> Promise<Void> in
-            return self.initMy12306()
+            return self.authorUserLogin()
+        }.then { () -> Promise<Void> in
+            return self.initRealName()
         }.then { () -> Promise<Void> in
             return self.getPassengerDTOs(isSubmit: false)
         }.then { _ in
@@ -110,15 +112,15 @@ extension WSService {
     
     func verifyRandomCodeForLogin(_ randomCodeStr:String) -> Promise<Void> {
         return Promise{ fulfill, reject in
-            let url = "https://kyfw.12306.cn/otn/passcodeNew/checkRandCodeAnsyn"
-            let params = ["randCode":randomCodeStr,"rand":"sjrand"]
+            let url = "https://kyfw.12306.cn/passport/captcha/captcha-check"
+            let params = ["answer":randomCodeStr, "rand":"sjrand", "login_site":"E"]
             let headers = ["refer": "https://kyfw.12306.cn/otn/login/init"]
             WSService.manager.request(url, method: .post, parameters: params, headers: headers).responseJSON(completionHandler: { response in
                 switch response.result {
                 case .failure(let error):
                     reject(error)
                 case .success(let data):
-                    if  let msg = JSON(data)["data"]["msg"].string, msg == "TRUE" {
+                    if  let code = JSON(data)["result_code"].string, code == "4" {
                         fulfill()
                     }else{
                         let error = WSServiceError.errorWithCode(.checkRandCodeFailed)
@@ -129,26 +131,48 @@ extension WSService {
         }
     }
     
-    func loginUserWith(_ user: String, passWord: String, randCodeStr: String) -> Promise<Void> {
-        return Promise { fulfill, reject in
-            let url = "https://kyfw.12306.cn/otn/login/loginAysnSuggest"
-            let params =        ["loginUserDTO.user_name":user,"userDTO.password":passWord,"randCode":randCodeStr]
-            let headers = ["refer": "https://kyfw.12306.cn/otn/login/init"]
-            WSService.manager.request(url, method: .post, parameters: params, headers: headers).responseJSON(completionHandler: { response in
+    func authorUserLogin() -> Promise<Void> {
+        return Promise{ fulfill, reject in
+            let url = "https://kyfw.12306.cn/passport/web/auth/uamtk"
+            let params = ["appid":"otn"]
+            WSService.manager.request(url, method: .post, parameters: params).responseJSON(completionHandler: { response in
                 switch response.result {
                 case .failure(let error):
                     reject(error)
                 case .success(let data):
-                    if let loginCheck = JSON(data)["data"]["loginCheck"].string, loginCheck == "Y" {
-                        WSUserModule.userName =  user
+                    if let code = JSON(data)["result_code"].int, code == 0 {
+                        if let apptk = JSON(data)["newapptk"].string {
+                            WSUserModule.apptk = apptk
+                        }else{
+                            print("can't get the apptk")
+                        }
                         fulfill()
                     }else{
-                        let error: NSError
-                        if let errorStr = JSON(data)["messages"][0].string{
-                            error = WSServiceError.errorWithCode(.loginUserFailed, failureReason: errorStr)
-                        }else{
-                            error = WSServiceError.errorWithCode(.loginUserFailed)
-                        }
+                        let error = WSServiceError.errorWithCode(.loginUserFailed)
+                        reject(error)
+                    }
+                }
+            })
+        
+        }
+    }
+    
+    func loginUserWith(_ user: String, passWord: String, randCodeStr: String) -> Promise<Void> {
+        return Promise { fulfill, reject in
+            let url = "https://kyfw.12306.cn/passport/web/login"
+            let params = ["username":user,"password":passWord,"appid":"otn"]
+            let headers = ["refer": "https://kyfw.12306.cn/otn/login/init",
+                           "Accept": "application/json"]
+            WSService.manager.request(url, method: .post, parameters: params, headers: headers).responseJSON(completionHandler: { response in
+
+                switch response.result {
+                case .failure(let error):
+                    reject(error)
+                case .success(let data):
+                    if  let code = JSON(data)["result_code"].int, code == 0 {
+                        fulfill()
+                    }else{
+                        let error = WSServiceError.errorWithCode(.loginFailed)
                         reject(error)
                     }
                 }
@@ -156,19 +180,17 @@ extension WSService {
         }
     }
     
-    func initMy12306() -> Promise<Void> {
+    func initRealName() -> Promise<Void> {
         return Promise { fulfill, reject in
-            let url = "https://kyfw.12306.cn/otn/index/initMy12306"
-            let headers = ["refer": "https://kyfw.12306.cn/otn/login/init"]
-            WSService.manager.request(url, method: .post, headers: headers).responseString(completionHandler: { response in
+            let url = "https://kyfw.12306.cn/otn/uamauthclient"
+            let params = ["tk": WSUserModule.apptk]
+            WSService.manager.request(url, method: .post, parameters: params).responseJSON(completionHandler: { response in
                 switch response.result {
                 case .failure(let error):
                     reject(error)
                 case .success(let data):
-                    if let matches = Regex("(var user_name='[^']+')").getMatches(data) {
-                        let context = JSContext()!
-                        context.evaluateScript(matches[0][0])
-                        WSUserModule.realName = context.objectForKeyedSubscript("user_name").toString()
+                    if let userName = JSON(data)["username"].string {
+                        WSUserModule.realName = userName
                     }else{
                         print("can't get user_name")
                     }
@@ -179,5 +201,5 @@ extension WSService {
     }
     
     
-    
+
 }

@@ -25,7 +25,7 @@ class WSLogin: NSObject {
         }
     }
 
-    static func checkLogin() -> Bool {
+    @discardableResult static func checkLogin() -> Bool {
         if WSLogin.isLogin {
             return true
         }else{

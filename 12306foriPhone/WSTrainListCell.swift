@@ -144,14 +144,18 @@ class WSTrainListCell: UITableViewCell {
     }
     
     @IBAction func selectPersonDidTapped(_ sender: Any) {
+        if WSUserModule.passengers.count == 0 {
+            WSLogin.isLogin = false
+        }
         
         if !WSLogin.checkLogin() {return}
         
         WSTrainPersonAlert.showPersonAler(WSConfig.getViewController(inView: self)!, WSUserModule.passengers) { passenger in
-            print(passenger)
+            self.setPerson(passenger.passenger_name)
         }
     }
     
     @IBAction func addGrapTicketDidTapped(_ sender: Any) {
+        
     }
 }

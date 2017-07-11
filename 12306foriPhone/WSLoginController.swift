@@ -87,8 +87,9 @@ class WSLoginController: UIViewController, NVActivityIndicatorViewable {
         
         let successHandler = {
             
-            self .stopAnimating()
+            self.stopAnimating()
             self.dismiss(animated: true, completion: nil)
+            WSLogin.isLogin = true
         }
         
         myService.loginFlow(user: accountTF.text!, passWord: pwdTF.text!, randCodeStr: self.randomCodeView.selectCode, success: successHandler, failure: failureHandler)

@@ -107,6 +107,7 @@
 		54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */; };
 		54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3321B1DC627DB00796927 /* WSPassCoverView.swift */; };
 		54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */; };
+		54E1F2421F160C4900A9AA90 /* WSBallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E1F2411F160C4900A9AA90 /* WSBallView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -216,6 +217,7 @@
 		54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLoginRandomCodeView.swift; sourceTree = "<group>"; };
 		54B3321B1DC627DB00796927 /* WSPassCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSPassCoverView.swift; sourceTree = "<group>"; };
 		54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRegex.swift; sourceTree = "<group>"; };
+		54E1F2411F160C4900A9AA90 /* WSBallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSBallView.swift; sourceTree = "<group>"; };
 		7C0BED7311D0D7C7883A25D1 /* Pods-12306foriPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-12306foriPhone.release.xcconfig"; path = "Pods/Target Support Files/Pods-12306foriPhone/Pods-12306foriPhone.release.xcconfig"; sourceTree = "<group>"; };
 		F636753D1B88E84D44EEF507 /* Pods_12306foriPhone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_12306foriPhone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -309,6 +311,7 @@
 				54D5750E1E59DBBD00FA0E7C /* utilities */,
 				543E48861DBCF64700AB9D08 /* service */,
 				543E48831DBCF62400AB9D08 /* order */,
+				54E1F2401F160C0E00A9AA90 /* ball */,
 				543E48801DBCF61300AB9D08 /* ticket */,
 				543E48791DBCF5FA00AB9D08 /* login */,
 				543E48741DBCF5E400AB9D08 /* main */,
@@ -595,6 +598,14 @@
 			name = utilities;
 			sourceTree = "<group>";
 		};
+		54E1F2401F160C0E00A9AA90 /* ball */ = {
+			isa = PBXGroup;
+			children = (
+				54E1F2411F160C4900A9AA90 /* WSBallView.swift */,
+			);
+			name = ball;
+			sourceTree = "<group>";
+		};
 		A471CCDFF1142B1427B4EFF5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -776,6 +787,7 @@
 				542675301EEBEE0100C2689F /* WSCalendarView.swift in Sources */,
 				5451D1101ED6B57600725F27 /* WSCalendarHeaderLayout.swift in Sources */,
 				540487291F0DD6C7002266AE /* WSTrainPersonAlert.swift in Sources */,
+				54E1F2421F160C4900A9AA90 /* WSBallView.swift in Sources */,
 				543E48771DBCF5F500AB9D08 /* WSOrderController.swift in Sources */,
 				5442F9291ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				5442F9421ECEEDAF00D236D0 /* NVActivityIndicatorAnimationPacman.swift in Sources */,

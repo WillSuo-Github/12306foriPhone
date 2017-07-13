@@ -28,7 +28,7 @@ class WSTrainListCell: UITableViewCell {
     @IBOutlet weak var fromStationName: UILabel!
     @IBOutlet weak var toStationName: UILabel!
     @IBOutlet weak var selectSeatButton: UIButton!
-     @IBOutlet weak var selectPersonButton: UIButton!
+    @IBOutlet weak var selectPersonButton: UIButton!
     @IBOutlet weak var detailTrainName: UILabel!
     @IBOutlet weak var startTime: UILabel!
     @IBOutlet weak var addGrapTicketButton: UIButton!
@@ -67,7 +67,6 @@ class WSTrainListCell: UITableViewCell {
         toStationName.text = ticketInfo.ToStationName!
         
         updateShadowColor()
-        updateSeatAndPerson()
         updateLayoutConstraint()
     }
     
@@ -90,8 +89,12 @@ class WSTrainListCell: UITableViewCell {
         }
     }
     
-    private func updateSeatAndPerson() {
+    private func getDetailSnap() -> UIImage {
         
+        addGrapTicketButton.isHidden = true
+        let image = detailView.snapshotImage()
+        addGrapTicketButton.isHidden = false
+        return image!
     }
     
     private func setSeat(_ seatName: String) {
@@ -156,6 +159,10 @@ class WSTrainListCell: UITableViewCell {
     }
     
     @IBAction func addGrapTicketDidTapped(_ sender: Any) {
-        
+        let imageV = UIImageView(image: getDetailSnap())
+        WSConfig.keywindow.addSubview(imageV)
+        imageV.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
     }
 }

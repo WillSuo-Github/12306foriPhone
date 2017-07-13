@@ -313,7 +313,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="addGrapTicketButton" destination="mtg-Gz-lIo" id="azw-VN-acE"/>
+                <outlet property="addGrapTicketButton" destination="mtg-Gz-lIo" id="R14-Oj-Jud"/>
                 <outlet property="addressStationLabel" destination="gPs-zq-8Z0" id="CaQ-bf-rbc"/>
                 <outlet property="buyButton" destination="jiS-GY-olj" id="fkf-Ny-xuH"/>
                 <outlet property="detailTrainName" destination="bgI-B5-etq" id="P8B-Ab-0Mx"/>
@@ -330,7 +330,7 @@
                 <outlet property="toStationName" destination="yVR-P2-nmF" id="bbU-Sy-Hyh"/>
                 <outlet property="trainNameLabel" destination="G9l-u8-s2I" id="dhn-pQ-uXA"/>
             </connections>
-            <point key="canvasLocation" x="-874" y="-357"/>
+            <point key="canvasLocation" x="-1024" y="-350"/>
         </tableViewCell>
     </objects>
 </document>

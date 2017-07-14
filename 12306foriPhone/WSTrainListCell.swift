@@ -159,10 +159,8 @@ class WSTrainListCell: UITableViewCell {
     }
     
     @IBAction func addGrapTicketDidTapped(_ sender: Any) {
-        let imageV = UIImageView(image: getDetailSnap())
-        WSConfig.keywindow.addSubview(imageV)
-        imageV.snp.makeConstraints { make in
-            make.center.equalToSuperview()
-        }
+        
+        let detailFrame = detailView.convert(detailView.bounds, to: WSConfig.keywindow)
+        WSAddGrapTicketAnimation.startAddGrapAnimationInViewSnap(getDetailSnap(), detailFrame)
     }
 }

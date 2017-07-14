@@ -98,6 +98,7 @@
 		545F72DF1EEE9237005A122B /* WSTrainListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F72DD1EEE9237005A122B /* WSTrainListCell.swift */; };
 		545F72E01EEE9237005A122B /* WSTrainListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545F72DE1EEE9237005A122B /* WSTrainListCell.xib */; };
 		545F72E31EEE9B5F005A122B /* WSTrainListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F72E21EEE9B5F005A122B /* WSTrainListModule.swift */; };
+		547ADC1F1F186E8F00CB2EDD /* WSAddGrapTicketAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547ADC1E1F186E8F00CB2EDD /* WSAddGrapTicketAnimation.swift */; };
 		548D0C801F0C8A5700368813 /* WSTrainSeatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548D0C7E1F0C8A5700368813 /* WSTrainSeatCell.swift */; };
 		548D0C811F0C8A5700368813 /* WSTrainSeatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548D0C7F1F0C8A5700368813 /* WSTrainSeatCell.xib */; };
 		549D72C71EF0D6E70033F6A1 /* WSService+QueryTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549D72C61EF0D6E70033F6A1 /* WSService+QueryTicket.swift */; };
@@ -208,6 +209,7 @@
 		545F72DD1EEE9237005A122B /* WSTrainListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainListCell.swift; sourceTree = "<group>"; };
 		545F72DE1EEE9237005A122B /* WSTrainListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSTrainListCell.xib; sourceTree = "<group>"; };
 		545F72E21EEE9B5F005A122B /* WSTrainListModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainListModule.swift; sourceTree = "<group>"; };
+		547ADC1E1F186E8F00CB2EDD /* WSAddGrapTicketAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSAddGrapTicketAnimation.swift; sourceTree = "<group>"; };
 		548D0C7E1F0C8A5700368813 /* WSTrainSeatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainSeatCell.swift; sourceTree = "<group>"; };
 		548D0C7F1F0C8A5700368813 /* WSTrainSeatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSTrainSeatCell.xib; sourceTree = "<group>"; };
 		549D72C61EF0D6E70033F6A1 /* WSService+QueryTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WSService+QueryTicket.swift"; sourceTree = "<group>"; };
@@ -495,6 +497,7 @@
 			isa = PBXGroup;
 			children = (
 				544CCB391F000EA000E4D290 /* WSRotationScaleAnimation.swift */,
+				547ADC1E1F186E8F00CB2EDD /* WSAddGrapTicketAnimation.swift */,
 			);
 			name = animation;
 			sourceTree = "<group>";
@@ -784,6 +787,7 @@
 				5442F9281ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallClipRotate.swift in Sources */,
 				5442F93C1ECEEDAF00D236D0 /* NVActivityIndicatorAnimationLineScale.swift in Sources */,
 				5442F9401ECEEDAF00D236D0 /* NVActivityIndicatorAnimationLineSpinFadeLoader.swift in Sources */,
+				547ADC1F1F186E8F00CB2EDD /* WSAddGrapTicketAnimation.swift in Sources */,
 				542675301EEBEE0100C2689F /* WSCalendarView.swift in Sources */,
 				5451D1101ED6B57600725F27 /* WSCalendarHeaderLayout.swift in Sources */,
 				540487291F0DD6C7002266AE /* WSTrainPersonAlert.swift in Sources */,

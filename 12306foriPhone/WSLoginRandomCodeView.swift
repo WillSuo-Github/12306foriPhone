@@ -78,7 +78,7 @@ class WSLoginRandomCodeView: UIView {
     func imageDidTouch(_ gesture: UIGestureRecognizer) {
         
         let point = transformTouchLocation(locationPoint: gesture.location(in: myImageV))
-        print(point as Any)
+//        print(point as Any)
         if let point = point {
             let coverView = WSPassCoverView(frame: CGRect(x: point.x, y: point.y, width: 67.3, height: 67.3))
             myImageV.addSubview(coverView)

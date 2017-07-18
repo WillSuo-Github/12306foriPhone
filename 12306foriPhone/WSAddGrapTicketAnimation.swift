@@ -8,22 +8,36 @@
 
 import UIKit
 
-class WSAddGrapTicketAnimation {
+class WSAddGrapTicketAnimation: NSObject {
 
     public class func startAddGrapAnimationInViewSnap(_ viewSnap: UIImage, _ fromFrame: CGRect) {
-        print(fromFrame)
         
-        configSubViews(viewSnap, fromFrame)
-        
+        _ = WSAddGrapTicketAnimation(viewSnap, fromFrame)
     }
+//MARK:- private property
+    let viewSnap: UIImage!
+    let fromFrame: CGRect!
     
-    private class func configSubViews(_ viewSnap: UIImage, _ fromFrame: CGRect) {
+    var imageView: UIImageView!
+    var cycleView: UIView!
+    var tipsLabel: UILabel!
+    
+//MARK:- life cycle
+    init(_ viewSnap: UIImage, _ fromFrame: CGRect) {
+        self.viewSnap = viewSnap
+        self.fromFrame = fromFrame
+        super.init()
+        configSubViews()
+    }
+ 
+//MARK:- layout
+    private func configSubViews() {
         
-        let imageView = UIImageView(image: viewSnap)
+        imageView = UIImageView(image: viewSnap)
         imageView.frame = fromFrame
         WSConfig.keywindow.addSubview(imageView)
         
-        let cycleView = UIView()
+        cycleView = UIView()
         cycleView.height = fromFrame.width
         cycleView.width = fromFrame.width
         cycleView.center = CGPoint(x: fromFrame.midX, y: fromFrame.midY)
@@ -37,7 +51,8 @@ class WSAddGrapTicketAnimation {
         
     }
     
-    private class func startCycleViewAnimation(_ cycleView: UIView) {
+//MARK:- animations
+    private func startCycleViewAnimation(_ cycleView: UIView) {
         let animation = CABasicAnimation(keyPath: "transform.scale")
         animation.toValue = 3.0
         animation.duration = 0.5
@@ -46,7 +61,7 @@ class WSAddGrapTicketAnimation {
         cycleView.layer.add(animation, forKey: "scaleAnimation")
     }
     
-    private class func startReduceHeightAnimation(_ imageView: UIImageView) {
+    private func startReduceHeightAnimation(_ imageView: UIImageView) {
         let coverView = UIView(frame: CGRect(x: 0, y: imageView.height, width: imageView.width, height: 0))
         coverView.backgroundColor = UIColor(hexString: "F0575F")
         imageView.addSubview(coverView)
@@ -60,12 +75,12 @@ class WSAddGrapTicketAnimation {
             coverView.frame = CGRect(x: 0, y: imageView.height - 70, width: imageView.height, height: 70)
         }) { isCompleted in
             
-            startTipsAnimation(coverView)
+            self.startTipsAnimation(coverView)
         }
     }
     
-    private class func startTipsAnimation(_ coverView: UIView) {
-        let tipsLabel = UILabel()
+    private func startTipsAnimation(_ coverView: UIView) {
+        tipsLabel = UILabel()
         tipsLabel.text = "即将开始抢票..."
         tipsLabel.textColor = .white
         tipsLabel.font = UIFont.systemFont(ofSize: 13)
@@ -75,15 +90,30 @@ class WSAddGrapTicketAnimation {
             make.center.equalToSuperview()
         }
         
-         startFlickerAnimation(tipsLabel)
+        startFlickerAnimation(tipsLabel)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+            self.startReduceAnimation()
+        }
     }
     
-    private class func startFlickerAnimation(_ view: UIView) {
+    private func startFlickerAnimation(_ view: UIView) {
         
         UIView.animate(withDuration: 0.5, animations: {
             view.alpha = view.alpha == 0 ? 0.7: 0.0
         }) { isCompleted in
-            startFlickerAnimation(view)
+            self.startFlickerAnimation(view)
+        }
+    }
+    
+    private func startReduceAnimation() {
+        let cycleWH: CGFloat = 5.0
+        
+        imageView.removeFromSuperview()
+        UIView.animate(withDuration: 0.5) { 
+            self.cycleView.width = cycleWH
+            self.cycleView.height = cycleWH
+            self.cycleView.center = WSConfig.keywindow.center
+            self.cycleView.layer.cornerRadius = cycleWH / 2
         }
     }
 }

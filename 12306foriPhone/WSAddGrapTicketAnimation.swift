@@ -21,6 +21,7 @@ class WSAddGrapTicketAnimation: NSObject {
     var imageView: UIImageView!
     var cycleView: UIView!
     var tipsLabel: UILabel!
+    var coverView: UIView!
     
 //MARK:- life cycle
     init(_ viewSnap: UIImage, _ fromFrame: CGRect) {
@@ -54,7 +55,7 @@ class WSAddGrapTicketAnimation: NSObject {
 //MARK:- animations
     private func startCycleViewAnimation(_ cycleView: UIView) {
         let animation = CABasicAnimation(keyPath: "transform.scale")
-        animation.toValue = 3.0
+        animation.toValue = 3
         animation.duration = 0.5
         animation.fillMode = kCAFillModeForwards
         animation.isRemovedOnCompletion = false
@@ -62,20 +63,16 @@ class WSAddGrapTicketAnimation: NSObject {
     }
     
     private func startReduceHeightAnimation(_ imageView: UIImageView) {
-        let coverView = UIView(frame: CGRect(x: 0, y: imageView.height, width: imageView.width, height: 0))
+        coverView = UIView(frame: CGRect(x: 0, y: imageView.height, width: imageView.width, height: 0))
         coverView.backgroundColor = UIColor(hexString: "F0575F")
         imageView.addSubview(coverView)
         
-        UIView.animate(withDuration: 0.5) { 
-            
-        }
-        
         UIView.animate(withDuration: 0.5, animations: { 
             imageView.center = WSConfig.keywindow.center
-            coverView.frame = CGRect(x: 0, y: imageView.height - 70, width: imageView.height, height: 70)
+            self.coverView.frame = CGRect(x: 0, y: imageView.height - 70, width: imageView.height, height: 70)
         }) { isCompleted in
             
-            self.startTipsAnimation(coverView)
+            self.startTipsAnimation(self.coverView)
         }
     }
     
@@ -91,7 +88,7 @@ class WSAddGrapTicketAnimation: NSObject {
         }
         
         startFlickerAnimation(tipsLabel)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             self.startReduceAnimation()
         }
     }
@@ -106,14 +103,52 @@ class WSAddGrapTicketAnimation: NSObject {
     }
     
     private func startReduceAnimation() {
-        let cycleWH: CGFloat = 5.0
+        let cycleWH: CGFloat = 10.0
+        let cycleCenterWH: CGFloat = 1.5;
+        let duration: TimeInterval =  0.5
+
+//        coverView.removeFromSuperview()
+    
+        let animationGroup = CAAnimationGroup()
+        let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
+        scaleAnimation.fromValue = 3
+        scaleAnimation.toValue = 0.01
+        scaleAnimation.duration = duration
         
-        imageView.removeFromSuperview()
-        UIView.animate(withDuration: 0.5) { 
-            self.cycleView.width = cycleWH
-            self.cycleView.height = cycleWH
-            self.cycleView.center = WSConfig.keywindow.center
-            self.cycleView.layer.cornerRadius = cycleWH / 2
+        let positionAnimation = CABasicAnimation(keyPath: "position")
+        positionAnimation.toValue = NSValue(cgPoint: WSConfig.keywindow.center)
+        positionAnimation.duration = duration
+        
+        animationGroup.duration = duration
+        animationGroup.animations = [scaleAnimation, positionAnimation]
+        animationGroup.fillMode = kCAFillModeForwards
+        animationGroup.isRemovedOnCompletion = false
+        cycleView.layer.add(animationGroup, forKey: "animationGroup")
+        
+        UIView.animate(withDuration: duration) {
+            self.imageView.width = cycleCenterWH
+            self.imageView.height = cycleCenterWH
+            self.imageView.center = WSConfig.keywindow.center
+            self.imageView.layer.cornerRadius = cycleCenterWH / 2
+            self.imageView.layer.masksToBounds = true;
+        }
+        
+        let smallBallView = UIImageView(image: UIImage(named: "smallBall"))
+        smallBallView.width = 0
+        smallBallView.height = 0
+        smallBallView.center = WSConfig.keywindow.center
+        WSConfig.keywindow.addSubview(smallBallView)
+        
+        UIView.animate(withDuration: 0.2, delay: duration, usingSpringWithDamping: 2, initialSpringVelocity: 2, options: .curveEaseOut, animations: { 
+            smallBallView.width = cycleWH
+            smallBallView.height = cycleWH
+            smallBallView.center = WSConfig.keywindow.center
+        }) { isCompleted in
+            self.imageView.removeFromSuperview()
+            self.cycleView.removeFromSuperview()
+            self.tipsLabel.removeFromSuperview()
+            self.coverView.removeFromSuperview()
         }
     }
 }
+

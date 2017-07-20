@@ -9,12 +9,12 @@
 import UIKit
 
 
-private let shared = WSBallView()
+private let sharedInstance = WSBallView()
 class WSBallView: UIView {
     
     private static let ballWH: CGFloat = 40.0
-    public class var sharedInstance: WSBallView {
-        return shared;
+    public class var shared: WSBallView {
+        return sharedInstance;
     }
     
     public class func showBall() {

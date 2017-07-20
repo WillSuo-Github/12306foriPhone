@@ -22,6 +22,8 @@ class WSAddGrapTicketAnimation: NSObject {
     var cycleView: UIView!
     var tipsLabel: UILabel!
     var coverView: UIView!
+    var smallBallView: UIImageView!
+    let animator = UIDynamicAnimator(referenceView: WSConfig.keywindow)
     
 //MARK:- life cycle
     init(_ viewSnap: UIImage, _ fromFrame: CGRect) {
@@ -133,22 +135,38 @@ class WSAddGrapTicketAnimation: NSObject {
             self.imageView.layer.masksToBounds = true;
         }
         
-        let smallBallView = UIImageView(image: UIImage(named: "smallBall"))
+        smallBallView = UIImageView(image: UIImage(named: "smallBall"))
         smallBallView.width = 0
         smallBallView.height = 0
         smallBallView.center = WSConfig.keywindow.center
         WSConfig.keywindow.addSubview(smallBallView)
         
-        UIView.animate(withDuration: 0.2, delay: duration, usingSpringWithDamping: 2, initialSpringVelocity: 2, options: .curveEaseOut, animations: { 
-            smallBallView.width = cycleWH
-            smallBallView.height = cycleWH
-            smallBallView.center = WSConfig.keywindow.center
+        UIView.animate(withDuration: 0.2, delay: duration, usingSpringWithDamping: 2, initialSpringVelocity: 2, options: .curveEaseOut, animations: {
+            self.smallBallView.width = cycleWH
+            self.smallBallView.height = cycleWH
+            self.smallBallView.center = WSConfig.keywindow.center
         }) { isCompleted in
             self.imageView.removeFromSuperview()
             self.cycleView.removeFromSuperview()
             self.tipsLabel.removeFromSuperview()
             self.coverView.removeFromSuperview()
+            
+            self.startGetIntoBall()
         }
+    }
+    
+    private func startGetIntoBall() {
+        let gravity = UIGravityBehavior(items: [smallBallView])
+        animator.addBehavior(gravity)
+        
+        let collisionBehavior = UICollisionBehavior(items: [smallBallView])
+        collisionBehavior.translatesReferenceBoundsIntoBoundary = true
+        animator.addBehavior(collisionBehavior)
+        
+        let pushBehavior = UIPushBehavior(items: [smallBallView], mode: .continuous)
+//        pushBehavior.pushDirection = CGVector(dx: 0.05, dy: 0)
+        pushBehavior.setAngle(CGFloat(-Double.pi / 8), magnitude: 0.1)
+        animator.addBehavior(pushBehavior)
     }
 }
 

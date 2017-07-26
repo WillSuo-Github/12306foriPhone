@@ -15,15 +15,15 @@ class WSAddGrapTicketAnimation: NSObject {
         _ = WSAddGrapTicketAnimation(viewSnap, fromFrame)
     }
 //MARK:- private property
-    let viewSnap: UIImage!
-    let fromFrame: CGRect!
+    private let viewSnap: UIImage!
+    private let fromFrame: CGRect!
     
-    var imageView: UIImageView!
-    var cycleView: UIView!
-    var tipsLabel: UILabel!
-    var coverView: UIView!
-    var smallBallView: UIImageView!
-    let animator = UIDynamicAnimator(referenceView: WSConfig.keywindow)
+    private var imageView: UIImageView!
+    private var cycleView: UIView!
+    private var tipsLabel: UILabel!
+    private var coverView: UIView!
+    private var smallBallView: UIImageView!
+    private let animator = UIDynamicAnimator(referenceView: WSConfig.keywindow)
     
 //MARK:- life cycle
     init(_ viewSnap: UIImage, _ fromFrame: CGRect) {
@@ -57,7 +57,7 @@ class WSAddGrapTicketAnimation: NSObject {
 //MARK:- animations
     private func startCycleViewAnimation(_ cycleView: UIView) {
         let animation = CABasicAnimation(keyPath: "transform.scale")
-        animation.toValue = 3
+        animation.toValue = 5
         animation.duration = 0.5
         animation.fillMode = kCAFillModeForwards
         animation.isRemovedOnCompletion = false
@@ -139,7 +139,7 @@ class WSAddGrapTicketAnimation: NSObject {
         smallBallView.width = 0
         smallBallView.height = 0
         smallBallView.center = WSConfig.keywindow.center
-        WSConfig.keywindow.addSubview(smallBallView)
+        WSConfig.keywindow.insertSubview(smallBallView, belowSubview: WSBallView.shared)
         
         UIView.animate(withDuration: 0.2, delay: duration, usingSpringWithDamping: 2, initialSpringVelocity: 2, options: .curveEaseOut, animations: {
             self.smallBallView.width = cycleWH
@@ -156,17 +156,18 @@ class WSAddGrapTicketAnimation: NSObject {
     }
     
     private func startGetIntoBall() {
+
         let gravity = UIGravityBehavior(items: [smallBallView])
         animator.addBehavior(gravity)
         
-        let collisionBehavior = UICollisionBehavior(items: [smallBallView])
-        collisionBehavior.translatesReferenceBoundsIntoBoundary = true
-        animator.addBehavior(collisionBehavior)
+        let duration: CFTimeInterval = CFTimeInterval(sqrt((WSBallView.shared.centerY - smallBallView.centerY) * 2.0 / 1000))
         
-        let pushBehavior = UIPushBehavior(items: [smallBallView], mode: .continuous)
-//        pushBehavior.pushDirection = CGVector(dx: 0.05, dy: 0)
-        pushBehavior.setAngle(CGFloat(-Double.pi / 8), magnitude: 0.1)
-        animator.addBehavior(pushBehavior)
+        let horizontalAnimation = CABasicAnimation(keyPath: "position.x")
+        horizontalAnimation.toValue = WSBallView.shared.centerX
+        horizontalAnimation.fillMode = kCAFillModeForwards
+        horizontalAnimation.isRemovedOnCompletion = false
+        horizontalAnimation.duration = duration
+        smallBallView.layer.add(horizontalAnimation, forKey: "horizontalAnimation")
     }
 }
 

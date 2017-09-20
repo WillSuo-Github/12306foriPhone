@@ -32,7 +32,7 @@ extension WSService {
         after(interval: 2).then {
             self.verifyRandomCodeForLogin(randCodeStr)
         }.then { () -> Promise<Void> in
-                return self.loginUserWith(user, passWord: passWord, randCodeStr: randCodeStr)
+            return self.loginUserWith(user, passWord: passWord, randCodeStr: randCodeStr)
         }.then { () -> Promise<Void> in
             return self.authorUserLogin()
         }.then { () -> Promise<Void> in

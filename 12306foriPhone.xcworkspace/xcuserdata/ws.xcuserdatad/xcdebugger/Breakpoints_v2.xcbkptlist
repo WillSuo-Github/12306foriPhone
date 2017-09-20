@@ -19,13 +19,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "12306foriPhone/WSService+login.swift"
-            timestampString = "521523575.141082"
+            filePath = "12306foriPhone/WSLMateBall.swift"
+            timestampString = "527322184.901953"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "loginFlow(user:passWord:randCodeStr:success:failure:)"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "configSubviews()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

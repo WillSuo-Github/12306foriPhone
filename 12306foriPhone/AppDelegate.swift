@@ -56,7 +56,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func configBallView() {
         
-        WSBallView.showBall()
+        let config = WSLCustomConfig(smallWH: 8.0, smallColor: UIColor(hexString: "67D6FF")!, mainBallColor: UIColor(hexString: "F0575F")!)
+        WSLMateBall.showBall(config)
     }
 
 }

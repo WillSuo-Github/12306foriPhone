@@ -108,7 +108,7 @@
 		54B3321A1DC6249400796927 /* WSLoginRandomCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */; };
 		54B3321C1DC627DB00796927 /* WSPassCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3321B1DC627DB00796927 /* WSPassCoverView.swift */; };
 		54D575101E59DBD500FA0E7C /* SwiftyRegex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */; };
-		54E1F2421F160C4900A9AA90 /* WSBallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E1F2411F160C4900A9AA90 /* WSBallView.swift */; };
+		54DE52C01F6E3BA3006A60D7 /* WSLMateBall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54DE52BF1F6E3BA3006A60D7 /* WSLMateBall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -219,7 +219,7 @@
 		54B332191DC6249400796927 /* WSLoginRandomCodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSLoginRandomCodeView.swift; sourceTree = "<group>"; };
 		54B3321B1DC627DB00796927 /* WSPassCoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSPassCoverView.swift; sourceTree = "<group>"; };
 		54D5750F1E59DBD500FA0E7C /* SwiftyRegex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRegex.swift; sourceTree = "<group>"; };
-		54E1F2411F160C4900A9AA90 /* WSBallView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSBallView.swift; sourceTree = "<group>"; };
+		54DE52BF1F6E3BA3006A60D7 /* WSLMateBall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WSLMateBall.swift; sourceTree = "<group>"; };
 		7C0BED7311D0D7C7883A25D1 /* Pods-12306foriPhone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-12306foriPhone.release.xcconfig"; path = "Pods/Target Support Files/Pods-12306foriPhone/Pods-12306foriPhone.release.xcconfig"; sourceTree = "<group>"; };
 		F636753D1B88E84D44EEF507 /* Pods_12306foriPhone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_12306foriPhone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -604,7 +604,7 @@
 		54E1F2401F160C0E00A9AA90 /* ball */ = {
 			isa = PBXGroup;
 			children = (
-				54E1F2411F160C4900A9AA90 /* WSBallView.swift */,
+				54DE52BF1F6E3BA3006A60D7 /* WSLMateBall.swift */,
 			);
 			name = ball;
 			sourceTree = "<group>";
@@ -769,6 +769,7 @@
 				548D0C801F0C8A5700368813 /* WSTrainSeatCell.swift in Sources */,
 				5426752C1EEBEE0100C2689F /* WSCalendarConfig.swift in Sources */,
 				544CCB3A1F000EA000E4D290 /* WSRotationScaleAnimation.swift in Sources */,
+				54DE52C01F6E3BA3006A60D7 /* WSLMateBall.swift in Sources */,
 				5426752E1EEBEE0100C2689F /* WSCalendarItem.swift in Sources */,
 				5442F8F91ECDAE1000D236D0 /* WSService+Order.swift in Sources */,
 				5426752D1EEBEE0100C2689F /* WSCalendarDate.swift in Sources */,
@@ -791,7 +792,6 @@
 				542675301EEBEE0100C2689F /* WSCalendarView.swift in Sources */,
 				5451D1101ED6B57600725F27 /* WSCalendarHeaderLayout.swift in Sources */,
 				540487291F0DD6C7002266AE /* WSTrainPersonAlert.swift in Sources */,
-				54E1F2421F160C4900A9AA90 /* WSBallView.swift in Sources */,
 				543E48771DBCF5F500AB9D08 /* WSOrderController.swift in Sources */,
 				5442F9291ECEEDAF00D236D0 /* NVActivityIndicatorAnimationBallClipRotateMultiple.swift in Sources */,
 				5442F9421ECEEDAF00D236D0 /* NVActivityIndicatorAnimationPacman.swift in Sources */,

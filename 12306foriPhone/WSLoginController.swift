@@ -33,6 +33,12 @@ class WSLoginController: UIViewController, NVActivityIndicatorViewable {
     
     private func configSubViews() {
         detailView.addSubview(self.randomCodeView)
+        
+        configNav()
+    }
+    
+    private func configNav() {
+        self.edgesForExtendedLayout = .all
     }
     
 //MARK: network
@@ -93,6 +99,10 @@ class WSLoginController: UIViewController, NVActivityIndicatorViewable {
         }
         
         myService.loginFlow(user: accountTF.text!, passWord: pwdTF.text!, randCodeStr: self.randomCodeView.selectCode, success: successHandler, failure: failureHandler)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
 //MARK: lazy

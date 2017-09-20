@@ -139,7 +139,7 @@ class WSAddGrapTicketAnimation: NSObject {
         smallBallView.width = 0
         smallBallView.height = 0
         smallBallView.center = WSConfig.keywindow.center
-        WSConfig.keywindow.insertSubview(smallBallView, belowSubview: WSBallView.shared)
+        WSConfig.keywindow.insertSubview(smallBallView, belowSubview: WSLMateBall.shared)
         
         UIView.animate(withDuration: 0.2, delay: duration, usingSpringWithDamping: 2, initialSpringVelocity: 2, options: .curveEaseOut, animations: {
             self.smallBallView.width = cycleWH
@@ -160,10 +160,10 @@ class WSAddGrapTicketAnimation: NSObject {
         let gravity = UIGravityBehavior(items: [smallBallView])
         animator.addBehavior(gravity)
         
-        let duration: CFTimeInterval = CFTimeInterval(sqrt((WSBallView.shared.centerY - smallBallView.centerY) * 2.0 / 1000))
+        let duration: CFTimeInterval = CFTimeInterval(sqrt((WSLMateBall.shared.centerY - smallBallView.centerY) * 2.0 / 1000))
         
         let horizontalAnimation = CABasicAnimation(keyPath: "position.x")
-        horizontalAnimation.toValue = WSBallView.shared.centerX
+        horizontalAnimation.toValue = WSLMateBall.shared.centerX
         horizontalAnimation.fillMode = kCAFillModeForwards
         horizontalAnimation.isRemovedOnCompletion = false
         horizontalAnimation.duration = duration

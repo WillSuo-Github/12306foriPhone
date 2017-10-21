@@ -39,7 +39,6 @@
 		543E48851DBCF64400AB9D08 /* WSNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48841DBCF64400AB9D08 /* WSNavigationController.swift */; };
 		543E48891DBCF65900AB9D08 /* WSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48871DBCF65900AB9D08 /* WSService.swift */; };
 		543E488A1DBCF65900AB9D08 /* WSService+login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 543E48881DBCF65900AB9D08 /* WSService+login.swift */; };
-		543E488D1DBCF67C00AB9D08 /* srca.cer in Resources */ = {isa = PBXBuildFile; fileRef = 543E488C1DBCF67C00AB9D08 /* srca.cer */; };
 		5442F8F21ECD80F900D236D0 /* WSServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F8F11ECD80F900D236D0 /* WSServiceError.swift */; };
 		5442F8F51ECDA3A400D236D0 /* WSUserModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F8F41ECDA3A400D236D0 /* WSUserModule.swift */; };
 		5442F8F71ECDABAD00D236D0 /* WSPassengerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5442F8F61ECDABAD00D236D0 /* WSPassengerDTO.swift */; };
@@ -97,6 +96,7 @@
 		545F72DF1EEE9237005A122B /* WSTrainListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F72DD1EEE9237005A122B /* WSTrainListCell.swift */; };
 		545F72E01EEE9237005A122B /* WSTrainListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 545F72DE1EEE9237005A122B /* WSTrainListCell.xib */; };
 		545F72E31EEE9B5F005A122B /* WSTrainListModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F72E21EEE9B5F005A122B /* WSTrainListModule.swift */; };
+		546DDFD81F9B525B00626FE5 /* srca.cer in Resources */ = {isa = PBXBuildFile; fileRef = 546DDFD71F9B525B00626FE5 /* srca.cer */; };
 		547ADC1F1F186E8F00CB2EDD /* WSAddGrapTicketAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547ADC1E1F186E8F00CB2EDD /* WSAddGrapTicketAnimation.swift */; };
 		548D0C801F0C8A5700368813 /* WSTrainSeatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548D0C7E1F0C8A5700368813 /* WSTrainSeatCell.swift */; };
 		548D0C811F0C8A5700368813 /* WSTrainSeatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 548D0C7F1F0C8A5700368813 /* WSTrainSeatCell.xib */; };
@@ -149,7 +149,6 @@
 		543E48841DBCF64400AB9D08 /* WSNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSNavigationController.swift; sourceTree = "<group>"; };
 		543E48871DBCF65900AB9D08 /* WSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSService.swift; sourceTree = "<group>"; };
 		543E48881DBCF65900AB9D08 /* WSService+login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WSService+login.swift"; sourceTree = "<group>"; };
-		543E488C1DBCF67C00AB9D08 /* srca.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = srca.cer; sourceTree = "<group>"; };
 		5442F8F11ECD80F900D236D0 /* WSServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSServiceError.swift; sourceTree = "<group>"; };
 		5442F8F41ECDA3A400D236D0 /* WSUserModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSUserModule.swift; sourceTree = "<group>"; };
 		5442F8F61ECDABAD00D236D0 /* WSPassengerDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSPassengerDTO.swift; sourceTree = "<group>"; };
@@ -208,6 +207,7 @@
 		545F72DD1EEE9237005A122B /* WSTrainListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainListCell.swift; sourceTree = "<group>"; };
 		545F72DE1EEE9237005A122B /* WSTrainListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSTrainListCell.xib; sourceTree = "<group>"; };
 		545F72E21EEE9B5F005A122B /* WSTrainListModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainListModule.swift; sourceTree = "<group>"; };
+		546DDFD71F9B525B00626FE5 /* srca.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = srca.cer; sourceTree = "<group>"; };
 		547ADC1E1F186E8F00CB2EDD /* WSAddGrapTicketAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSAddGrapTicketAnimation.swift; sourceTree = "<group>"; };
 		548D0C7E1F0C8A5700368813 /* WSTrainSeatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSTrainSeatCell.swift; sourceTree = "<group>"; };
 		548D0C7F1F0C8A5700368813 /* WSTrainSeatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WSTrainSeatCell.xib; sourceTree = "<group>"; };
@@ -377,8 +377,8 @@
 		543E488B1DBCF66B00AB9D08 /* productFile */ = {
 			isa = PBXGroup;
 			children = (
+				546DDFD71F9B525B00626FE5 /* srca.cer */,
 				54A1662F1F1F2FE1007BD48C /* Assets.xcassets */,
-				543E488C1DBCF67C00AB9D08 /* srca.cer */,
 				543E486B1DBCF5C900AB9D08 /* LaunchScreen.storyboard */,
 				543E486E1DBCF5C900AB9D08 /* Info.plist */,
 			);
@@ -684,12 +684,12 @@
 			files = (
 				5442F9531ED2D28400D236D0 /* WSGrapTicketontroller.xib in Resources */,
 				5411C3271F0F29E800F60721 /* WSTrainPersonCell.xib in Resources */,
+				546DDFD81F9B525B00626FE5 /* srca.cer in Resources */,
 				548D0C811F0C8A5700368813 /* WSTrainSeatCell.xib in Resources */,
 				543B435D1ED53BEE00230567 /* WSCalendarViewController.xib in Resources */,
 				545F72DC1EEE7304005A122B /* WSTrainListHeaderView.xib in Resources */,
 				543E486D1DBCF5C900AB9D08 /* LaunchScreen.storyboard in Resources */,
 				54A166301F1F2FE1007BD48C /* Assets.xcassets in Resources */,
-				543E488D1DBCF67C00AB9D08 /* srca.cer in Resources */,
 				543E487F1DBCF60A00AB9D08 /* WSLoginController.xib in Resources */,
 				5442F9561ED2D90700D236D0 /* station_name.js in Resources */,
 				543B43651ED56C3500230567 /* WSCalendarHeaderCell.xib in Resources */,
@@ -984,6 +984,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = NT9VR9C9HY;
 				INFOPLIST_FILE = 12306foriPhone/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1004,6 +1006,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				DEVELOPMENT_TEAM = NT9VR9C9HY;
 				INFOPLIST_FILE = 12306foriPhone/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

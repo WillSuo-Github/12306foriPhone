@@ -10,9 +10,9 @@ import UIKit
 
 class WSAddGrapTicketAnimation: NSObject {
 
-    public class func startAddGrapAnimationInViewSnap(_ viewSnap: UIImage, _ fromFrame: CGRect) {
+    public class func startAddGrapAnimationInViewSnap(_ viewSnap: UIImage, _ fromFrame: CGRect, _ completeBlock: @escaping ()->()) {
         
-        _ = WSAddGrapTicketAnimation(viewSnap, fromFrame)
+        _ = WSAddGrapTicketAnimation(viewSnap, fromFrame, completeBlock)
     }
 //MARK:- private property
     private let viewSnap: UIImage!
@@ -22,13 +22,15 @@ class WSAddGrapTicketAnimation: NSObject {
     private var cycleView: UIView!
     private var tipsLabel: UILabel!
     private var coverView: UIView!
-    private var smallBallView: UIImageView!
-    private let animator = UIDynamicAnimator(referenceView: WSConfig.keywindow)
+    fileprivate var completeBlock: (()->())?
+    fileprivate var smallBallView: UIImageView!
+    fileprivate let animator = UIDynamicAnimator(referenceView: WSConfig.keywindow)
     
 //MARK:- life cycle
-    init(_ viewSnap: UIImage, _ fromFrame: CGRect) {
+    init(_ viewSnap: UIImage, _ fromFrame: CGRect, _ completeBlock: @escaping ()->()) {
         self.viewSnap = viewSnap
         self.fromFrame = fromFrame
+        self.completeBlock = completeBlock
         super.init()
         configSubViews()
     }
@@ -89,18 +91,19 @@ class WSAddGrapTicketAnimation: NSObject {
             make.center.equalToSuperview()
         }
         
-        startFlickerAnimation(tipsLabel)
+        startFlickerAnimation(tipsLabel, 5)
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             self.startReduceAnimation()
         }
     }
     
-    private func startFlickerAnimation(_ view: UIView) {
+    private func startFlickerAnimation(_ view: UIView, _ count: Int) {
         
+        if count == 0 {return};
         UIView.animate(withDuration: 0.5, animations: {
             view.alpha = view.alpha == 0 ? 0.7: 0.0
         }) { isCompleted in
-            self.startFlickerAnimation(view)
+            self.startFlickerAnimation(view, count-1)
         }
     }
     
@@ -146,11 +149,13 @@ class WSAddGrapTicketAnimation: NSObject {
             self.smallBallView.height = cycleWH
             self.smallBallView.center = WSConfig.keywindow.center
         }) { isCompleted in
-            self.imageView.removeFromSuperview()
-            self.cycleView.removeFromSuperview()
-            self.tipsLabel.removeFromSuperview()
-            self.coverView.removeFromSuperview()
-            
+            if isCompleted {
+                self.imageView.removeFromSuperview()
+                self.cycleView.removeFromSuperview()
+                self.tipsLabel.removeFromSuperview()
+                self.coverView.removeFromSuperview()
+            }
+
             self.startGetIntoBall()
         }
     }
@@ -167,7 +172,20 @@ class WSAddGrapTicketAnimation: NSObject {
         horizontalAnimation.fillMode = kCAFillModeForwards
         horizontalAnimation.isRemovedOnCompletion = false
         horizontalAnimation.duration = duration
+        horizontalAnimation.delegate = self
         smallBallView.layer.add(horizontalAnimation, forKey: "horizontalAnimation")
     }
 }
+
+extension WSAddGrapTicketAnimation: CAAnimationDelegate {
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        if flag {
+            smallBallView.layer.removeAllAnimations()
+            animator.removeAllBehaviors()
+            smallBallView.removeFromSuperview()
+            if let block = self.completeBlock {block()}
+        }
+    }
+}
+
 

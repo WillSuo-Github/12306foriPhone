@@ -161,6 +161,8 @@ class WSTrainListCell: UITableViewCell {
     @IBAction func addGrapTicketDidTapped(_ sender: Any) {
         
         let detailFrame = detailView.convert(detailView.bounds, to: WSConfig.keywindow)
-        WSAddGrapTicketAnimation.startAddGrapAnimationInViewSnap(getDetailSnap(), detailFrame)
+        WSAddGrapTicketAnimation.startAddGrapAnimationInViewSnap(getDetailSnap(), detailFrame, {
+            WSLMateBall.shared.addBubble()
+        })
     }
 }

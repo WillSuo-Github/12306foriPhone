@@ -99,6 +99,12 @@ extension WSService {
             let headers = ["refer": "https://kyfw.12306.cn/otn/leftTicket/init",
                            "If-Modified-Since":"0",
                            "Cache-Control":"no-cache"]
+            
+            WSService.manager.request(url, headers: headers).responseData(completionHandler: { data in
+                let str = JSON(data.data)
+                print(str)
+            })
+            
             WSService.manager.request(url, headers: headers).responseJSON(completionHandler: { response in
                 switch response.result {
                 case .success(let data):

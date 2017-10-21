@@ -13,5 +13,85 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "12306foriPhone/WSService+QueryTicket.swift"
+            timestampString = "530288256.046771"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "queryTicketWith(_:queryUrl:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((Swift.Array&lt;_2306foriPhone.WSQueryLeftNewDTO&gt;) -&gt; (), (Swift.Error) -&gt; ()) -&gt; () in _2306foriPhone.WSService.queryTicketWith(_2306foriPhone.WSLeftTicketParam, queryUrl: Swift.String) -&gt; PromiseKit.Promise&lt;Swift.Array&lt;_2306foriPhone.WSQueryLeftNewDTO&gt;&gt;"
+                  moduleName = "12306foriPhone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ws/Desktop/xiangmu/12306foriPhone/12306foriPhone/WSService+QueryTicket.swift"
+                  timestampString = "530272866.877362"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "108"
+                  endingLineNumber = "108"
+                  offsetFromSymbolStart = "1780">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Alamofire.DataResponse&lt;Any&gt;) -&gt; () in closure #1 ((Swift.Array&lt;_2306foriPhone.WSQueryLeftNewDTO&gt;) -&gt; (), (Swift.Error) -&gt; ()) -&gt; () in _2306foriPhone.WSService.queryTicketWith(_2306foriPhone.WSLeftTicketParam, queryUrl: Swift.String) -&gt; PromiseKit.Promise&lt;Swift.Array&lt;_2306foriPhone.WSQueryLeftNewDTO&gt;&gt;"
+                  moduleName = "12306foriPhone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ws/Desktop/xiangmu/12306foriPhone/12306foriPhone/WSService+QueryTicket.swift"
+                  timestampString = "530272866.880932"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "109"
+                  endingLineNumber = "109"
+                  offsetFromSymbolStart = "209">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "12306foriPhone/WSService+QueryTicket.swift"
+            timestampString = "530288256.047136"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "queryTicketWith(_:queryUrl:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "12306foriPhone/WSService+QueryTicket.swift"
+            timestampString = "530288256.047205"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "queryTicketWith(_:queryUrl:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

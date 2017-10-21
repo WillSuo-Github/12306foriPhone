@@ -61,10 +61,12 @@ class WSTrainListCell: UITableViewCell {
         trainNameLabel.text = ticketInfo.TrainCode!
         timeLabel.text = "\(ticketInfo.start_time!) - \(ticketInfo.arrive_time!)"
         ticketsLeftLabel.text = hasSeat ? "有票": "无票"
-        buyButton.backgroundColor = hasSeat ? UIColor(hexString: "FFDD67") : UIColor(hexString: "AAAABC")
+        buyButton.setTitleColor(hasSeat ? UIColor(hexString: "333333") : UIColor(hexString: "AAAABC"), for: .normal)
         buyButton.setTitle(hasSeat ? "购买" : "预定", for: .normal)
         addressStationLabel.text = "\(ticketInfo.FromStationName!) - \(ticketInfo.ToStationName!)"
         detailTrainName.text = ticketInfo.TrainCode!
+        addGrapTicketButton.setTitle(hasSeat ? "购买" : "预定", for: .normal)
+        addGrapTicketButton.setTitleColor(hasSeat ? UIColor(hexString: "ffffff") : UIColor(hexString: "cccccc"), for: .normal)
         startTime.text = ticketInfo.start_time!
         fromStationName.text = ticketInfo.FromStationName!
         toStationName.text = ticketInfo.ToStationName!

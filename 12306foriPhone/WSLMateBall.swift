@@ -41,7 +41,6 @@ class WSLMateBall: UIView {
 //MARK:- cycle life
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         configSubviews()
     }
     
@@ -53,11 +52,10 @@ class WSLMateBall: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         mainBall.path = getMainNoramlPath()
+        mainBall.fillColor = config.mainBallColor.cgColor
     }
     
     private func configSubviews() {
-        mainBall.path = getMainNoramlPath()
-        mainBall.fillColor = config.mainBallColor.cgColor
         self.layer.addSublayer(mainBall)
     }
     

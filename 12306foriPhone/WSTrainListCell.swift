@@ -56,10 +56,13 @@ class WSTrainListCell: UITableViewCell {
     }
     
     private func updateUI() {
-    
+        
+        let hasSeat = isHaveSeat(ticketInfo)
         trainNameLabel.text = ticketInfo.TrainCode!
         timeLabel.text = "\(ticketInfo.start_time!) - \(ticketInfo.arrive_time!)"
-        ticketsLeftLabel.text = getSeatStates(ticketInfo)
+        ticketsLeftLabel.text = hasSeat ? "有票": "无票"
+        buyButton.backgroundColor = hasSeat ? UIColor(hexString: "FFDD67") : UIColor(hexString: "AAAABC")
+        buyButton.setTitle(hasSeat ? "购买" : "预定", for: .normal)
         addressStationLabel.text = "\(ticketInfo.FromStationName!) - \(ticketInfo.ToStationName!)"
         detailTrainName.text = ticketInfo.TrainCode!
         startTime.text = ticketInfo.start_time!
@@ -112,7 +115,7 @@ class WSTrainListCell: UITableViewCell {
         detailViewLeading.constant = detailViewLeading.constant * WSConfig.SizeScale
     }
     
-    private func getSeatStates(_ ticket: WSQueryLeftNewDTO) -> String {
+    private func isHaveSeat(_ ticket: WSQueryLeftNewDTO) -> Bool {
         var count: UInt32 = 0
         let properties = class_copyPropertyList(ticket.classForCoder, &count)
         for i in 0..<count {
@@ -124,13 +127,13 @@ class WSTrainListCell: UITableViewCell {
                 if value != "" {
                     if value == "有" || (value != "无" && Int(value)! > 0){
                         ticketsLeftLabel.textColor = UIColor(hexString: "f7999e")
-                        return "有票"
+                        return true
                     }
                 }
             }
         }
         ticketsLeftLabel.textColor = UIColor(hexString: "AAAABC")
-        return "无票"
+        return false
     }
     
 //MARK:- tapped response
